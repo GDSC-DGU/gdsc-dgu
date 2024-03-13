@@ -14,7 +14,7 @@
 | [정은지](https://github.com/bianbbc87)  | bian87@dgu.ac.kr | 2024.03.13 |
 | [심서현](https://github.com/shimseohyun) | shim020924@gmail.com | 2024.03.13 |
 | [이도형](https://github.com/puretension) |  rlrlfhtm5@gmail.com  | 2024.03.13 |
-| [황현정](https://github.com/bunju20) | ghkd4009@gmail.com  | 2024.03.13 |
+| [황현정](https://github.com/bunju20) | ghkd4009@gmail.com  | 2024.03.13 |
 | 본인 이름은 본인이 업데이트해주세용 |  본인 이름은 본인이 업데이트해주세용  | 2024.03.00 |
 
 ## 🎯 Branch Convention
