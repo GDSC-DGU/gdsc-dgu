@@ -13,6 +13,12 @@
 | [서희찬](https://github.com/seochan99)  | gmlcks0513@dgu.ac.kr |
 | 본인 이름은 본인이 업데이트해주세용 |  본인 이름은 본인이 업데이트해주세용  |
 
+## 🎯 Branch Convention
+
+`feture/컴포넌트 or 페이지 or 기능`
+`fix/컴포넌트 or 페이지 or 기능`
+`design/컴포넌트 or 페이지 or 기능`
+
 ## 🎯 Commit Convention
 
 - ✨ Feat: A new feature or enhancement
