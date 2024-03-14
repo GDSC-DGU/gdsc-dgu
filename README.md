@@ -13,7 +13,7 @@
 | [심서현](https://github.com/shimseohyun) | shim020924@gmail.com  | 2024.03.13 |
 | [이도형](https://github.com/puretension) | rlrlfhtm5@gmail.com   | 2024.03.13 |
 | [황현정](https://github.com/bunju20)     | ghkd4009@gmail.com    | 2024.03.13 |
-| [이나경](https://github.com/naarang)     | nakyong7770@gmail.com | 2024.03.00 |
+| [이나경](https://github.com/naarang)     | nakyong7770@gmail.com | 2024.03.14 |
 
 ## 🎯 Branch Convention
 
