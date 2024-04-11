@@ -17,7 +17,7 @@ const RecruitHeader = () => {
   return (
     <header className="h-lvh flex flex-col">
       {/* Main section */}
-      <main
+      <div
         className="w-full flex-col justify-center items-center gap-2.5 inline-flex h-[35.75rem] 2xl:h-[40rem] min-h-fit mt-10"
         style={{
           backgroundImage: `url(${BannerImg.src})`,
@@ -28,7 +28,7 @@ const RecruitHeader = () => {
         <article className="flex flex-col items-center">
           <BannerImg2 className="scale-75" />
           <div className="flex-col items-center flex mt-14">
-            <p className="text-center text-white text-xs font-normal leading-[14px] tracking-wide">
+            <p className="text-center text-xs font-normal leading-[14px] tracking-wide">
               2023/08/28 ~ 2023/09/14
             </p>
             <p className="border mt-8 py-2 px-28 border-solid text-zinc-500 text-sm font-medium">
@@ -36,7 +36,7 @@ const RecruitHeader = () => {
             </p>
           </div>
         </article>
-      </main>
+      </div>
       <ChervonDownIcon className="self-center " />
     </header>
   );
