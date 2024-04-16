@@ -1,5 +1,6 @@
 import ProjectHeader from '@/components/project/header/ProjectHeader';
 import ProjectList from '@/components/project/list/ProjectList';
+import ProjectPagination from '@/components/project/pagination/ProjectPagination';
 import React from 'react';
 
 export const metadata = {
@@ -17,6 +18,10 @@ const ProjectPage = () => {
       {/* ------------------ 프로젝트 리스트 ----------------*/}
       {/* -----------------------------------------------*/}
       <ProjectList />
+      {/* -----------------------------------------------*/}
+      {/* ------------------ 페이지네이션 ----------------*/}
+      {/* -----------------------------------------------*/}
+      <ProjectPagination />
     </main>
   );
 };
