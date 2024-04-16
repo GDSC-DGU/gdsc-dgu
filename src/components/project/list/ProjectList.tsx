@@ -24,7 +24,20 @@ const ProjectList = () => {
         <ProjectCard />
         <ProjectCard />
       </section>
-      <section>페이지</section>
+      <section className="w-full pt-[3.75rem] flex justify-center items-center gap-3">
+        <button className="w-5 h-5 bg-transparent border border-white rounded text-sm leading-4">
+          1
+        </button>
+        <button className="w-5 h-5 bg-transparent border border-[#73787E] text-[#73787E] rounded text-sm leading-4">
+          2
+        </button>
+        <button className="w-5 h-5 bg-transparent border border-[#73787E] text-[#73787E] rounded text-sm leading-4">
+          3
+        </button>
+        <button className="w-5 h-5 bg-transparent border border-[#73787E] text-[#73787E] rounded text-sm leading-4">
+          4
+        </button>
+      </section>
     </section>
   );
 };
