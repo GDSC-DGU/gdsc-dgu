@@ -14,8 +14,8 @@ import LightIcon from '@/svg/icons/solutionChallenge/lightIcon.svg';
 
 const SolutionChallengeTab = () => {
   return (
-    <section className="w-4/5 mx-auto">
-      <section className="w-full mb-10 p-5 flex flex-row items-center gap-2 rounded-xl bg-[#1C1D1F]">
+    <section className="w-4/5 mx-auto px-10">
+      <section className="w-full mt-8 mb-10 p-5 flex flex-row items-center gap-2 rounded-xl bg-[#1C1D1F]">
         <LightIcon className="scale-90" />
         <div>
           2024 Solution Challenge 에서 GDSC DGU의 2팀이 TOP100에 진출했습니다.

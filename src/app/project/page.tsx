@@ -9,7 +9,7 @@ export const metadata = {
 
 const ProjectPage = () => {
   return (
-    <main className="w-full px-10 pb-[7.5rem]">
+    <main className="w-full pb-[7.5rem]">
       {/* -----------------------------------------------*/}
       {/* -------------------- 제목 ----------------------*/}
       {/* -----------------------------------------------*/}

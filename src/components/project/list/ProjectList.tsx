@@ -14,7 +14,7 @@ import ProjectCard from '../card/ProjectCard';
 
 const ProjectList = () => {
   return (
-    <section className="w-4/5 grid xl:grid-cols-3 md:grid-cols-2 gap-8 mx-auto">
+    <section className="w-4/5 px-10 grid xl:grid-cols-3 md:grid-cols-2 gap-8 mx-auto">
       <ProjectCard />
       <ProjectCard />
       <ProjectCard />
