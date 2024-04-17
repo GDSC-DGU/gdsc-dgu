@@ -1,3 +1,57 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  /* Header */
+  .H3 {
+    font-family: Pretendard-Regular;
+    font-size: 3rem;
+  }
+  .H5 {
+    font-family: Pretendard-Regular;
+    font-size: 1.5rem;
+  }
+  .H6 {
+    font-family: Pretendard-Medium;
+    font-size: 1.25rem;
+  }
+
+  /* Subheader */
+  .Sh1 {
+    font-family: Pretendard-Medium;
+    font-size: 1rem;
+  }
+  .Sh2 {
+    font-family: Pretendard-Medium;
+    font-size: 0.875rem;
+  }
+
+  /* Body */
+  .B1 {
+    font-family: Pretendard-Regular;
+    font-size: 1rem;
+  }
+  .B2 {
+    font-family: Pretendard-Regular;
+    font-size: 0.875rem;
+  }
+
+  /* Button */
+  .Btn {
+    font-family: Pretendard-Medium;
+    font-size: 0.875rem;
+  }
+
+  /* Overline */
+  .Ove {
+    font-family: Pretendard-Regular;
+    font-size: 0.625rem;
+  }
+
+  /* Caption */
+  .Cap {
+    font-family: Pretendard-Regular;
+    font-size: 0.75rem;
+  }
+}
