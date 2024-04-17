@@ -16,7 +16,7 @@ const PartCard: React.FC<{
   description: string;
 }> = ({ icon, part, description }) => {
   return (
-    <div className="w-[352px] flex-shrink-0 p-8 bg-[#000000] flex flex-col gap-10">
+    <div className="w-[352px] flex-shrink-0 p-8 bg-mono_black flex flex-col gap-10">
       <img className="w-6 h-6 bg-red-900" />
       <div className="text-[#ffffff] flex flex-col gap-3">
         <span className="H6">{part}</span>
@@ -28,8 +28,8 @@ const PartCard: React.FC<{
 
 const AboutGDSCDGU = () => {
   return (
-    <div className="w-full flex justify-center items-center  bg-[#F7F8FA]">
-      <section className="w-full  py-40 tablet:px-10 px-4 gap-16 flex flex-col text-[#000000]">
+    <div className="w-full flex justify-center items-center  bg-mono_50">
+      <section className="w-full  py-40 tablet:px-10 px-4 gap-16 flex flex-col text-mono_black">
         <div className="flex desktop:flex-row flex-col">
           {/* title */}
           <div className="mr-10">
