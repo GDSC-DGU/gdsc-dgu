@@ -32,8 +32,8 @@ const AboutGDSC = () => {
           <br />
         </p>
 
-        <div className="H6 flex gap-1 ">
-          GDSC 소개 바로가기 <p>아이콘</p>
+        <div className="H6 flex gap-1 items-center">
+          GDSC 소개 바로가기 <div className="w-6 h-6 bg-red-900"></div>
         </div>
 
         <div className="flex gap-10 pt-6">
