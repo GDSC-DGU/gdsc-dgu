@@ -1,8 +1,7 @@
 import React from 'react';
 import MemberHeader from '@/components/member/header/MemberHeader';
-import TimeLine from '@/components/member/timeline/TimeLine';
-import LeadIntro from '@/components/member/introduce/LeadIntro';
-import MemberIntro from '@/components/member/introduce/MemberIntro';
+
+import GenerationPage from '@/components/member/generation/GenerationPage';
 
 export const metadata = {
   title: 'Member',
@@ -16,31 +15,9 @@ const MemberPage = () => {
       {/* -----------------------------------------------*/}
       <MemberHeader />
       {/* -----------------------------------------------*/}
-      {/* -------------------- 타임라인 --------------------*/}
+      {/* ----------- 타임라인 및 GDSC세대별 페이지-------------*/}
       {/* -----------------------------------------------*/}
-      <TimeLine />
-      {/* -----------------------------------------------*/}
-      {/* -------------------- 리드 소개 --------------------*/}
-      {/* -----------------------------------------------*/}
-      <LeadIntro />
-      {/* -----------------------------------------------*/}
-      {/* -------------------- DevRel --------------------*/}
-      {/* -----------------------------------------------*/}
-      <MemberIntro title="DevRel" />
-      {/* -----------------------------------------------*/}
-      {/* -------------------- Web/App --------------------*/}
-      {/* -----------------------------------------------*/}
-
-      <MemberIntro title="Web/App" />
-      {/* -----------------------------------------------*/}
-      {/* -------------------- Server/Cloud --------------------*/}
-      {/* -----------------------------------------------*/}
-
-      <MemberIntro title="Server/Cloud" />
-      {/* -----------------------------------------------*/}
-      {/* -------------------- Al/ML --------------------*/}
-      {/* -----------------------------------------------*/}
-      <MemberIntro title="AI/ML" />
+      <GenerationPage />
     </main>
   );
 };

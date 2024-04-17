@@ -5,16 +5,27 @@ import FutureDotLine from 'public/svg/icons/member/futureDotLine.svg';
 import ShortDotLine from 'public/svg/icons/member/shortDotLine.svg';
 import { TIME_LINE } from '@/constants/member/timeLine';
 
-const TimeLine = () => {
-  const [selected, setSelected] = useState(null);
+const TimeLine = ({
+  onSelectIndex,
+}: {
+  onSelectIndex: (index: number) => void;
+}) => {
+  const [selected, setSelected] = useState(1);
 
   const handleCircleClick = (index: any) => {
+    if (index === 0) return;
     setSelected(index);
+    onSelectIndex(index); // Pass the selected index up to the parent component
   };
 
   const getCircleColor = (index: any) => {
     if (index === selected) return '#FB8C00';
-    if (index < selected!) return '#FFCC80';
+    if (index < selected) return '#FFCC80';
+    return '#9FA4A8';
+  };
+
+  const getTextColor = (index: any) => {
+    if (index === selected) return '#FFFFFF';
     return '#9FA4A8';
   };
 
@@ -39,13 +50,13 @@ const TimeLine = () => {
                 </button>
                 <div
                   className="border-solid text-zinc-500 text-sm font-medium"
-                  style={{ fontSize: '14px', color: getCircleColor(index) }}
+                  style={{ fontSize: '14px', color: getTextColor(index) }}
                 >
                   {item.generate}
                 </div>
                 <div
                   className="border-solid text-zinc-500 text-xs font-medium"
-                  style={{ fontSize: '12px', color: getCircleColor(index) }}
+                  style={{ fontSize: '12px', color: getTextColor(index) }}
                 >
                   {item.date}
                 </div>
