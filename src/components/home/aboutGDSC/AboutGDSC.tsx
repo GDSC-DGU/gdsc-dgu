@@ -44,7 +44,7 @@ const AboutGDSC = () => {
         </div>
 
         {/* 이미지 */}
-        <div className="flex-grow bg-slate-100  h-[378px]"> </div>
+        <div className="flex-grow bg-red-900  h-[378px]"> </div>
       </section>
     </div>
   );

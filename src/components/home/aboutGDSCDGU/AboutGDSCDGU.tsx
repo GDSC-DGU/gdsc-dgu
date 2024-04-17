@@ -4,7 +4,7 @@ const MemberGuideLine: React.FC<{ label: string; description: string }> = ({
 }) => {
   return (
     <div className="flex">
-      <p className="Sb1 w-20 flex-shrink-0">{label}</p>
+      <p className="Sh1 w-20 flex-shrink-0">{label}</p>
       <p className="B1">{description}</p>
     </div>
   );
@@ -16,8 +16,8 @@ const PartCard: React.FC<{
   description: string;
 }> = ({ icon, part, description }) => {
   return (
-    <div className="w-[352px] flex-shrink-0 p-8 bg-mono_black flex flex-col gap-10">
-      <img className="w-6 h-6 bg-red-900" />
+    <div className="desktop:w-[352px] flex-shrink-0 p-8 bg-mono_black flex desktop:flex-col desktop:gap-10 gap-6">
+      <img className="desktop:w-6  desktop:h-6 w-7 h-7 bg-red-900 flex-shrink-0" />
       <div className="text-[#ffffff] flex flex-col gap-3">
         <span className="H6">{part}</span>
         <p className="B1">{description}</p>
@@ -29,7 +29,7 @@ const PartCard: React.FC<{
 const AboutGDSCDGU = () => {
   return (
     <div className="w-full flex justify-center items-center  bg-mono_50">
-      <section className="w-full  py-40 tablet:px-10 px-4 gap-16 flex flex-col text-mono_black">
+      <section className="w-full max-w-[1200px]  py-40 tablet:px-10 px-4 gap-16 flex flex-col text-mono_black">
         <div className="flex desktop:flex-row flex-col">
           {/* title */}
           <div className="mr-10">
@@ -92,7 +92,7 @@ const AboutGDSCDGU = () => {
           {/* title */}
 
           {/* part */}
-          <div className="mt-10 flex justify-between desktop:flex-row flex-col">
+          <div className="mt-10 flex justify-between desktop:flex-row flex-col desktop:justify-between desktop:gap-8 gap-3 overflow-scroll">
             <PartCard
               icon="web_app"
               part="Web / App"
