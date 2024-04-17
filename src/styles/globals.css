@@ -7,51 +7,61 @@
   .H3 {
     font-family: Pretendard-Regular;
     font-size: 3rem;
+    line-height: calc(56 / 48);
   }
   .H5 {
     font-family: Pretendard-Regular;
     font-size: 1.5rem;
+    line-height: calc(28 / 24);
   }
   .H6 {
     font-family: Pretendard-Medium;
     font-size: 1.25rem;
+    line-height: calc(28 / 20);
   }
 
   /* Subheader */
   .Sh1 {
     font-family: Pretendard-Medium;
     font-size: 1rem;
+    line-height: calc(28 / 16);
   }
   .Sh2 {
     font-family: Pretendard-Medium;
     font-size: 0.875rem;
+    line-height: calc(24 / 14);
   }
 
   /* Body */
   .B1 {
     font-family: Pretendard-Regular;
     font-size: 1rem;
+    line-height: calc(28 / 16);
   }
   .B2 {
     font-family: Pretendard-Regular;
     font-size: 0.875rem;
+    line-height: calc(24 / 14);
   }
 
   /* Button */
   .Btn {
     font-family: Pretendard-Medium;
     font-size: 0.875rem;
+    line-height: calc(16 / 14);
   }
 
   /* Overline */
   .Ove {
     font-family: Pretendard-Regular;
     font-size: 0.625rem;
+    line-height: calc(12 / 10);
   }
 
   /* Caption */
   .Cap {
     font-family: Pretendard-Regular;
     font-size: 0.75rem;
+    line-height: calc(14 / 12);
   }
 }
