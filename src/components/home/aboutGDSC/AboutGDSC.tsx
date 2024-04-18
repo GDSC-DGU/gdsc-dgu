@@ -39,7 +39,7 @@ const AboutGDSC = () => {
 
           <div className="flex gap-10 pt-6">
             <NumberAbout label={'Student Developer'} number={'1,600,00'} />
-            <NumberAbout label={'Offiline Even'} number={'20,000'} />
+            <NumberAbout label={'Offiline Event'} number={'20,000'} />
           </div>
         </div>
 
