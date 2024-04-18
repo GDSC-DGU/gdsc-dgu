@@ -5,6 +5,15 @@ import FutureDotLine from 'public/svg/icons/member/futureDotLine.svg';
 import ShortDotLine from 'public/svg/icons/member/shortDotLine.svg';
 import { TIME_LINE } from '@/constants/member/timeLine';
 
+/**
+ * @description
+ * 타임라인 인터랙티브 컴포넌트로, 사용자는 타임라인의 각 지점을 클릭하여 선택할 수 있습니다.
+ * 선택된 지점의 정보를 부모 컴포넌트에 전달합니다.
+ * @component TimeLine
+ * @param {function} onSelectIndex - 선택된 인덱스를 부모 컴포넌트로 전달하는 함수.
+ * @returns {JSX.Element} The TimeLine interactive component.
+ * @since 2024.04.18
+ */
 const TimeLine = ({
   onSelectIndex,
 }: {
