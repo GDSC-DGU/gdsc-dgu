@@ -1,11 +1,25 @@
 import React from 'react';
+import MemberHeader from '@/components/member/header/MemberHeader';
+
+import GenerationPage from '@/components/member/generation/GenerationPage';
 
 export const metadata = {
   title: 'Member',
 };
 
 const MemberPage = () => {
-  return <div className="w-4/5 px-10">Member 페이지입니당</div>;
+  return (
+    <main className="w-4/5 px-0.625rem flex flex-col items-center justify-center">
+      {/* -----------------------------------------------*/}
+      {/* -------------------- 배너 --------------------*/}
+      {/* -----------------------------------------------*/}
+      <MemberHeader />
+      {/* -----------------------------------------------*/}
+      {/* ----------- 타임라인 및 GDSC세대별 페이지-------------*/}
+      {/* -----------------------------------------------*/}
+      <GenerationPage />
+    </main>
+  );
 };
 
 export default MemberPage;

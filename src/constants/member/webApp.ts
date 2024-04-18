@@ -1,0 +1,95 @@
+export const WEBAPP_MEMBERS = [
+  {
+    id: 1,
+    name: '정원호',
+    role: 'Core',
+    department: 'Web/App',
+    description: 'Focused on core system architecture and backend development.',
+    image: '/images/members/lead.png',
+  },
+  {
+    id: 2,
+    name: '이상돈',
+    role: 'Core',
+    department: 'Web/App',
+    description:
+      'Leads the core development team with a focus on innovation and performance.',
+    image: '/images/members/lead.png',
+  },
+  {
+    id: 3,
+    name: '김민성',
+    role: 'General',
+    department: '멀티미디어소프트웨어공학전공',
+    description:
+      'Works on user interface design and user experience optimization.',
+    image: '/images/members/lead.png',
+  },
+  {
+    id: 4,
+    name: '박정민',
+    role: 'General',
+    department: '산업시스템공학과',
+    description:
+      'Implements digital marketing strategies to enhance product visibility.',
+    image: '/images/members/lead.png',
+  },
+  {
+    id: 5,
+    name: '유다현',
+    role: 'General',
+    department: '경영정보학과',
+    description: 'Provides customer support and technical assistance.',
+    image: '/images/members/lead.png',
+  },
+  {
+    id: 6,
+    name: '이나경',
+    role: 'General',
+    department: '컴퓨터공학전공',
+    description: 'Ensures software quality through rigorous testing.',
+    image: '/images/members/lead.png',
+  },
+  {
+    id: 7,
+    name: '이다은',
+    role: 'General',
+    department: '컴퓨터공학전공',
+    description:
+      'Conducts research to keep the team updated with the latest tech trends.',
+    image: '/images/members/lead.png',
+  },
+  {
+    id: 8,
+    name: '이도형',
+    role: 'General',
+    department: '컴퓨터공학전공',
+    description:
+      'Manages recruitment and ensures a healthy workplace environment.',
+    image: '/images/members/lead.png',
+  },
+  {
+    id: 9,
+    name: '이창준',
+    role: 'General',
+    department: '불교학부, 컴퓨터공학전공',
+    description: 'Oversees financial operations and budget planning.',
+    image: '/images/members/lead.png',
+  },
+  {
+    id: 10,
+    name: '정은지',
+    role: 'General',
+    department: '컴퓨터공학전공',
+    description: 'Coordinates day-to-day operational activities.',
+    image: '/images/members/lead.png',
+  },
+  {
+    id: 11,
+    name: '황현정',
+    role: 'General',
+    department: '컴퓨터공학전공',
+    description: 'Coordinates day-to-day operational activities.',
+    image: '/images/members/lead.png',
+  },
+];
