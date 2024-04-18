@@ -48,9 +48,10 @@ const MoreAbout = () => {
             '이것도 세줄이상이면 좋겠습니다!',
           ]}
         />
-        <section className="flex w-full desktop:flex-row flex-col gap-8 ">
+        <section className=" grid  desktop:grid-cols-4 tablet:grid-cols-2  grid-cols-1 gap-x-8 gap-y-8">
           {ChannelList.map((item, index) => (
             <ChannelCard
+              key={index}
               title={item.title}
               description={item.description}
               link={item.link}
