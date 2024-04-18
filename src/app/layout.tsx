@@ -19,7 +19,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="ko" className="flex w-screen justify-center  bg-[#000]">
+    <html
+      lang="ko"
+      className="flex w-screen justify-center  bg-[#000] tablet:text-[16px] text-[14px]"
+    >
       <body
         className={clsx(
           [NotoSans.className],
