@@ -1,3 +1,91 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer components {
+  /* Font Style */
+  /* Header */
+  .H3 {
+    font-family: Pretendard-Regular;
+    font-size: 3rem;
+    line-height: calc(56 / 48);
+    @media (max-width: 520px) {
+      font-family: Pretendard-Medium;
+      font-size: 2rem;
+    }
+  }
+  .H4 {
+    font-family: Pretendard-Regular;
+    font-size: 2.125rem;
+    line-height: calc(40 / 34);
+    letter-spacing: 0.25px;
+
+    @media (max-width: 520px) {
+      font-family: Pretendard-Medium;
+      font-size: 1.75rem;
+    }
+  }
+  .H5 {
+    font-family: Pretendard-Regular;
+    font-size: 1.5rem;
+    line-height: calc(28 / 24);
+  }
+  .H6 {
+    letter-spacing: 0.15px;
+    font-family: Pretendard-Medium;
+    font-size: 1.25rem;
+    line-height: calc(28 / 20);
+  }
+
+  /* Subheader */
+  .Sh1 {
+    letter-spacing: 0.15px;
+    font-family: Pretendard-Medium;
+    font-size: 1rem;
+    line-height: calc(28 / 16);
+  }
+  .Sh2 {
+    letter-spacing: 1px;
+    font-family: Pretendard-Medium;
+    font-size: 0.875rem;
+    line-height: calc(24 / 14);
+  }
+
+  /* Body */
+  .B1 {
+    letter-spacing: -0.5px;
+    font-family: Pretendard-Regular;
+    font-size: 1rem;
+    line-height: calc(28 / 16);
+  }
+  .B2 {
+    letter-spacing: -0.25px;
+    font-family: Pretendard-Regular;
+    font-size: 0.875rem;
+    line-height: calc(24 / 14);
+  }
+
+  /* Button */
+  .Btn {
+    letter-spacing: -0.5px;
+    font-family: Pretendard-Medium;
+    font-size: 0.875rem;
+    line-height: calc(16 / 14);
+  }
+
+  /* Overline */
+  .Ove {
+    letter-spacing: 1.5px;
+    font-family: Pretendard-Regular;
+    font-size: 0.625rem;
+    line-height: calc(12 / 10);
+  }
+
+  /* Caption */
+  .Cap {
+    letter-spacing: 1.5px;
+    font-family: Pretendard-Regular;
+    font-size: 0.75rem;
+    line-height: calc(14 / 12);
+  }
+}
