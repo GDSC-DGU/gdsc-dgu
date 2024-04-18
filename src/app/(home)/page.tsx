@@ -2,6 +2,7 @@ import AboutGDSC from '@/components/home/aboutGDSC/AboutGDSC';
 import AboutGDSCDGU from '@/components/home/aboutGDSCDGU/AboutGDSCDGU';
 import Activity from '@/components/home/activity/Activity';
 import HomeBanner from '@/components/home/banner/HomeBanner';
+import MoreAbout from '@/components/home/moreAbout/MoreAbout';
 import StoriesFrom from '@/components/home/storiesFrom/StoriesFrom';
 import React from 'react';
 
@@ -18,6 +19,8 @@ const HomePage = () => {
       <StoriesFrom />
       {/* 활동 소개 */}
       <Activity />
+      {/* 채널 소개 */}
+      <MoreAbout />
     </main>
   );
 };

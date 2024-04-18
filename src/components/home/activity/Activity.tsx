@@ -1,3 +1,5 @@
+import HomeTitle from '../title/HomeTitle';
+
 const ActivityCard: React.FC<{
   icon: string;
   label: string;
@@ -23,21 +25,18 @@ const Activity = () => {
         {/* 세미나 소개 */}
         <section className="flex flex-col gap-10">
           {/* 제목 */}
-          <div className="flex gap-8 items-end">
-            <p className="H3">
-              Week
-              <br />
-              Seminar
-            </p>
-            <p className="B1">
-              GDSC DGU 맴버들이 직접 기획하고, 참여하는 세미나입니다. <br />
-              세미나 내에서는 각자의 다양한 경험과 지식을 공유합니다
-            </p>
-          </div>
+          <HomeTitle
+            title={['Week', 'Seminar']}
+            description={[
+              'GDSC DGU 맴버들이 직접 기획하고, 참여하는 세미나입니다.',
+              '세미나 내에서는 각자의 다양한 경험과 지식을 공유합니다',
+            ]}
+          />
+
           {/* 제목 */}
 
           {/* 내용 */}
-          <div className="w-full h-[198px] flex relative overflow-visible">
+          <div className="w-full  flex  overflow-scroll">
             {/* 풀페이지에서 overflow를 어떻게 보여줘야할지 모르겠네... */}
             {/* <div className="absolute w-lvw h-[198px] bg-slate-900 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div> */}
             <div className="flex flex-shrink-0 gap-6">
@@ -57,21 +56,13 @@ const Activity = () => {
         {/* 활동 소개 */}
         <section className="flex flex-col gap-10">
           {/* 제목 */}
-          <div className="flex gap-8 items-end">
-            <p className="H3">
-              Our
-              <br />
-              Activity
-            </p>
-            <p className="B1">
-              GDSC DGU 맴버들이 직접 기획하고, 참여하는 세미나입니다.
-              <br />
-              세미나 내에서는 각자의 다양한 경험과 지식을 공유합니다.
-              <br />
-              다만, 주제는 기술에만 국한되어있지 않습니다.
-              <br />
-            </p>
-          </div>
+          <HomeTitle
+            title={['Our', 'Activity']}
+            description={[
+              'GDSC DGU 맴버들이 직접 기획하고, 참여하는 세미나입니다.',
+              '다만, 주제는 기술에만 국한되어있지 않습니다.',
+            ]}
+          />
           {/* 제목 */}
 
           {/* 내용 */}
@@ -124,7 +115,7 @@ const Activity = () => {
           </div>
           {/* 내용 */}
         </section>
-        `{/* 활동 소개 */}
+        {/* 활동 소개 */}
       </section>
     </div>
   );

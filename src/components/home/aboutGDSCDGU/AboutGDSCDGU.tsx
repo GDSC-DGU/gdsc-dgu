@@ -3,7 +3,7 @@ const MemberGuideLine: React.FC<{ label: string; description: string }> = ({
   description,
 }) => {
   return (
-    <div className="flex">
+    <div className="flex ">
       <p className="Sh1 w-20 flex-shrink-0">{label}</p>
       <p className="B1">{description}</p>
     </div>
@@ -30,9 +30,9 @@ const AboutGDSCDGU = () => {
   return (
     <div className="w-full flex justify-center items-center  bg-mono_50">
       <section className="w-full max-w-[1200px]  py-40 tablet:px-10 px-4 gap-16 flex flex-col text-mono_black">
-        <div className="flex desktop:flex-row flex-col">
+        <div className="flex desktop:flex-row flex-col flex-wrap">
           {/* title */}
-          <div className="mr-10">
+          <div className="mr-10 mb-6 tablet:min-w-[440px]">
             <div className="H3 inline-block">
               <span className="flex items-center gap-4">
                 <span>GDSC in</span>
@@ -45,8 +45,7 @@ const AboutGDSCDGU = () => {
             </div>
 
             <div className="B1 pt-6">
-              동국대학교의 GDSC는 자발적이고 주도적으로 학습하는 커뮤니티
-              그룹입니다.
+              GDSC DGU는 자발적이고 주도적으로 학습하는 커뮤니티 그룹입니다.
               <br />
               저희는 이론과 산업 간의 격차를 줄이는 연구를 하기 위해 모였습니다.
             </div>
@@ -54,7 +53,7 @@ const AboutGDSCDGU = () => {
           {/* title */}
 
           {/* member */}
-          <div className="flex flex-col">
+          <div className="flex flex-col mb-6">
             <p className="H6 h-[56px] flex items-center">Members</p>
             <MemberGuideLine
               label="Lead"
@@ -62,11 +61,11 @@ const AboutGDSCDGU = () => {
             />
             <MemberGuideLine
               label="Core"
-              description="모든 맴버가 유기적으로 연결 될 수 있도록 연간 활동을 기획하고 진행을 돕습니다."
+              description="모든 맴버가 유기적으로 연결 될 수 있도록 돕습니다."
             />
             <MemberGuideLine
               label="General"
-              description="적극적인 활동을 하며, 커뮤니티의 활성화에 큰 역할을 기여합니다."
+              description="적극적인 활동으로, 커뮤니티의 활성화에 기여합니다."
             />
             <MemberGuideLine
               label="DevRel"
