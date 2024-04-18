@@ -16,15 +16,19 @@ import Image from 'next/image';
 const MemberHeader = () => {
   return (
     <div>
-      <div className="w-full flex justify-center mt-5rem mb-5rem">
+      <div className="w-full flex justify-center mt-[5rem] mb-[5rem]">
         <BannerSvg style={{ height: '100%' }} />
       </div>
       <div
         className="flex justify-center"
-        style={{ width: '100%', maxWidth: '70rem' }}
+        style={{ width: '100%', maxWidth: '[70rem]' }}
       >
         <div
-          style={{ position: 'relative', width: '70rem', height: '39.375rem' }}
+          style={{
+            position: 'relative',
+            width: '[70rem]',
+            height: '[39.375rem]',
+          }}
         >
           <Image
             src={BannerPng}
