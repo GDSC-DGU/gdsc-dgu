@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect } from 'react';
 import Circle from 'public/svg/icons/member/futureCircle.svg';
 import FutureDotLine from 'public/svg/icons/member/futureDotLine.svg';
 import ShortDotLine from 'public/svg/icons/member/shortDotLine.svg';
@@ -17,6 +17,8 @@ const TimeLine = ({
     setSelected(index);
     onSelectIndex(index); // Pass the selected index up to the parent component
   };
+
+  const scrollContainer = useRef(null);
 
   const getCircleColor = (index: any) => {
     if (index === selected) return '#FB8C00';

@@ -3,6 +3,7 @@ import LeadIntro from '@/components/member/introduce/LeadIntro';
 import MemberIntro from '@/components/member/introduce/MemberIntro';
 import TimeLine from '@/components/member/timeline/TimeLine';
 import { useState } from 'react';
+import RecruitHeader from '@/components/recruit/header/RecruitHeader';
 
 const GenerationPage = () => {
   const [selectedTimelineIndex, setSelectedTimelineIndex] = useState(1);
@@ -15,7 +16,12 @@ const GenerationPage = () => {
       <TimeLine onSelectIndex={setSelectedTimelineIndex} />
 
       {selectedTimelineIndex === 2 ? (
-        <p>Special content when timeline index 2 is selected.</p>
+        <div>
+          {/* -----------------------------------------------*/}
+          {/* -------------------- 모집 페이지 --------------------*/}
+          {/* -----------------------------------------------*/}
+          <RecruitHeader />
+        </div>
       ) : (
         <div>
           {/* -----------------------------------------------*/}
