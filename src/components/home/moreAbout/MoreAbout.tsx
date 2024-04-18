@@ -1,9 +1,9 @@
 import HomeTitle from '../title/HomeTitle';
 
-const ChannelCard: React.FC<Channel> = ({ label, description }) => {
+const ChannelCard: React.FC<Channel> = ({ title, description }) => {
   return (
     <div className="flex-grow bg-mono_900 p-7 gap-3 text-white table:">
-      <p className="H5">{label}</p>
+      <p className="H5">{title}</p>
       <p className="B2">{description}</p>
     </div>
   );
@@ -16,6 +16,11 @@ interface Channel {
 }
 
 const ChannelList: Channel[] = [
+  {
+    title: 'FAQ',
+    description: '자주 묻는 질문',
+    link: 'instagram',
+  },
   {
     title: 'Instagram',
     description: '인스타그램',
@@ -46,7 +51,7 @@ const MoreAbout = () => {
         <section className="flex w-full desktop:flex-row flex-col gap-8 ">
           {ChannelList.map((item, index) => (
             <ChannelCard
-              label={item.title}
+              title={item.title}
               description={item.description}
               link={item.link}
             />

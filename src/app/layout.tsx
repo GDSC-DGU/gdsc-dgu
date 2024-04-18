@@ -30,7 +30,7 @@ export default function RootLayout({
           ['text-white'],
         )}
       >
-        {/* <Navigation /> */}
+        <Navigation />
         <div className="flex justify-center">{children}</div>
       </body>
     </html>
