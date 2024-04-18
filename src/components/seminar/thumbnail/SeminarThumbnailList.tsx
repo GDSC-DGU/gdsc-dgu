@@ -1,8 +1,10 @@
 'use client';
 
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import SeminarThumbnail from "./SeminarThumbnail";
 import { SEMINAR_DATA } from '@/constants/seminar/seminarData';
+import Link from 'next/link'
 
 /**
  * @description
@@ -18,9 +20,10 @@ import { SEMINAR_DATA } from '@/constants/seminar/seminarData';
  * @returns The rendered header component.
  */
 
-const SeminarThumbnailList = ({ selectedCategory }: { selectedCategory: string }) => {      
-    const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 12;  // 한 페이지당 표시할 항목 수
+const SeminarThumbnailList = ({ selectedCategory }: { selectedCategory: string }) => {   
+  const router = useRouter();   
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 12;  // 한 페이지당 표시할 항목 수
   
     // topic으로 데이터 필터링
   const filteredData = selectedCategory !== "all" ? SEMINAR_DATA.filter(seminar => seminar.topic === selectedCategory) : SEMINAR_DATA;
@@ -36,9 +39,10 @@ const SeminarThumbnailList = ({ selectedCategory }: { selectedCategory: string }
       pageNumbers.push(i);
     }
   
-    // 페이지 변경 함수
+    // 세미나 리스트 페이지네이션 함수
     const paginate = (pageNumber: number) => {
       setCurrentPage(pageNumber);
+      // /seminar/${seminar.id}/page
     };
   
   
@@ -49,10 +53,15 @@ const SeminarThumbnailList = ({ selectedCategory }: { selectedCategory: string }
           aspectRatio: 16/9,
         }}>
         {currentItems.map((seminar) => (
+          <Link
+          href={`/seminar/${seminar.id}`}
+          key={seminar.id}
+        >
           <SeminarThumbnail
           key={seminar.id}
           data={seminar}
           />
+          </Link>
         ))}
         </div>
         {/* 페이지네이션 버튼 */}
