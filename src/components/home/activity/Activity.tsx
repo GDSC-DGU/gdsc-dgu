@@ -1,0 +1,133 @@
+const ActivityCard: React.FC<{
+  icon: string;
+  label: string;
+  description: string[];
+}> = ({ icon, label, description }) => {
+  return (
+    <div className="flex-grow">
+      <img className="bg-red-900 w-24 h-24" />
+      <div className="H6 pb-2 pt-6">{label}</div>
+      <div className="B1 flex flex-col">
+        {description.map((item, index) => (
+          <p key={index}>{item}</p>
+        ))}
+      </div>
+    </div>
+  );
+};
+
+const Activity = () => {
+  return (
+    <div className="w-full flex justify-center items-center  bg-mono_50">
+      <section className="w-full max-w-[1200px]  py-40 tablet:px-10 px-4 gap-40 flex flex-col text-mono_black">
+        {/* 세미나 소개 */}
+        <section className="flex flex-col gap-10">
+          {/* 제목 */}
+          <div className="flex gap-8 items-end">
+            <p className="H3">
+              Week
+              <br />
+              Seminar
+            </p>
+            <p className="B1">
+              GDSC DGU 맴버들이 직접 기획하고, 참여하는 세미나입니다. <br />
+              세미나 내에서는 각자의 다양한 경험과 지식을 공유합니다
+            </p>
+          </div>
+          {/* 제목 */}
+
+          {/* 내용 */}
+          <div className="w-full h-[198px] flex relative overflow-visible">
+            {/* 풀페이지에서 overflow를 어떻게 보여줘야할지 모르겠네... */}
+            {/* <div className="absolute w-lvw h-[198px] bg-slate-900 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div> */}
+            <div className="flex flex-shrink-0 gap-6">
+              <img className="w-[352px] h-[198px] flex-shrink-0 bg-red-900" />
+              <img className="w-[352px] h-[198px] flex-shrink-0 bg-red-900" />
+              <img className="w-[352px] h-[198px] flex-shrink-0 bg-red-900" />
+            </div>
+
+            {/* 스크롤되는 부분 */}
+
+            {/* 스크롤되는 부분 */}
+          </div>
+          {/* 내용 */}
+        </section>
+        {/* 세미나 */}
+        {/* ----- */}
+        {/* 활동 소개 */}
+        <section className="flex flex-col gap-10">
+          {/* 제목 */}
+          <div className="flex gap-8 items-end">
+            <p className="H3">
+              Our
+              <br />
+              Activity
+            </p>
+            <p className="B1">
+              GDSC DGU 맴버들이 직접 기획하고, 참여하는 세미나입니다.
+              <br />
+              세미나 내에서는 각자의 다양한 경험과 지식을 공유합니다.
+              <br />
+              다만, 주제는 기술에만 국한되어있지 않습니다.
+              <br />
+            </p>
+          </div>
+          {/* 제목 */}
+
+          {/* 내용 */}
+          <div className=" flex flex-col gap-16">
+            <div className="flex  w-full gap-8">
+              <ActivityCard
+                icon="FirstGDSC"
+                label="First GDSC"
+                description={[
+                  '이건 희찬님이 문구를 써주삼',
+                  '제가 뭐라쓸지모르겠어요',
+                  '하이고 쓸말없다 대충 느낌만 보려고 아무말이나 채워넣기',
+                  '이건 4줄정도는 나와야 보기 좋을 듯 합니다',
+                ]}
+              />
+              <ActivityCard
+                icon="FirstGDSC"
+                label="First GDSC"
+                description={[
+                  '이건 희찬님이 문구를 써주삼',
+                  '제가 뭐라쓸지모르겠어요',
+                  '하이고 쓸말없다 대충 느낌만 보려고 아무말이나 채워넣기',
+                  '이건 4줄정도는 나와야 보기 좋을 듯 합니다',
+                ]}
+              />
+            </div>
+
+            <div className="flex  w-full gap-8">
+              <ActivityCard
+                icon="FirstGDSC"
+                label="First GDSC"
+                description={[
+                  '이건 희찬님이 문구를 써주삼',
+                  '제가 뭐라쓸지모르겠어요',
+                  '하이고 쓸말없다 대충 느낌만 보려고 아무말이나 채워넣기',
+                  '이건 4줄정도는 나와야 보기 좋을 듯 합니다',
+                ]}
+              />
+              <ActivityCard
+                icon="FirstGDSC"
+                label="First GDSC"
+                description={[
+                  '이건 희찬님이 문구를 써주삼',
+                  '제가 뭐라쓸지모르겠어요',
+                  '하이고 쓸말없다 대충 느낌만 보려고 아무말이나 채워넣기',
+                  '이건 4줄정도는 나와야 보기 좋을 듯 합니다',
+                ]}
+              />
+            </div>
+          </div>
+          {/* 내용 */}
+        </section>
+        `{/* 활동 소개 */}
+      </section>
+    </div>
+  );
+};
+
+export default Activity;
