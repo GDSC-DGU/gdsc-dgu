@@ -110,7 +110,7 @@ export default function Navigation() {
 
         {/* -- 사이드 바 -- */}
         {isSideBarOpen ? (
-          <div className=" bg-black w-full tablet:px-10 px-4 pt-4 pb-20 rounded-b-lg desktop:hidden">
+          <div className=" bg-mono_900 w-full tablet:px-10 px-4 pt-4 pb-16 rounded-b-lg desktop:hidden">
             <div className="gap-10 flex flex-col ">
               {NavgationList.map((item, index) => {
                 return item.length == 1 ? (
@@ -140,7 +140,7 @@ export default function Navigation() {
       {isModalOpen ? (
         <div
           className={`fixed left-0 top-0 z-0 w-lvw h-lvh mix-blend-multiply  ${
-            isSideBarOpen ? 'bg-slate-200' : ''
+            isSideBarOpen ? ' desktop:bg-transparent bg-mono_200' : ''
           }`}
           onClick={setIsModalClose}
         />
@@ -190,7 +190,7 @@ const NavToggle: React.FC<{ label: NavItem; navList: NavItem[] }> = ({
       )}
 
       {label.isModalShow ? (
-        <div className="absolute px-6 py-4 z-999 bg-mono_900 flex flex-col rounded-lg  gap-3  right-0 top-12">
+        <div className="absolute px-6 py-4 z-999 bg-mono_900 flex flex-col rounded-lg  gap-3  right-0 top-10">
           {navList.map((item, index) => {
             return (
               <NavButton key={index} label={item.label} link={item.link} />

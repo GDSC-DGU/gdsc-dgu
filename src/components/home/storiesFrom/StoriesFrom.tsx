@@ -1,11 +1,32 @@
-const ImageBox: React.FC<{ label: string; img: string }> = ({ label, img }) => {
+'use client';
+import { Swiper, SwiperSlide } from 'swiper/react';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+import { Navigation, Autoplay } from 'swiper/modules';
+
+interface Story {
+  label: string;
+  img: string;
+}
+
+const ImageBox: React.FC<Story> = ({ label, img }) => {
   return (
-    <div className="flex flex-col gap-6">
-      <img className="w-full  bg-red-900 " src="/images/main/story_ex.png" />
-      <div className="H6">사진에 대한 제목이 들어갑니다.</div>
+    <div className="flex flex-col gap-6 w-full">
+      <img className="w-full   bg-red-900 " src="/images/main/story_ex.png" />
+      <div className="H6">{label}</div>
     </div>
   );
 };
+
+const StoryList: Story[] = [
+  { label: '일번', img: '22' },
+  { label: '이번', img: '22' },
+  { label: '삼번', img: '22' },
+  { label: '사번', img: '22' },
+];
+
 const StoriesFrom = () => {
   return (
     <div className="w-full flex justify-center items-center  bg-white ">
@@ -35,9 +56,22 @@ const StoriesFrom = () => {
           </div>
         </div>
 
-        <div className="tablet:hidden flex">
-          <ImageBox label="1" img="" />
-        </div>
+        <Swiper
+          // navigation={true}
+          autoplay={{ delay: 3000 }}
+          modules={[Navigation, Autoplay]}
+          className="tablet:hidden flex w-full"
+          loop
+        >
+          {StoryList.map((item, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <ImageBox label={item.label} img={item.img} />
+              </SwiperSlide>
+            );
+          })}
+        </Swiper>
+
         {/* content */}
       </section>
     </div>
