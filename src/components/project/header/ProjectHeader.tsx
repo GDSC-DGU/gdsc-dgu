@@ -13,8 +13,8 @@
 const ProjectHeader = () => {
   return (
     <section className="w-4/5 px-10 flex flex-col mx-auto my-10">
-      <div className="px-3 pt-10 text-5xl leading-[3.5rem]">Project</div>
-      <div className="px-3 pt-3 leading-[1.75rem]">GDSC DGU의 프로젝트</div>
+      <div className="px-3 pt-10 H3">Project</div>
+      <div className="px-3 pt-3 H6">GDSC DGU의 프로젝트</div>
       <div className="w-full pt-6 border-b border-white border-solid"></div>
     </section>
   );

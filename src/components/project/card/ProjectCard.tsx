@@ -25,14 +25,10 @@ const ProjectCard = () => {
             backgroundPosition: 'center', // Aligns the background image to the center
           }}
         ></div>
-        <div className="w-full p-4 pt-3 rounded-b-md bg-[#1C1D1F]">
-          <div className="pb-4 text-[1.25rem] leading-7">제목</div>
-          <div className="pb-5 text-sm leading-6">
-            서비스 소개! 두줄까지 적어주세요.
-          </div>
-          <div className="text-xs leading-[0.875rem] text-[#9FA4A8]">
-            특이 사항
-          </div>
+        <div className="w-full p-4 pt-3 rounded-b-md bg-mono_900">
+          <div className="pb-4 H6">제목</div>
+          <div className="pb-5 B2">서비스 소개! 두줄까지 적어주세요.</div>
+          <div className="Cap text-mono_400">특이 사항</div>
         </div>
       </Link>
     </section>

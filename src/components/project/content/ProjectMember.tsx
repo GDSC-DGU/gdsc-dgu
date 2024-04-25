@@ -16,7 +16,7 @@ import Image from 'next/image';
 
 const ProjectMember = () => {
   return (
-    <section className="w-full p-4 bg-[#1C1D1F] flex flex-row items-center gap-4 rounded">
+    <section className="w-full p-4 bg-mono_900 flex flex-row items-center gap-4 rounded">
       <Image
         src={ProfileImg}
         alt="profile"
@@ -24,10 +24,10 @@ const ProjectMember = () => {
       />
       <div className="flex flex-col leading-7">
         <div className="flex flex-row gap-2">
-          <div>성이름</div>
-          <div className="text-[#CACDD2]">part role</div>
+          <div className="Sh1">성이름</div>
+          <div className="B1 text-mono_200">part role</div>
         </div>
-        <div>세미나 이름</div>
+        <div className="B1">세미나 이름</div>
       </div>
     </section>
   );

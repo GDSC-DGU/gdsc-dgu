@@ -41,7 +41,7 @@ const SolutionChallengeHeader = () => {
           <BannerImg2 className="scale-95" />
           <div className="flex-col items-center flex">
             <Link href="https://developers.google.com/community/gdsc-solution-challenge?hl=ko">
-              <button className="border mt-16 py-4 min-w-[12.5rem] border-white text-sm font-medium">
+              <button className="border mt-16 py-4 min-w-[12.5rem] border-white Btn">
                 자세히 알아보기
               </button>
             </Link>

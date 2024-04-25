@@ -34,19 +34,17 @@ const ProjectIntroduction = () => {
             <FileIcon />
             <YoutubeIcon />
           </div>
-          <div className="pb-4 text-5xl leading-[3.5rem]">서비스명</div>
-          <div className="pb-4 text-xl leading-[1.9rem] font-medium">
+          <div className="pb-4 H3">서비스명</div>
+          <div className="pb-4 H6">
             서비스의 캐치프라이즈, 컨셉을 잘 나타낼 수 있는 말을 간결하게
             적고자합니다.
           </div>
         </div>
       </section>
-      <section className="w-full my-16 bg-[#1C1D1F]">
+      <section className="w-full my-16 bg-mono_900">
         <div className="w-4/5 mx-auto flex max-[960px]:flex-col justify-between items-center p-10">
-          <div className="text-2xl">
-            서비스가 어디서 시작됐는지, 서비스의 띠지
-          </div>
-          <div className="text-2xl">추가적인 성과</div>
+          <div className="H5">서비스가 어디서 시작됐는지, 서비스의 띠지</div>
+          <div className="H5">추가적인 성과</div>
         </div>
       </section>
     </section>

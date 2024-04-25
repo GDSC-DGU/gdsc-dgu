@@ -17,8 +17,8 @@ const ProjectContent = () => {
   return (
     <section className="w-4/5 px-10 pb-[7.5rem] mx-auto">
       <section>
-        <div className="w-full flex flex-row justify-between items-center mb-8 px-2 pb-3 border-b border-solid border-[#3E4348]">
-          <div className="text-[2.125rem] leading-[2.5rem]">Team</div>
+        <div className="w-full flex flex-row justify-between items-center mb-8 px-2 pb-3 border-b border-solid border-mono_700">
+          <div className="H4">Team</div>
           <button className="">
             <ToggleIcon />
           </button>
@@ -30,9 +30,11 @@ const ProjectContent = () => {
           <ProjectMember />
         </div>
       </section>
-      <section className="mt-[5rem] leading-7">
-        노션 내용 크롤링 <br /> CONG(콩) : 축하 아카이빙 서비스 <br /> CONG은 왜
-        필요할까? <br />{' '}
+      <section className="mt-[5rem]">
+        <div className="H6">노션 내용 크롤링</div>
+        <div className="B1">
+          CONG(콩) : 축하 아카이빙 서비스 <br /> CONG은 왜 필요할까? <br />{' '}
+        </div>
       </section>
     </section>
   );
