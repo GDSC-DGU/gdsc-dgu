@@ -16,7 +16,7 @@ const Footer = () => {
   };
 
   return (
-    <footer className="w-full py-10 bg-mono_900 flex pl-[400px]">
+    <footer className="w-full py-10 bg-mono_900 flex desktop:pl-80 tablet:pl-20 pl-10">
       <div className="flex justify-start items-start w-full gap-10">
         <div>
           <h1 className="F1">About Us</h1>
@@ -33,14 +33,14 @@ const Footer = () => {
         </div>
         <div>
           <h1 className="F1">Contact</h1>
-            <div className="contact-item">
-              <p className="F2 label-width">이메일</p>
-              <p className="F2">gdsc.gdu@gmail.com</p>
-            </div>
-            <div className="contact-item">
-              <p className="F2 label-width">주소</p>
-              <p className="F2">서울특별시 중구 필동로1길 30</p>
-            </div>
+          <div className="contact-item">
+            <p className="F2 label-width">이메일</p>
+            <p className="F2">gdsc.gdu@gmail.com</p>
+          </div>
+          <div className="contact-item">
+            <p className="F2 label-width">주소</p>
+            <p className="F2">서울특별시 중구 필동로1길 30</p>
+          </div>
         </div>
       </div>
     </footer>
