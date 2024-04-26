@@ -75,7 +75,7 @@ const TIMELINE_CARDS_INFO: Record<string, TimelineCardProps[]> = {
     },
     // 기타 1기 데이터...
   ],
-  '2nd': [
+  '2st': [
     {
       id: 1,
       cardImageUrl: SampleImage.src,
@@ -147,7 +147,7 @@ const TIMELINE_CARDS_INFO: Record<string, TimelineCardProps[]> = {
       detail: '세미나에 대한 자세한 내용'
     },
   ],
-  '3rd': [
+  '3st': [
     {
       id: 1,
       cardImageUrl: SampleImage.src,
