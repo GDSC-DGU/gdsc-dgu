@@ -14,14 +14,14 @@ import LightIcon from '@/svg/icons/solutionChallenge/lightIcon.svg';
 
 const SolutionChallengeTab = () => {
   return (
-    <section className="w-4/5 mx-auto px-10">
+    <section className="w-full max-w-[1200px] tablet:px-10 px-4">
       <section className="w-full mt-8 mb-10 p-5 flex flex-row items-center gap-2 rounded-xl bg-mono_900">
         <LightIcon className="scale-90" />
         <div className="B1">
           2024 Solution Challenge 에서 GDSC DGU의 2팀이 TOP100에 진출했습니다.
         </div>
       </section>
-      <section className="pb-10 px-3 flex items-center gap-3">
+      <section className="w-full pb-10 px-3 flex items-center gap-3">
         <button className="py-2 px-3 bg-transparent border border-white rounded-lg Btn">
           2024
         </button>

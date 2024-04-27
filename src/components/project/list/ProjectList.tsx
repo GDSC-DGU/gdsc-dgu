@@ -14,14 +14,16 @@ import ProjectCard from '../card/ProjectCard';
 
 const ProjectList = () => {
   return (
-    <section className="w-4/5 px-10 grid min-[1200px]:grid-cols-3 min-[768px]:grid-cols-2 gap-8 mx-auto">
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
-      <ProjectCard />
+    <section className="w-full max-w-[1200px] tablet:px-10 px-4">
+      <div className="w-full grid desktop:grid-cols-3 tablet:grid-cols-2 grid-cols-1 gap-8 mx-auto">
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+        <ProjectCard />
+      </div>
     </section>
   );
 };

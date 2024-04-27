@@ -18,31 +18,30 @@ import Image from 'next/image';
 
 const ProjectIntroduction = () => {
   return (
-    <section>
-      <section className="w-4/5 mx-auto flex max-[960px]:flex-col justify-center gap-8 mt-20 px-10">
-        <div
-          className="flex-1 w-full min-h-[19.125rem] rounded-md flex-col justify-center items-center"
-          style={{
-            backgroundImage: `url(${ProjectImg.src})`,
-            backgroundSize: 'cover', // Sets the background image to cover the div
-            backgroundPosition: 'center', // Aligns the background image to the center
-          }}
-        ></div>
-        <div className="flex-1 flex flex-col justify-end my-3">
-          <div className="flex flex-row gap-[0.625rem] pb-5">
-            <GithubIcon />
-            <FileIcon />
-            <YoutubeIcon />
-          </div>
-          <div className="pb-4 H3">서비스명</div>
-          <div className="pb-4 H6">
-            서비스의 캐치프라이즈, 컨셉을 잘 나타낼 수 있는 말을 간결하게
-            적고자합니다.
+    <section className="w-full flex flex-col items-center">
+      <section className="w-full max-w-[1200px] tablet:px-10 px-4">
+        <div className="w-full mx-auto flex desktop:flex-row flex-col justify-center items-center gap-8 mt-20">
+          <Image
+            className="desktop:max-w-[34rem] w-full rounded-md"
+            src={ProjectImg}
+            alt="프로젝트 프로필"
+          />
+          <div className="flex flex-col justify-end my-3">
+            <div className="flex flex-row gap-[0.625rem] pb-5">
+              <GithubIcon />
+              <FileIcon />
+              <YoutubeIcon />
+            </div>
+            <div className="pb-4 H3">서비스명</div>
+            <div className="pb-4 H6">
+              서비스의 캐치프라이즈, 컨셉을 잘 나타낼 수 있는 말을 간결하게
+              적고자합니다.
+            </div>
           </div>
         </div>
       </section>
-      <section className="w-full my-16 bg-mono_900">
-        <div className="w-4/5 mx-auto flex max-[960px]:flex-col justify-between items-center p-10">
+      <section className="w-full flex flex-col items-center my-16 bg-mono_900">
+        <div className="w-full max-w-[1200px] tablet:px-10 px-4 flex desktop:flex-row flex-col justify-between items-center py-10">
           <div className="H5">서비스가 어디서 시작됐는지, 서비스의 띠지</div>
           <div className="H5">추가적인 성과</div>
         </div>

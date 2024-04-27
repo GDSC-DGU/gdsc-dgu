@@ -14,19 +14,21 @@ import ProjectCard from '../card/ProjectCard';
 
 const ProjectPagination = () => {
   return (
-    <section className="w-full px-10 pt-[3.75rem] flex justify-center items-center gap-3">
-      <button className="w-5 h-5 bg-transparent border border-white rounded Btn">
-        1
-      </button>
-      <button className="w-5 h-5 bg-transparent border border-mono_500 text-mono_500 rounded Btn">
-        2
-      </button>
-      <button className="w-5 h-5 bg-transparent border border-mono_500 text-mono_500 rounded Btn">
-        3
-      </button>
-      <button className="w-5 h-5 bg-transparent border border-mono_500 text-mono_500 rounded Btn">
-        4
-      </button>
+    <section className="w-full max-w-[1200px] tablet:px-10 px-4">
+      <div className="w-full pt-[3.75rem] flex justify-center items-center gap-3">
+        <button className="w-5 h-5 bg-transparent border border-white rounded Btn">
+          1
+        </button>
+        <button className="w-5 h-5 bg-transparent border border-mono_500 text-mono_500 rounded Btn">
+          2
+        </button>
+        <button className="w-5 h-5 bg-transparent border border-mono_500 text-mono_500 rounded Btn">
+          3
+        </button>
+        <button className="w-5 h-5 bg-transparent border border-mono_500 text-mono_500 rounded Btn">
+          4
+        </button>
+      </div>
     </section>
   );
 };

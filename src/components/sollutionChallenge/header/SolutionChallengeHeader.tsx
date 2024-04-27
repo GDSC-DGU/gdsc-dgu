@@ -16,25 +16,14 @@ import Link from 'next/link';
 
 const SolutionChallengeHeader = () => {
   return (
-    <header className="flex flex-col relative">
-      {/* <div
-        style={{
-          background: 'linear-gradient(180deg, #000 74.83%, #666 126.52%)',
-          zIndex: 1,
-          position: 'absolute',
-          height: '100%',
-          width: '100%',
-        }}
-      ></div> */}
+    <header className="w-full flex flex-col relative">
       <div
-        className="w-full flex-col justify-center items-center gap-2.5 inline-flex h-[31.25rem] 2xl:h-[40rem] min-h-fit"
+        className="w-full flex-col justify-center items-center gap-2.5 inline-flex h-[31.25rem] desktop:h-[40rem] min-h-fit"
         style={{
           backgroundImage: `linear-gradient(180deg, #000000c6 74.83%, #666666c8 126.52%), url(${BannerImg.src})`,
           backgroundSize: 'cover', // Sets the background image to cover the div
           backgroundPosition: 'center', // Aligns the background image to the center
           backgroundBlendMode: 'multiply',
-          //background: 'linear-gradient(180deg, #000 74.83%, #666 126.52%)',
-          //opacity: 0.7,
         }}
       >
         <article className="flex flex-col items-center">
