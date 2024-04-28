@@ -1,4 +1,5 @@
 import ProfileImg from '@/images/project_img.png';
+import { ProjectMemberData } from '@/interfaces/project/projectMemberData';
 
 /**
  * @description
@@ -14,7 +15,7 @@ import ProfileImg from '@/images/project_img.png';
 
 import Image from 'next/image';
 
-const ProjectMember = () => {
+const ProjectMember = ({ member }: { member: ProjectMemberData }) => {
   return (
     <section className="w-full p-4 bg-mono_900 flex flex-row items-center gap-4 rounded">
       <Image
@@ -24,10 +25,10 @@ const ProjectMember = () => {
       />
       <div className="flex flex-col leading-7">
         <div className="flex flex-row gap-2">
-          <div className="Sh1">성이름</div>
-          <div className="B1 text-mono_200">part role</div>
+          <div className="Sh1">{member?.name}</div>
+          <div className="B1 text-mono_200">{member?.role}</div>
         </div>
-        <div className="B1">세미나 이름</div>
+        <div className="B1">{member?.seminar}</div>
       </div>
     </section>
   );

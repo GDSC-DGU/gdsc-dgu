@@ -1,4 +1,5 @@
 import ProjectImg from '@/images/project_img.png';
+import { ProjectData } from '@/interfaces/project/projectData';
 import Link from 'next/link';
 
 /**
@@ -13,10 +14,10 @@ import Link from 'next/link';
  * @returns The rendered card component.
  */
 
-const ProjectCard = () => {
+const ProjectCard = ({ project }: { project: ProjectData }) => {
   return (
     <section>
-      <Link href="/project/1">
+      <Link href={`/project/${project.id}`}>
         <div
           className="w-full h-[12.375rem] rounded-md flex-col justify-center items-center cursor-pointer"
           style={{
@@ -26,13 +27,11 @@ const ProjectCard = () => {
           }}
         ></div>
         <div className="w-full p-4 pt-3 rounded-b-md bg-mono_900">
-          <div className="pb-1 H6">제목</div>
+          <div className="pb-1 H6">{project.title}</div>
           <div className="B2 h-[3.2rem] text-overflow-custom">
-            서비스 소개! 두줄까지 적어주세요. 서비스 소개! 두줄까지 적어주세요.
-            서비스 소개! 두줄까지 적어주세요. 서비스 소개! 두줄까지 적어주세요.
-            서비스 소개! 두줄까지 적어주세요.
+            {project.introduce}
           </div>
-          <div className="pt-5 Cap text-mono_400">특이 사항</div>
+          <div className="pt-5 Cap text-mono_400">{project.feature}</div>
         </div>
       </Link>
     </section>

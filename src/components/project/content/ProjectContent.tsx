@@ -1,3 +1,4 @@
+import { ProjectData } from '@/interfaces/project/projectData';
 import ProjectMember from './ProjectMember';
 import ToggleIcon from '@/svg/icons/project/toggleIcon.svg';
 
@@ -13,7 +14,7 @@ import ToggleIcon from '@/svg/icons/project/toggleIcon.svg';
  * @returns The rendered project content component.
  */
 
-const ProjectContent = () => {
+const ProjectContent = ({ projectData }: { projectData: ProjectData }) => {
   return (
     <section className="w-full max-w-[1200px] tablet:px-10 px-4">
       <section className="w-full pb-[7.5rem] mx-auto">
@@ -25,17 +26,15 @@ const ProjectContent = () => {
             </button>
           </div>
           <div className="w-full grid min-[960px]:grid-cols-2 gap-8">
-            <ProjectMember />
-            <ProjectMember />
-            <ProjectMember />
-            <ProjectMember />
+            {projectData?.team.length > 0 &&
+              projectData.team.map((member) => (
+                <ProjectMember key={member?.id} member={member} />
+              ))}
           </div>
         </section>
         <section className="w-full mt-[5rem]">
           <div className="H6">노션 내용 크롤링</div>
-          <div className="B1">
-            CONG(콩) : 축하 아카이빙 서비스 <br /> CONG은 왜 필요할까? <br />{' '}
-          </div>
+          <div className="B1">{projectData?.content}</div>
         </section>
       </section>
     </section>
