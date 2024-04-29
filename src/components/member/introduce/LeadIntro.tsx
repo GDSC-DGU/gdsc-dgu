@@ -5,26 +5,30 @@ import React from 'react';
 const LeadIntro = () => {
   return (
     <div>
-      <div className="w-70rem flex justify-center mt-20 mb-20">
-        <div className="flex">
-          <div>
-            <Image
-              src="/images/members/lead.png"
-              alt="DGU GDSC Lead 서희찬 사진"
-              width={352}
-              height={200}
-              priority
-            />
+      <div className="flex justify-start mt-20 mb-20">
+        <div className="flex flex-col bigTablet:flex-row">
+          <div className="w-full bigTablet:w-[22rem]">
+            <div
+              style={{ position: 'relative', width: '100%', height: '200px' }}
+            >
+              <Image
+                src="/images/members/lead.png"
+                alt="DGU GDSC Lead 사진"
+                layout="fill" // 부모 컨테이너를 채움
+                objectFit="cover" // 너비는 반응형으로 조절되고, 높이는 고정되며 이미지가 컨테이너에 맞춰 잘릴 수 있음
+                priority
+              />
+            </div>
           </div>
 
-          <div className="flex flex-col justify-center ml-[2rem]">
+          <div className="flex flex-col justify-center ml-[0rem] mt-[1.75rem] bigTablet:ml-[2rem]  bigTablet:mt-[0rem]">
             <div className="text-4xl mb-[1.25rem]">Lead</div>
-            <div className="flex">
+            <div className="flex flex">
               <div className="text-3xl mr-[0.5rem]">{LEAD.name}</div>
               <div className="text-2xl mb-[1.25rem]">{LEAD.department}</div>
             </div>
             <div className="flex items-center text-lg">
-              <div className="w-1 h-12 bg-white mr-2.5"></div>
+              <div className="w-1 h-full bg-white mr-2.5"></div>
               {LEAD.description.split('\n').map((line, index) => (
                 <React.Fragment key={index}>
                   {line}
