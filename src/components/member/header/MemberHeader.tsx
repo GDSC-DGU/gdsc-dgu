@@ -1,4 +1,4 @@
-import BannerSvg from 'public/svg/member_header.svg';
+import BannerHead from 'public/images/member_header.png';
 import BannerPng from 'public/images/member_banner.png';
 import Image from 'next/image';
 
@@ -17,26 +17,24 @@ const MemberHeader = () => {
   return (
     <div>
       <div className="w-full flex justify-center mt-[5rem] mb-[5rem]">
-        <BannerSvg style={{ height: '100%' }} />
+        <div style={{ maxWidth: '701px', width: '100%' }}>
+          <Image
+            src={BannerHead}
+            alt="GDSC 사이트 멤버 페이지 배너 텍스트 이미지"
+            priority
+            width={1400}
+            height={630}
+          />
+        </div>
       </div>
-      <div
-        className="flex justify-center"
-        style={{ width: '100%', maxWidth: '[70rem]' }}
-      >
-        <div
-          style={{
-            position: 'relative',
-            width: '[70rem]',
-            height: '[39.375rem]',
-          }}
-        >
+      <div className="w-full flex justify-center">
+        <div style={{ maxWidth: '1120px', width: '100%' }}>
           <Image
             src={BannerPng}
             alt="GDSC 멤버들 단체사진"
             priority
-            width={1120}
+            width={1400}
             height={630}
-            layout="fixed"
           />
         </div>
       </div>
