@@ -12,9 +12,17 @@ import LightIcon from '@/svg/icons/solutionChallenge/lightIcon.svg';
  * @returns The rendered Tab component.
  */
 
-const SolutionChallengeTab = () => {
+const SolutionChallengeTab = ({
+  selectedYear,
+  changeSelectedYear,
+}: {
+  selectedYear: string;
+  changeSelectedYear: (year: string) => void;
+}) => {
+  const yearData: string[] = ['2024', '2023', '2022', '2021', '2020'];
+
   return (
-    <section className="w-full max-w-[1200px] tablet:px-10 px-4">
+    <section>
       <section className="w-full mt-8 mb-10 p-5 flex flex-row items-center gap-2 rounded-xl bg-mono_900">
         <LightIcon className="scale-90" />
         <div className="B1">
@@ -22,21 +30,24 @@ const SolutionChallengeTab = () => {
         </div>
       </section>
       <section className="w-full pb-10 px-3 flex items-center gap-3">
-        <button className="py-2 px-3 bg-transparent border border-white rounded-lg Btn">
-          2024
-        </button>
-        <button className="py-2 px-3 bg-transparent border border-mono_500 text-mono_500 rounded-lg Btn">
-          2023
-        </button>
-        <button className="py-2 px-3 bg-transparent border border-mono_500 text-mono_500 rounded-lg Btn">
-          2022
-        </button>
-        <button className="py-2 px-3 bg-transparent border border-mono_500 text-mono_500 rounded-lg Btn">
-          2021
-        </button>
-        <button className="py-2 px-3 bg-transparent border border-mono_500 text-mono_500 rounded-lg Btn">
-          2020
-        </button>
+        {yearData.map((year) =>
+          year === selectedYear ? (
+            <button
+              key={year}
+              className="py-2 px-3 bg-transparent border border-white rounded-lg Btn"
+            >
+              {year}
+            </button>
+          ) : (
+            <button
+              key={year}
+              onClick={() => changeSelectedYear(year)}
+              className="py-2 px-3 bg-transparent border border-mono_500 text-mono_500 rounded-lg Btn"
+            >
+              {year}
+            </button>
+          ),
+        )}
       </section>
     </section>
   );

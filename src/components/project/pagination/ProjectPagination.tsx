@@ -17,7 +17,7 @@ const ProjectPagination = ({
 }: {
   pageNum: number[];
   currentPage: number;
-  changeCurrentPage: (value: number) => void;
+  changeCurrentPage: (page: number) => void;
 }) => {
   return (
     <section className="w-full pt-[3.75rem] flex justify-center items-center gap-3">
