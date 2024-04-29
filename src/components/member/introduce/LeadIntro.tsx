@@ -22,12 +22,12 @@ const LeadIntro = () => {
           </div>
 
           <div className="flex flex-col justify-center ml-[0rem] mt-[1.75rem] bigTablet:ml-[2rem]  bigTablet:mt-[0rem]">
-            <div className="text-4xl mb-[1.25rem]">Lead</div>
+            <div className="H4 mb-[1.25rem]">Lead</div>
             <div className="flex flex">
-              <div className="text-3xl mr-[0.5rem]">{LEAD.name}</div>
-              <div className="text-2xl mb-[1.25rem]">{LEAD.department}</div>
+              <div className="H6 mr-[0.5rem]">{LEAD.name}</div>
+              <div className="B1 mb-[1.25rem]">{LEAD.department}</div>
             </div>
-            <div className="flex items-center text-lg">
+            <div className="B2 flex items-center">
               <div className="w-1 h-full bg-white mr-2.5"></div>
               {LEAD.description.split('\n').map((line, index) => (
                 <React.Fragment key={index}>
