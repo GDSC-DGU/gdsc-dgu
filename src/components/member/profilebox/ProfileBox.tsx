@@ -8,7 +8,7 @@ const ProfileBox = ({ member }: { member: any }) => {
           <Image
             className="mr-[1rem]"
             src={member.image}
-            alt={member.name}
+            alt={`${member.name}의 프로필 사진`}
             width={64}
             height={64}
             priority

@@ -32,7 +32,7 @@ const MemberHeader = () => {
         >
           <Image
             src={BannerPng}
-            alt="BannerPng"
+            alt="GDSC 멤버들 단체사진"
             priority
             width={1120}
             height={630}
