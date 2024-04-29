@@ -12,6 +12,7 @@ const config: Config = {
         desktop: '769px',
         tablet: '521px',
         bigTablet: '960px',
+        mainDesktop: '1200px',
       },
       colors: {
         mono_50: '#F7F8FA',

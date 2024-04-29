@@ -32,23 +32,36 @@ const MemberIntro = ({ title }: { title: string }) => {
 
   return (
     <div>
-      <div className="w-70rem flex-col justify-center mb-[2rem]">
-        <div className="w-70rem flex flex-col justify-center mt-20 mb-20">
+      <div className="w-full flex-col justify-center mb-[2rem]">
+        <div className="w-full flex flex-col justify-center mt-20 mb-20">
           <div className="text-4xl mb-[0.75rem]">{title}</div>
           <hr className="border-t-[1px] border-[#3E4348] my-1" />
         </div>
 
-        <div className="w-[70rem] flex justify-center mt-20 mb-20 overflow-hidden">
+        <div className="w-full flex justify-center mt-20 mb-20 overflow-hidden">
           <div className="flex flex-wrap justify-start w-full">
             {memberType &&
-              memberType.map((member, index) => (
-                <div
-                  key={member.id}
-                  className="w-full md:w-1/3 p-4 flex justify-center"
-                >
-                  <ProfileBox member={member} />
-                </div>
-              ))}
+              memberType.map((member, index, array) => {
+                // 조건을 사용하여 줄의 마지막 박스에 패딩을 제거
+                const isLastItemInRowBigTablet =
+                  (index + 1) % 2 === 0 || index === array.length - 1;
+                const isLastItemInRowMainDesktop =
+                  (index + 1) % 3 === 0 || index === array.length - 1;
+                return (
+                  <div
+                    key={member.id}
+                    className={`w-full bigTablet:w-1/2 mainDesktop:w-1/3 flex justify-center ${
+                      isLastItemInRowBigTablet ? 'p-4 bigTablet:pr-0' : 'p-4'
+                    } ${
+                      isLastItemInRowMainDesktop
+                        ? 'mainDesktop:pr-0'
+                        : 'mainDesktop:p-4'
+                    } h-[10.5rem] w-full overflow-hidden`}
+                  >
+                    <ProfileBox member={member} />
+                  </div>
+                );
+              })}
           </div>
         </div>
       </div>
