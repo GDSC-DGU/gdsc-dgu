@@ -9,7 +9,7 @@ const GenerationPage = () => {
   const [selectedTimelineIndex, setSelectedTimelineIndex] = useState(1);
 
   return (
-    <div>
+    <div className="w-full flex-col justify-center mt-[5rem] mb-[5rem]">
       {/* -----------------------------------------------*/}
       {/* -------------------- 타임라인 --------------------*/}
       {/* -----------------------------------------------*/}

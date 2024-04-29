@@ -42,7 +42,7 @@ const TimeLine = ({
 
   return (
     <div>
-      <div className="w-full flex justify-center mt-20 mb-20">
+      <div className="w-full justify-center mt-20 mb-20">
         <div className="flex">
           {TIME_LINE.map((item, index) => (
             <React.Fragment key={index}>
