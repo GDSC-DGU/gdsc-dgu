@@ -4,17 +4,17 @@ import RecruitTargetRowText from '@/components/recruit/target/RecruitTargetRowTe
 
 const RecruitTarget = () => {
   return (
-    <section className="w-4/5 flex flex-col  mx-auto my-32 ">
+    <section className="w-4/5 flex flex-col  mx-auto my-32">
       <section className="flex justify-between">
-        <div className="pb-8 flex-col justify-start ">
+        <div className="pb-8 flex-col justify-start">
           {/* 모집 타겟div */}
           <div className="flex flex-col gap-6 self-start justify-start">
-            <p className="text-5xl leading-[3.5rem]">
+            <p className="H3">
               Recruitment
               <br />
               Target
             </p>
-            <p className="leading-7">
+            <p className="B1">
               아래 3가지 모두 해당 되는 분이라면, 누구든 지원 가능해요!
               <br />
               이런 분들과 함께 하고 싶어요!
@@ -24,9 +24,7 @@ const RecruitTarget = () => {
         {/* 지원 자격 div */}
         <div className="flex-col justify-start items-start inline-flex gap-7">
           <div className="justify-center items-center gap-2.5 inline-flex">
-            <div className="text-xl font-medium leading-7 tracking-tight">
-              지원 자격
-            </div>
+            <div className="H6">지원 자격</div>
           </div>
           <div className="leading-7 flex-col justify-start items-start gap-2 flex ">
             <RecruitTargetRowText
