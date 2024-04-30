@@ -8,7 +8,7 @@ const RecruitSchedule = () => {
         <div className="flex-col items-center gap-2.5 flex">
           <div className="self-stretch flex-col flex">
             <div className="px-1 pb-10">
-              <p className="text-black text-5xl leading-10">Schedule</p>
+              <p className="text-mono_black H3">Schedule</p>
             </div>
             <section className="gap-5 inline-flex">
               <RecruitScheduleBox schedules={RECRUIT_SCHEDULE['document']} />
