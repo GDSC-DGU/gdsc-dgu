@@ -10,7 +10,11 @@ export const metadata = {
     template: '%s | GDSC DGU',
     default: 'GDSC DGU',
   },
+
   description: 'Google Developer Student Clubs 동국대학교',
+  icons: {
+    icon: '/favicon-black.ico',
+  },
 };
 
 export default function RootLayout({
