@@ -11,20 +11,20 @@
  */
 const RecruitRecommand = () => {
   return (
-    <section className="w-full py-16 bg-[#1C1D1F] flex-col items-center justify-center gap-10 flex">
+    <section className="w-full py-16 bg-mono_900 flex-col items-center justify-center gap-10 flex">
       {/* title */}
-      <div className="justify-center gap-2 inline-flex text-2xl font-normal leading-7">
+      <div className="justify-center gap-2 inline-flex H5">
         <p>같이해서 가치를 만들고 세상에 스며들다</p>
       </div>
       {/* body */}
-      <div className="flex-col gap-5 flex leading-7">
+      <div className="flex-col gap-5 flex">
         <div className="tracking-tight">
-          <p>
+          <p className="Sh1">
             혼자만의 성장이 아닌, 언제든 사람들과 만나 서로의 이야기를
             공유하고자 커뮤니티를 만들었습니다.
           </p>
         </div>
-        <div className="text-center">
+        <div className="text-center B1">
           <p>
             공유를 통해 같이 성장하며, 사회의 문제점을 해결하기 위한 공간을
             지향합니다.
