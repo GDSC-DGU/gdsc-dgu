@@ -17,7 +17,7 @@ import Image from 'next/image';
 
 const ProjectMember = ({ member }: { member: ProjectMemberData }) => {
   return (
-    <section className="w-full p-4 bg-mono_900 flex flex-row items-center gap-4 rounded">
+    <section className="toggle-menu opacity-0 w-full p-4 bg-mono_900 flex flex-row items-center gap-4 rounded">
       <Image
         src={ProfileImg}
         alt="profile"
