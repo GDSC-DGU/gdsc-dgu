@@ -9,12 +9,11 @@ const RecruitFaq = () => {
         <div className="self-stretch flex-col justify-start items-start flex">
           {/* title */}
           <div className="px-1 pb-10 gap-8 flex items-end">
-            <p className="text-5xl leading-[3.5rem]">
+            <p className="H3">
               Frequently
               <br />
               Asked Questions
             </p>
-            <p className="leading-7">자주 묻는 질문</p>
           </div>
           {/* body */}
 
@@ -25,8 +24,8 @@ const RecruitFaq = () => {
           </div>
         </div>
         <Link href="https://www.instagram.com/gdsc.dgu/" target="_blank">
-          <div className="w-80 py-4 bg-zinc-900 rounded justify-center items-center gap-2.5 inline-flex">
-            <div className="text-sm font-medium">문의하기</div>
+          <div className="w-80 py-4 bg-mono_900 rounded justify-center items-center gap-2.5 inline-flex">
+            <div className="Btn">문의하기</div>
           </div>
         </Link>
       </div>
