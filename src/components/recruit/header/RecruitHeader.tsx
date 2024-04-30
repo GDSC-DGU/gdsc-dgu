@@ -21,23 +21,23 @@ const RecruitHeader = () => {
         className="w-full flex-col justify-center items-center gap-2.5 inline-flex h-[35.75rem] 2xl:h-[40rem] min-h-fit mt-10"
         style={{
           backgroundImage: `url(${BannerImg.src})`,
-          backgroundSize: 'cover', // Sets the background image to cover the div
-          backgroundPosition: 'center', // Aligns the background image to the center
+          backgroundSize: 'cover',
+          backgroundPosition: 'center',
         }}
       >
         <article className="flex flex-col items-center">
           <BannerImg2 className="scale-75" />
           <div className="flex-col items-center flex mt-14">
-            <p className="text-center text-xs font-normal leading-[14px] tracking-wide">
+            <p className="text-center Cap tracking-wide">
               2023/08/28 ~ 2023/09/14
             </p>
-            <p className="border mt-8 py-2 px-28 border-solid text-zinc-500 text-sm font-medium">
+            <p className="border mt-8 py-4 px-28 border-solid text-mono_500 Btn">
               모집 기간이 아닙니다.
             </p>
           </div>
         </article>
       </div>
-      <ChervonDownIcon className="self-center " />
+      <ChervonDownIcon className="self-center" />
     </header>
   );
 };
