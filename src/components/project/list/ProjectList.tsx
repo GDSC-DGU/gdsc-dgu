@@ -18,11 +18,12 @@ import ProjectPagination from '../pagination/ProjectPagination';
  * @returns The rendered list component.
  */
 
+// util로 빼기
+
 const ProjectList = () => {
-  // const [selectedYear, SetSelectedYear] = useState<string>("2024"); 이거는 세미나에 넣기!
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [projects, setProjects] = useState<ProjectData[]>([]);
-  const itemsPerPage = 6;
+  const itemsPerPage = 12;
 
   const pageNum = [];
   for (let i = 1; i <= Math.ceil(PROJECTS.length / itemsPerPage); i++) {
@@ -35,7 +36,6 @@ const ProjectList = () => {
     const endItemIndex = startItemIndex + itemsPerPage;
     setProjects(PROJECTS.slice(startItemIndex, endItemIndex));
     setCurrentPage(page);
-    console.log(page, startItemIndex, endItemIndex);
   };
 
   useEffect(() => {

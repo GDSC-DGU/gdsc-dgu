@@ -1,6 +1,8 @@
 import ProjectImg from '@/images/project_img.png';
 import { ProjectData } from '@/interfaces/project/projectData';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { projectCardVariants } from '@/constants/project/projectCardVariants';
 
 /**
  * @description
@@ -16,7 +18,16 @@ import Link from 'next/link';
 
 const ProjectCard = ({ project }: { project: ProjectData }) => {
   return (
-    <section>
+    <motion.section
+      whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+      whileTap={{ scale: 0.8 }}
+      initial={{ y: 20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true, amount: 0.9 }}
+      variants={projectCardVariants}
+      style={{ transformOrigin: '10% 60%' }}
+    >
       <Link href={`/project/${project.id}`}>
         <div
           className="w-full h-[12.375rem] rounded-md flex-col justify-center items-center cursor-pointer"
@@ -34,7 +45,7 @@ const ProjectCard = ({ project }: { project: ProjectData }) => {
           <div className="pt-5 Cap text-mono_400">{project.feature}</div>
         </div>
       </Link>
-    </section>
+    </motion.section>
   );
 };
 

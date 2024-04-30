@@ -1,9 +1,13 @@
+'use client';
+
 import GithubIcon from '@/svg/icons/project/githubIcon.svg';
 import YoutubeIcon from '@/svg/icons/project/youtubeIcon.svg';
 import FileIcon from '@/svg/icons/project/fileIcon.svg';
 import ProjectImg from '@/images/project_img.png';
 import Image from 'next/image';
 import { ProjectData } from '@/interfaces/project/projectData';
+import ProjectIntroductionBand from './ProjectIntroductionBand';
+import { motion } from 'framer-motion';
 
 /**
  * @description
@@ -21,9 +25,9 @@ const ProjectIntroduction = ({ projectData }: { projectData: ProjectData }) => {
   return (
     <section className="w-full flex flex-col items-center">
       <section className="w-full max-w-[1200px] tablet:px-10 px-4">
-        <div className="w-full mx-auto flex desktop:flex-row flex-col justify-center items-center gap-8 mt-20">
+        <div className="w-full mx-auto flex desktop:flex-row desktop:justify-start flex-col justify-center desktop:items-end gap-8 mt-20">
           <Image
-            className="desktop:max-w-[34rem] w-full rounded-md"
+            className="desktop:w-[34rem] tablet:w-full mobile:w-full rounded-md"
             src={ProjectImg}
             alt="프로젝트 프로필"
           />
@@ -38,12 +42,10 @@ const ProjectIntroduction = ({ projectData }: { projectData: ProjectData }) => {
           </div>
         </div>
       </section>
-      <section className="w-full flex flex-col items-center my-16 bg-mono_900">
-        <div className="w-full max-w-[1200px] tablet:px-10 px-4 flex desktop:flex-row flex-col justify-between items-center py-10">
-          <div className="H5">서비스가 어디서 시작됐는지, 서비스의 띠지</div>
-          <div className="H5">{projectData?.performance}</div>
-        </div>
-      </section>
+      {/* -----------------------------------------------*/}
+      {/* ------------ 프로젝트 소개 띠지 --------------------*/}
+      {/* -----------------------------------------------*/}
+      <ProjectIntroductionBand projectData={projectData} />
     </section>
   );
 };

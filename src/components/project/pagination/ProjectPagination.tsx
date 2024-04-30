@@ -1,3 +1,5 @@
+import { motion } from 'framer-motion';
+
 /**
  * @description
  * 프로젝트 페이지 프로젝트 페이지네이션 컴포넌트
@@ -21,24 +23,22 @@ const ProjectPagination = ({
 }) => {
   return (
     <section className="w-full pt-[3.75rem] flex justify-center items-center gap-3">
-      {pageNum.map((page) =>
-        page === currentPage ? (
-          <button
-            key={page}
-            className="flex justify-center items-center w-6 h-6 bg-transparent border border-white rounded Btn"
-          >
-            {page}
-          </button>
-        ) : (
-          <button
-            key={page}
-            onClick={() => changeCurrentPage(page)}
-            className="w-6 h-6 bg-transparent border border-mono_500 text-mono_500 rounded Btn"
-          >
-            {page}
-          </button>
-        ),
-      )}
+      {pageNum.map((page) => (
+        <motion.button
+          onClick={() => changeCurrentPage(page)}
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
+          transition={{ duration: 0.2 }}
+          key={page}
+          className={`flex justify-center items-center w-6 h-6 bg-transparent border ${
+            page === currentPage
+              ? 'border-white'
+              : 'border-mono_500 text-mono_500'
+          } rounded Btn cursor-pointer`}
+        >
+          {page}
+        </motion.button>
+      ))}
     </section>
   );
 };
