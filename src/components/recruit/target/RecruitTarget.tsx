@@ -5,7 +5,7 @@ import RecruitTargetRowText from '@/components/recruit/target/RecruitTargetRowTe
 const RecruitTarget = () => {
   return (
     <section className="w-4/5 flex flex-col  mx-auto my-32">
-      <section className="flex justify-between">
+      <section className="flex justify-between max-md:flex-col">
         <div className="pb-8 flex-col justify-start">
           {/* 모집 타겟div */}
           <div className="flex flex-col gap-6 self-start justify-start">

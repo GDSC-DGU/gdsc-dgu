@@ -7,12 +7,12 @@ import { RecruitPart } from '@/interfaces/recruit/recruitPart';
 
 const RecruitPartRow = ({ recruitPart }: { recruitPart: RecruitPart }) => {
   return (
-    <section className="self-stretch justify-start items-start gap-8 flex">
-      <div className=" w-96 h-60 p-8 bg-black rounded flex-col justify-start items-start gap-5 relative overflow-hidden">
+    <section className="self-stretch justify-start items-start gap-8 flex max-md:flex-col">
+      <div className="p-8 bg-black rounded flex-col justify-start items-start gap-5 relative overflow-hidden max-md:w-full">
         {/* 배경으로 사용할 div */}
         <div className="absolute top-0 left-0 w-full h-full z-0">
           <div
-            className={`w-96 h-60 relative opacity-40 ${
+            className={`w-full h-60 relative opacity-40 ${
               recruitPart.id == 1
                 ? 'bg-[#33A852]'
                 : recruitPart.id == 2
@@ -22,8 +22,8 @@ const RecruitPartRow = ({ recruitPart }: { recruitPart: RecruitPart }) => {
           />
         </div>
         {/* 배경 위에 올라갈 내용 */}
-        <div className="relative z-10">
-          <div className="mb-10">
+        <div className="relative z-10 max-md:flex-row flex flex-col">
+          <div className="mb-10 max-md:mr-8">
             {recruitPart.id == 1 ? (
               <WebAppIcon />
             ) : recruitPart.id == 2 ? (
@@ -39,7 +39,7 @@ const RecruitPartRow = ({ recruitPart }: { recruitPart: RecruitPart }) => {
         </div>
       </div>
 
-      <div className="grow p-8 bg-zinc-900 rounded flex-col justify-start items-start gap-6 flex">
+      <div className="grow p-8 bg-mono_900 rounded flex-col justify-start items-start gap-6 flex">
         <div className="self-stretch flex-col justify-start items-start gap-2 flex">
           <div className="H6">Preferred</div>
           <div className="B1">

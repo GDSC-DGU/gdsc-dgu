@@ -25,8 +25,8 @@ const RecruitHeader = () => {
           backgroundPosition: 'center',
         }}
       >
-        <article className="flex flex-col items-center">
-          <BannerImg2 className="scale-75" />
+        <article className="flex flex-col items-center w-full">
+          <BannerImg2 className="scale-75 max-md:scale-50" />
           <div className="flex-col items-center flex mt-14">
             <p className="text-center Cap tracking-wide">
               2023/08/28 ~ 2023/09/14
