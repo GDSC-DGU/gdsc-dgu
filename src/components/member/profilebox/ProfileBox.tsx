@@ -10,7 +10,7 @@ const ProfileBox = ({ member }: { member: any }) => {
 
   return (
     <div className="w-full">
-      <div className="w-full flex flex-col items-start bg-[#1C1D1F] pl-[1rem] pr-[1rem] pt-[1.25rem] pb-[1.25rem]">
+      <div className="w-full flex flex-col items-start bg-[#1C1D1F] pl-[1rem] pr-[1rem] pt-[1.25rem] pb-[1.25rem] rounded-[0.25rem]">
         <div className="w-full flex mb-[1rem]">
           <Image
             className="mr-[1rem] rounded-[0.2rem]"
@@ -28,7 +28,7 @@ const ProfileBox = ({ member }: { member: any }) => {
             <div className="B1 mt-1">{member.department}</div>
           </div>
         </div>
-        <div className="B2" style={{ whiteSpace: 'pre-wrap' }}>
+        <div className="B2 min-h-[4.5rem]" style={{ whiteSpace: 'pre-wrap' }}>
           {formatDescription(member.description)}
         </div>
       </div>

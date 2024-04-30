@@ -1,5 +1,5 @@
 import BannerHead from 'public/images/member_header.png';
-import BannerPng from 'public/images/member_banner.png';
+import BannerPng from 'public/images/member_banner_up.png';
 import Image from 'next/image';
 
 /**
@@ -24,11 +24,12 @@ const MemberHeader = () => {
             priority
             width={1400}
             height={630}
+            layout="responsive"
           />
         </div>
       </div>
       <div className="w-full flex justify-center">
-        <div style={{ maxWidth: '1120px', width: '100%' }}>
+        <div style={{ width: '100%' }}>
           <Image
             src={BannerPng}
             alt="GDSC 멤버들 단체사진"

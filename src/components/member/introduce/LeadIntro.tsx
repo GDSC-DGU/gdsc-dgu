@@ -6,8 +6,8 @@ const LeadIntro = () => {
   return (
     <div>
       <div className="flex justify-start mt-20 mb-20">
-        <div className="flex flex-col bigTablet:flex-row">
-          <div className="w-full bigTablet:w-[22rem]">
+        <div className="flex flex-col bigTablet:flex-row w-full ">
+          <div className="bigTablet:w-[22rem] w-full ">
             <div
               style={{ position: 'relative', width: '100%', height: '200px' }}
             >
@@ -17,6 +17,7 @@ const LeadIntro = () => {
                 layout="fill" // 부모 컨테이너를 채움
                 objectFit="cover" // 너비는 반응형으로 조절되고, 높이는 고정되며 이미지가 컨테이너에 맞춰 잘릴 수 있음
                 priority
+                className="rounded-[0.25rem]"
               />
             </div>
           </div>
