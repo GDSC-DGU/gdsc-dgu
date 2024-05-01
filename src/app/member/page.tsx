@@ -9,7 +9,7 @@ export const metadata = {
 
 const MemberPage = () => {
   return (
-    <main className="pl-[1rem] pr-[1rem] flex flex-col items-center justify-center w-full xl:w-[75rem] xl:w-full lg:w-full md:w-full/125 sm:w-full">
+    <main className="flex flex-col items-center justify-center w-full pl-[1rem] pr-[1rem] sm:w-full md:w-100/125]lg:w-full xl:w-[75rem]">
       {/* -----------------------------------------------*/}
       {/* -------------------- 배너 --------------------*/}
       {/* -----------------------------------------------*/}

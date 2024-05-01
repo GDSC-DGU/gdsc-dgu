@@ -48,15 +48,15 @@ const MemberIntro = ({ title }: { title: string }) => {
                 return (
                   <div
                     key={member.id}
-                    className={`w-full bigTablet:w-1/2 mainDesktop:w-1/3 flex justify-center items-start ${
+                    className={`w-full bigTablet:w-1/2 mainDesktop:w-1/3 flex pt-[2rem] justify-center items-start ${
                       isLastItemInRowBigTablet
-                        ? ' pt-[2rem] pr-[2rem] '
-                        : 'bigTablet: pt-[2rem] pr-[2rem]'
+                        ? 'bigTablet:pr-0 bigTablet:pt-[2rem]'
+                        : 'bigTablet:pr-[2rem] bigTablet:pt-[2rem]'
                     } ${
                       isLastItemInRowMainDesktop
-                        ? 'mainDesktop:pr-0'
-                        : 'mainDesktop:pt-[2rem] pr-[2rem]'
-                    } w-full overflow-hidden`} // items-start 추가
+                        ? 'mainDesktop:pr-0 mainDesktop:pt-[2rem]'
+                        : 'mainDesktop:pr-[2rem] mainDesktop:pt-[2rem]'
+                    } overflow-hidden`} // items-start 추가
                   >
                     <ProfileBox member={member} />
                   </div>
