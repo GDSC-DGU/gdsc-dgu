@@ -16,11 +16,11 @@ import SeminarDetailReviewDetail from './SeminalDetailReviewDetail';
 const SeminarDetailReview = () => {
 
   return (
-    <div className="mt-20 w-full flex-col justify-center gap-[1rem] inline-flex min-h-fit relative"> 
-    <p className="text-5xl font-normal leading-[3rem] tracking-wide">
+    <div className="w-full flex mt-10 flex-col inline-flex min-h-fit relative"> 
+    <p className="H4 font-normal px-2 py-3">
       Review
     </p>
-    <p className="w-full border border-solid text-zinc-500 h-0"/>
+    <p className="mb-3 border border-solid text-mono_700 h-0"/>
     {SEMINAR_REVIEW.map((review) => (
         <SeminarDetailReviewDetail 
         key={`${review.id}_review`} 

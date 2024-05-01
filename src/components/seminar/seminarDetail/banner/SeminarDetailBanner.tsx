@@ -1,6 +1,7 @@
 import React from 'react';
+import Image from 'next/image';
 import { SeminarThumnail } from '@/interfaces/seminar/seminarThumbnail';
-import SeminarDetailBannerThumbnail from './SeminarDetailBannerThumbnail';
+import TranslateImg from '@/svg/seminar/translate_img.png';
 
 
 /**
@@ -16,51 +17,56 @@ import SeminarDetailBannerThumbnail from './SeminarDetailBannerThumbnail';
  */
 const SeminarDetailBanner = ({ data }: { data: SeminarThumnail }) => {
   return (
-    <div className="mt-20 w-full flex relative gap-10">
+    <div className="w-full mt-8 pb-6 flex desktop:flex-row tablet:flex-col flex-col flex-col gap-8">
       {/* 왼쪽 컨텐츠 */}
-  <SeminarDetailBannerThumbnail data={data} />
+      <div className="desktop:min-w-[544px] tablet:w-full w-full aspect-w-16 aspect-h-9">
+        <Image
+          src={data.image_url}
+          alt={`${data.presenter}'s_seminarimage`}
+          width={1600}
+          height={900}
+          quality={100}
+          priority
+        />
+      </div>
     {/* 오른쪽 컨텐츠 */}
-    <div className='flex flex-col justify-end align-end mr-20 justify-between text-end align-end h-full'>
-      <div
-        className="relative" 
-        style={{
-          backgroundImage: `url(${data.profile_image_url})`,
-          backgroundSize: "cover",
-          borderRadius: 100,
-          aspectRatio: 1/1,
-          height: 160,
-          width: 160,
-        }}
-      >
-        <div className="flex flex-col absolute bottom-0 right-0 gap-1.5">
-          <p className="text-center py-0.5 px-1 bg-[#fff] text-[#000] text-[0.6rem] font-bold rounded-2xl">
-            {data.presenter}
-          </p>
-          <p className="text-center py-0.5 px-1 bg-[#fff] text-[#000] text-[0.6rem] font-bold rounded-2xl">
-            {data.flag}st {data.role}
-          </p>
+    <div className="flex desktop:items-end desktop:mt-0 tablet-mt-0 mt-8">
+    <div className="flex flex-col gap-6 py-3 whitespace-nowrap">
+        <div className='desktop:flex tablet:hidden hidden'>
+    <Image
+          src={TranslateImg.src}
+          alt="translate_img"
+          width={352}
+          height={56}
+          quality={100}
+          priority
+        />
         </div>
-      </div>
-      </div>
-    <div className="flex-1 flex-col">
-        <p className="font-bold text-lg">
+        <div>
+        <p className="H6 font-medium">
             Date
         </p>
-        <p className="mt-1 font-thin text-md">
+        <p className="B1 font-normal">
             {data.date}
         </p>
-        <p className="mt-5 font-bold text-lg">
+        </div>
+        <div>
+        <p className="H6 font-medium">
             Location
         </p>
-        <p className="mt-1 font-thin text-md">
+        <p className="B1 font-normal">
             {data.location}
         </p>
-        <p className="mt-5 font-bold text-lg">
+        </div>
+        <div>
+        <p className="H6 font-medium">
             Speaker
         </p>
-        <p className="mt-1 font-thin text-md">
-            {data.presenter}
-        </p>
+        <div className="B1 font-medium flex gap-2">
+            {data.presenter} <p className="B1 font-normal text-mono_200">{data.role}</p>
+        </div>
+        </div>
+    </div>
     </div>
   </div>
   );
