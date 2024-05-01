@@ -23,7 +23,7 @@ const ProfileBox = ({ member }: { member: any }) => {
           <div className="flex-col">
             <div className="flex">
               <div className="Sb1 mt-2 mr-[0.5rem]">{member.name}</div>
-              <div className="B1 mt-2">{member.role}</div>
+              <div className="B1 mt-2 text-mono_200">{member.role}</div>
             </div>
             <div className="B1 mt-1">{member.department}</div>
           </div>
