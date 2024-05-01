@@ -1,5 +1,6 @@
 import ProjectHeader from '@/components/project/header/ProjectHeader';
-import ProjectList from '@/components/project/list/ProjectList';
+import ProjectDesktopList from '@/components/project/list/ProjectDesktopList';
+import ProjectMobileList from '@/components/project/list/ProjectMobileList';
 import React from 'react';
 
 export const metadata = {
@@ -14,9 +15,17 @@ const ProjectPage = () => {
       {/* -----------------------------------------------*/}
       <ProjectHeader />
       {/* -----------------------------------------------*/}
-      {/* ------------------ 프로젝트 리스트 ----------------*/}
+      {/* -------프로젝트 리스트 (페이지네이션) ----------------*/}
       {/* -----------------------------------------------*/}
-      <ProjectList />
+      <section className="hidden desktop:block w-dvw">
+        <ProjectDesktopList />
+      </section>
+      {/* -----------------------------------------------*/}
+      {/* -------프로젝트 리스트 (무한 스크롤 ) ----------------*/}
+      {/* -----------------------------------------------*/}
+      <section className="block desktop:hidden">
+        <ProjectMobileList />
+      </section>
     </main>
   );
 };

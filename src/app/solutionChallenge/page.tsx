@@ -1,4 +1,4 @@
-import ProjectList from '@/components/project/list/ProjectList';
+import ProjectList from '@/components/project/list/ProjectDesktopList';
 import SolutionChallengeHeader from '@/components/sollutionChallenge/header/SolutionChallengeHeader';
 import SolutionChallengeList from '@/components/sollutionChallenge/list/SolutionChallengeList';
 import SolutionChallengeTab from '@/components/sollutionChallenge/tab/SolutionChallengeTab';
