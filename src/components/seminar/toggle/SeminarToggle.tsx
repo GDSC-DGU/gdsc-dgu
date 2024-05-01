@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import SeminarToggleMenu from './SeminarToggleMenu';
 import ChervonDownIcon from '@/svg/icons/common/chervon_down.svg';
 import { OPEN_SEMINAR_DATA } from '@/constants/seminar/openSeminarData';
+import Link from 'next/link';
 
 /**
  * @description
@@ -33,11 +34,16 @@ const SeminarToggle = () => {
   <div className={`overflow-hidden transition-max-height duration-500 ease-in-out ${!isMenuVisible && 'max-h-0'}`}>
   {isMenuVisible && (
     <div className="mt-5">
-        {OPEN_SEMINAR_DATA.map((openSeminar) => (
+        {OPEN_SEMINAR_DATA.map((seminar) => (
+               <Link
+               href={`/seminar/open/${seminar.id}`}
+               key={seminar.id}
+             >
              <SeminarToggleMenu 
-             key={openSeminar.id}
-             data={openSeminar}
+             key={seminar.id}
+             data={seminar}
              />
+             </Link>
       ))}
     </div>
   )}
