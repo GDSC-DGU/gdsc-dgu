@@ -16,10 +16,10 @@ const SeminarToggleMenu = ({data}: {data:OpenSeminar}) => {
   return (
     <div>
       <div
-        className="px-3 flex justify-between items-center">
+        className="p-3 flex justify-between items-center">
             <div className="flex-col">
       <p className="H6 font-medium">{data.opening_date}{" "}{data.type}</p>
-      <p className="Cap font-normal">{data.seminar_date}</p>
+      <p className="Cap font-normal">{data.date}</p>
       </div>
       <p className={`text-[0.75rem] font-medium py-2 px-3 border border-solid rounded-lg ${data.status === false ? "text-mono_500 border-mono_500" : "text-mono_white border-mono_white"}`}>
               {data.status === false ? "종료" : "진행중"}
