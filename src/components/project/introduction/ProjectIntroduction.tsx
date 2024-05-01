@@ -28,9 +28,10 @@ const ProjectIntroduction = ({ projectData }: { projectData: ProjectData }) => {
       <section className="w-full max-w-[1200px] tablet:px-10 px-4">
         <div className="w-full mx-auto flex desktop:flex-row desktop:justify-start flex-col justify-center desktop:items-end gap-8 mt-20">
           <Image
-            className="desktop:w-[34rem] tablet:w-full mobile:w-full rounded-md"
+            className="desktop:min-w-[34rem] w-full rounded-md"
             src={ProjectImg}
             alt="프로젝트 프로필"
+            priority
           />
           <motion.div
             initial={{ y: 20, opacity: 0 }}
