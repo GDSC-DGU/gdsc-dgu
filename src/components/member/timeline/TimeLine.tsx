@@ -29,6 +29,7 @@ const TimeLine = ({
 
   const scrollContainer = useRef(null);
 
+  //컬러 시스템 적용 불가
   const getCircleColor = (index: any) => {
     if (index === selected) return '#FB8C00';
     if (index < selected) return '#FFCC80';

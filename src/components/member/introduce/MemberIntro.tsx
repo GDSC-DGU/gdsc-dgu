@@ -35,7 +35,7 @@ const MemberIntro = ({ title }: { title: string }) => {
       <div className="w-full flex-col flex-end">
         <div className="w-full flex flex-col justify-start mt-20">
           <div className="H4">{title}</div>
-          <hr className="border-t-[1px] border-[#3E4348] my-1" />
+          <hr className="border-t-[1px] border-mono_700 my-1" />
         </div>
 
         <div className="w-full flex justify-start overflow-hidden">
