@@ -24,7 +24,7 @@ const OpenSeminarDetailPage = () => {
   }
 
   return <section className="flex justify-center">
-  <div className="max-w-[1200px] desktop:px-10 tablet:px-10 px-4">
+  <div className="max-w-[1200px] desktop:px-10 tablet:px-10 px-4 bg-mono_black">
      <div className="w-full">
     {/* header */}
     <OpenSeminarDetailHeader key={`${seminar.id}_header`} data={seminar}/>
