@@ -2,7 +2,7 @@ import ProjectImg from '@/images/project_img.png';
 import { ProjectData } from '@/interfaces/project/projectData';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
-import { projectCardVariants } from '@/constants/project/projectCardVariants';
+import { slideUpVariants } from '@/constants/project/slideUpVariants';
 
 /**
  * @description
@@ -25,7 +25,7 @@ const ProjectCard = ({ project }: { project: ProjectData }) => {
       whileInView={{ y: 0, opacity: 1 }}
       transition={{ duration: 0.5 }}
       viewport={{ once: true, amount: 0.9 }}
-      variants={projectCardVariants}
+      variants={slideUpVariants}
       style={{ transformOrigin: '10% 60%' }}
     >
       <Link href={`/project/${project.id}`}>

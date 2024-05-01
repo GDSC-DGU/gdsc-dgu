@@ -8,6 +8,7 @@ import Image from 'next/image';
 import { ProjectData } from '@/interfaces/project/projectData';
 import ProjectIntroductionBand from './ProjectIntroductionBand';
 import { motion } from 'framer-motion';
+import { slideUpVariants } from '@/constants/project/slideUpVariants';
 
 /**
  * @description
@@ -31,7 +32,15 @@ const ProjectIntroduction = ({ projectData }: { projectData: ProjectData }) => {
             src={ProjectImg}
             alt="프로젝트 프로필"
           />
-          <div className="flex flex-col justify-end my-3">
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, amount: 0.9 }}
+            variants={slideUpVariants}
+            style={{ transformOrigin: '10% 60%' }}
+            className="flex flex-col justify-end my-3"
+          >
             <div className="flex flex-row gap-[0.625rem] pb-5">
               <GithubIcon />
               <FileIcon />
@@ -39,7 +48,7 @@ const ProjectIntroduction = ({ projectData }: { projectData: ProjectData }) => {
             </div>
             <div className="pb-4 H3">{projectData?.title}</div>
             <div className="pb-4 H6">{projectData?.introduce}</div>
-          </div>
+          </motion.div>
         </div>
       </section>
       {/* -----------------------------------------------*/}

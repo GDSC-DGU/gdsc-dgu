@@ -1,6 +1,6 @@
 'use client';
 
-import { projectCardVariants } from '@/constants/project/projectCardVariants';
+import { slideUpVariants } from '@/constants/project/slideUpVariants';
 import LightIcon from '@/svg/icons/solutionChallenge/lightIcon.svg';
 import { motion, useInView } from 'framer-motion';
 import { useRef } from 'react';
@@ -47,9 +47,9 @@ const SolutionChallengeTab = ({
       <motion.section
         initial={{ y: 20, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 1 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
         viewport={{ once: true, amount: 0.9 }}
-        variants={projectCardVariants}
+        variants={slideUpVariants}
         style={{ transformOrigin: '10% 60%' }}
         className="w-full pb-10 px-3 flex items-center gap-3"
       >
