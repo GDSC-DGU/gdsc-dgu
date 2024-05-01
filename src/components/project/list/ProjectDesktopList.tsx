@@ -18,8 +18,6 @@ import ProjectPagination from '../pagination/ProjectPagination';
  * @returns The rendered list component.
  */
 
-// util로 빼기
-
 const ProjectDesktopList = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [projects, setProjects] = useState<ProjectData[]>([]);
