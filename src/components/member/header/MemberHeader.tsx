@@ -1,6 +1,8 @@
+'use client';
 import BannerHead from 'public/images/member_header.png';
 import BannerPng from 'public/images/member_banner_up.png';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 /**
  * @description
@@ -16,7 +18,13 @@ import Image from 'next/image';
 const MemberHeader = () => {
   return (
     <div>
-      <div className="w-full flex justify-center mt-[5rem] mb-[5rem]">
+      <motion.div
+        className="w-full flex justify-center mt-[5rem] mb-[5rem]"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div style={{ maxWidth: '701px', width: '100%' }}>
           <Image
             src={BannerHead}
@@ -27,8 +35,14 @@ const MemberHeader = () => {
             layout="responsive"
           />
         </div>
-      </div>
-      <div className="w-full flex justify-center">
+      </motion.div>
+      <motion.div
+        className="w-full flex justify-center"
+        initial={{ y: 30, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.5 }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
         <div style={{ width: '100%' }}>
           <Image
             src={BannerPng}
@@ -38,7 +52,7 @@ const MemberHeader = () => {
             height={630}
           />
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };
