@@ -24,17 +24,19 @@ const GenerationPage = () => {
       <motion.div
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: true, amount: 0.3 }}
+        viewport={{ once: true, amount: 0.2 }}
         variants={itemVariants}
+        transition={{ delay: 1 }} // 두 번째 컴포넌트의 delay를 1.5초로 설정
       >
         <TimeLine onSelectIndex={setSelectedTimelineIndex} />
       </motion.div>
 
       {selectedTimelineIndex === 2 ? (
         <motion.div
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true, amount: 0.3 }}
+          initial={{ y: 30, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 1 }}
+          viewport={{ once: true, amount: 0.2 }}
           variants={itemVariants}
         >
           <RecruitHeader />

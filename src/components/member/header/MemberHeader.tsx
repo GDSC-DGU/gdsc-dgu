@@ -38,9 +38,9 @@ const MemberHeader = () => {
       </motion.div>
       <motion.div
         className="w-full flex justify-center"
-        initial={{ y: 30, opacity: 0 }}
+        initial={{ y: 0, opacity: 0 }}
         whileInView={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, delay: 0.5 }}
+        transition={{ duration: 1 }}
         viewport={{ once: true, amount: 0.2 }}
       >
         <div style={{ width: '100%' }}>
