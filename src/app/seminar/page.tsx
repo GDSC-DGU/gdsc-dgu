@@ -23,7 +23,7 @@ const SeminarPage = () => {
 
 {/* seminar list */}
 <SeminarThumbnailList selectedCategory={selectedCategory} />
-<div className="h-[120px]"></div>
+<div className="h-[7.5rem]"></div>
   </div>
   </div>
   </section>;
