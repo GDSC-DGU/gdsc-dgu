@@ -4,7 +4,7 @@ import Link from 'next/link';
 
 const RecruitFaq = () => {
   return (
-    <section className="w-full px-10 py-28 flex-col justify-start items-center gap-32 inline-flex">
+    <section className="w-full py-28 flex-col justify-start items-center gap-32 inline-flex">
       <div className="w-4/5 mx-auto my-0 flex-col justify-start items-center gap-10 flex">
         <div className="self-stretch flex-col justify-start items-start flex">
           {/* title */}
