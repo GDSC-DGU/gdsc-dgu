@@ -23,7 +23,7 @@ const OpenSeminarDetailBanner = ({ data }: { data: OpenSeminar }) => {
       <div className="desktop:min-w-[544px] tablet:w-full w-full aspect-w-16 aspect-h-9">
         <Image
           src={data.image_url}
-          alt={`${data.date}'s open_seminarimage`}
+          alt={`${data.seminar_month_date}'s open_seminarimage`}
           width={1600}
           height={900}
           quality={100}
@@ -48,7 +48,7 @@ const OpenSeminarDetailBanner = ({ data }: { data: OpenSeminar }) => {
             Date
         </p>
         <p className="B1 font-normal">
-            {data.date}
+            {data.seminar_opening_date}
         </p>
         </div>
         <div>

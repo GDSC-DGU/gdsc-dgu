@@ -2,11 +2,9 @@ export interface OpenSeminar {
     id: number;
     flag: number;
     type: string;
-    date: string;
-    opening_date: string;
-    closing_data: string;
+    seminar_opening_date: string;
+    seminar_month_date: string;
     location: string;
-    title: string;
     description: string;
     information: string;
     image_url: string;
