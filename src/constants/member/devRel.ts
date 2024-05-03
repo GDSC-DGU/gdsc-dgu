@@ -5,7 +5,7 @@ export const DEVREL_MEMBERS = [
     role: 'Core',
     department: '학과',
     description:
-      '안녕하세요! GDSC CAU 23-24 Lead 유용민입니다. 다양한 분야에 넓게 발을 걸치고, 그중 하나에 깊게 파고드는 사람이 되고 싶습니다.',
+      '안녕하세요! GDSC DGU 23-24 Lead 뇽뇽뇽입니다. 다양한 분야에 넓게 발을 걸치고, 그중 하나에 깊게 파고드는 사람이 되고 싶습니다.',
     image: '/images/members/lead.png',
   },
   {
@@ -14,7 +14,7 @@ export const DEVREL_MEMBERS = [
     role: 'Core',
     department: '학과',
     description:
-      '안녕하세요! GDSC CAU 23-24 Lead 유용민입니다. 다양한 분야에 넓게 발을 걸치고, 그중 하나에 깊게 파고드는 사람이 되고 싶습니다.',
+      '안녕하세요! GDSC DGU 23-24 Lead 뇽뇽뇽입니다. 다양한 분야에 넓게 발을 걸치고, 그중 하나에 깊게 파고드는 사람이 되고 싶습니다.',
     image: '/images/members/lead.png',
   },
   {
@@ -23,7 +23,7 @@ export const DEVREL_MEMBERS = [
     role: 'Core',
     department: '학과',
     description:
-      '안녕하세요! GDSC CAU 23-24 Lead 유용민입니다. 다양한 분야에 넓게 발을 걸치고, 그중 하나에 깊게 파고드는 사람이 되고 싶습니다.',
+      '안녕하세요! GDSC DGU 23-24 Lead 뇽냐링입니다. 다양한 분야에 넓게 발을 걸치고, 그중 하나에 깊게 파고드는 사람이 되고 싶습니다.',
     image: '/images/members/lead.png',
   },
 ];
