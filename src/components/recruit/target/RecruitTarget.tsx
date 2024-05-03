@@ -41,7 +41,7 @@ const RecruitTarget = () => {
             />
             <RecruitTargetRowText
               title="열정"
-              content="개발에 열정이 있으며, 팀활동에 적극적으로 참여할 수 있는 사람"
+              content="개발 열정과 활동에 적극적으로 참여할 수 있는 사람"
             />
           </div>
         </div>
