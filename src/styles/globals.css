@@ -89,3 +89,39 @@
     line-height: calc(14 / 12);
   }
 }
+
+/* Footer */
+.F1 {
+  font-weight: 500;
+  letter-spacing: 0.25px;
+  font-family: Pretendard-Medium;
+  font-size: 1rem;
+}
+.F2 {
+  font-weight: 200; 
+  font-family: Pretendard-Medium;
+  font-size: 0.75rem; 
+  line-height: calc(28 / 14);
+}
+  .F3 {
+  font-weight: 200; 
+  font-family: Pretendard-Regular;
+  font-size: 0.7rem; 
+  line-height: calc(28 / 14);
+}
+.contact-item {
+  display: flex;
+  gap: 0.5rem;
+  flex-direction: row;
+}
+.mt-4 {
+  margin-top: 1rem; 
+}
+.mt-2 {
+  margin-top: 0.3rem; 
+}
+.label-width {
+  width: 2rem; 
+}
+
+

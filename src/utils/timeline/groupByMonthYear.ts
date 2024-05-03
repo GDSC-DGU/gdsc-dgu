@@ -1,4 +1,3 @@
-// utils/groupTimelineData.ts
 import { TimelineCardProps } from '@/interfaces/timeline/timelineCard';
 import { formatDate } from "./formDate";
 
@@ -7,6 +6,7 @@ import { formatDate } from "./formDate";
  * @param {TimelineCardProps[]} data - 타임라인 카드 데이터 배열
  * @returns {Record<string, TimelineCardProps[]>} - '년 월'로 그룹화하고 내림차순으로 정렬된 객체
  */
+
 const groupByMonthYear = (data: TimelineCardProps[]): Record<string, TimelineCardProps[]> => {
   const groups = data.reduce((acc, curr) => {
     const formattedDate = formatDate(curr.date);
