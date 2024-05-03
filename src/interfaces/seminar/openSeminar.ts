@@ -1,3 +1,5 @@
+import { SeminarThumnail } from "./seminarThumbnail";
+
 export interface OpenSeminar {
     id: number;
     flag: number;
@@ -9,14 +11,5 @@ export interface OpenSeminar {
     information: string;
     image_url: string;
     status: boolean;
-    seminars: OpenDetailSeminar[];
+    seminars: SeminarThumnail[];
 }
-
-export interface OpenDetailSeminar {
-    id: number;
-    presenter: string;
-    seminar_title: string;
-    presenter_role: string;
-    presenter_image_url: string;
-}
-  

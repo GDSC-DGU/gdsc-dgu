@@ -16,8 +16,8 @@ const SeminarThumbnail = ({ data }: { data: SeminarThumnail }) => {
   return (
     <div className="w-full aspect-w-16 aspect-h-9">
     <Image
-      src={data.image_url}
-      alt={`${data.presenter}'s_seminarimage`}
+      src={data.seminar_image_url}
+      alt={`${data.presenter_name}'s_seminarimage`}
       width={1600}
       height={900}
       quality={100}

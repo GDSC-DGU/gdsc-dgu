@@ -7,8 +7,9 @@ export interface SeminarThumnail {
     location: string;
     title: string;
     description: string;
-    presenter: string;
-    role: string;
-    image_url: string;
+    presenter_name: string;
+    presenter_role: string;
+    seminar_image_url: string;
+    presenter_image_url: string;
 }
   

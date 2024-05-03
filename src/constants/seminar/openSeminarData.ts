@@ -1,34 +1,87 @@
 import SeminarThumbnailCardImg from '@/svg/seminar/seminar_thumbnail_card.png';
 import PresenterProfileImg from '@/svg/seminar/presenter_profile_img.png';
-import { OpenDetailSeminar, OpenSeminar } from '@/interfaces/seminar/openSeminar';
+import { OpenSeminar } from '@/interfaces/seminar/openSeminar';
+import { SeminarThumnail } from '@/interfaces/seminar/seminarThumbnail';
 
-export const OPEN_DETAIL_SEMINAR_DATA:OpenDetailSeminar [] = [
+export const OPEN_DETAIL_SEMINAR_DATA:SeminarThumnail [] = [
     {
-        id: 4,
-        presenter: `서희찬`,
-        seminar_title: `세미나 제목`,
-        presenter_role: `Lead`,
-        presenter_image_url: PresenterProfileImg.src,
-    },
-    {
-        id: 3,
-        presenter: `서희찬`,
-        seminar_title: `세미나 제목`,
-        presenter_role: `Lead`,
+        id: 1,
+        flag: 1,
+        type: 'Open Seminar',
+        topic: 'DevTalk',
+        date: '2023.09.22 (FRI) 19:30',
+        location: '동국대학교 원흥관 PBL',
+        title: `
+        휴, 하마터면 
+        의사 될 뻔...
+        `,
+        description: `
+        의사를 목표로 공부를 하다가,
+        프로그래밍을 시작한 과정들을 토대로 개발 공부를 하며 깨달은 것들
+        `,
+        presenter_name: '서희찬',
+        presenter_role: 'Lead',
+        seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
     },
     {
         id: 2,
-        presenter: `서희찬`,
-        seminar_title: `세미나 제목`,
-        presenter_role: `Lead`,
+        flag: 1,
+        type: 'Open Seminar',
+        topic: 'DevTalk',
+        date: '2023.09.22 (FRI) 19:30',
+        location: '동국대학교 원흥관 PBL',
+        title: `
+        휴, 하마터면 
+        의사 될 뻔...
+        `,
+        description: `
+        의사를 목표로 공부를 하다가,
+        프로그래밍을 시작한 과정들을 토대로 개발 공부를 하며 깨달은 것들
+        `,
+        presenter_name: '서희찬',
+        presenter_role: 'Lead',
+        seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
     },
     {
-        id: 1,
-        presenter: `서희찬`,
-        seminar_title: `세미나 제목`,
-        presenter_role: `Lead`,
+        id: 3,
+        flag: 1,
+        type: 'Open Seminar',
+        topic: 'DevTalk',
+        date: '2023.09.22 (FRI) 19:30',
+        location: '동국대학교 원흥관 PBL',
+        title: `
+        휴, 하마터면 
+        의사 될 뻔...
+        `,
+        description: `
+        의사를 목표로 공부를 하다가,
+        프로그래밍을 시작한 과정들을 토대로 개발 공부를 하며 깨달은 것들
+        `,
+        presenter_name: '서희찬',
+        presenter_role: 'Lead',
+        seminar_image_url: SeminarThumbnailCardImg.src,
+        presenter_image_url: PresenterProfileImg.src,
+    },
+    {
+        id: 4,
+        flag: 1,
+        type: 'Open Seminar',
+        topic: 'DevTalk',
+        date: '2023.09.22 (FRI) 19:30',
+        location: '동국대학교 원흥관 PBL',
+        title: `
+        휴, 하마터면 
+        의사 될 뻔...
+        `,
+        description: `
+        의사를 목표로 공부를 하다가,
+        프로그래밍을 시작한 과정들을 토대로 개발 공부를 하며 깨달은 것들
+        `,
+        presenter_name: '서희찬',
+        presenter_role: 'Lead',
+        seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
     },
 ]
@@ -75,6 +128,7 @@ export const OPEN_SEMINAR_DATA: OpenSeminar[] = [
         seminar_opening_date: '2024.05.16 (THU) 18:30',
         seminar_month_date: '2024/5',
         location: '동국대학교 원흥관 PBL',
+
         description: `
         GDSC DGU의 소속이 아니더라도 기술과 경험을 공유하는 것에 관심이 있는 학생들을 대상으로 진행하는 세미나입니다.
         `,

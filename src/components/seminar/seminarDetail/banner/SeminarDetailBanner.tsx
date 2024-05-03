@@ -21,8 +21,8 @@ const SeminarDetailBanner = ({ data }: { data: SeminarThumnail }) => {
       {/* 왼쪽 컨텐츠 */}
       <div className="desktop:min-w-[544px] tablet:w-full w-full aspect-w-16 aspect-h-9">
         <Image
-          src={data.image_url}
-          alt={`${data.presenter}'s_seminarimage`}
+          src={data.seminar_image_url}
+          alt={`${data.presenter_name}'s_seminarimage`}
           width={1600}
           height={900}
           quality={100}
@@ -63,7 +63,7 @@ const SeminarDetailBanner = ({ data }: { data: SeminarThumnail }) => {
             Speaker
         </p>
         <div className="B1 font-medium flex gap-2">
-            {data.presenter} <p className="B1 font-normal text-mono_200">{data.role}</p>
+            {data.presenter_name} <p className="B1 font-normal text-mono_200">{data.presenter_role}</p>
         </div>
         </div>
     </div>

@@ -1,6 +1,6 @@
 'use client';
 
-import { OpenDetailSeminar, OpenSeminar } from '@/interfaces/seminar/openSeminar';
+import { OpenSeminar } from '@/interfaces/seminar/openSeminar';
 import React, { useState } from 'react';
 
 /**

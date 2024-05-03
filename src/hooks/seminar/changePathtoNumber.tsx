@@ -1,6 +1,6 @@
-export const changePathtoNumber = (pathname:string) => {
+export const changePathtoNumber = (pathname: string) => {
     const match = pathname.match(/\/seminar\/(\d+)/);
-    const seminar_id = match ? parseInt(match[1], 10) : null;
+    const seminar_id = match ? match[1] : null;
 
     return seminar_id;
 }

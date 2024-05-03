@@ -1,7 +1,6 @@
 import React from 'react';
 import OpenSeminarsDetailBox from './OpenSeminarsDetailBox';
 import { OpenSeminar } from '@/interfaces/seminar/openSeminar';
-import { OPEN_SEMINAR_DATA } from '@/constants/seminar/openSeminarData';
 import Link from 'next/link';
 
 /**
@@ -25,10 +24,15 @@ const OpenSeminarDetailSeminars = ({ data }: { data: OpenSeminar }) => {
     <p className="mb-3 border border-solid text-mono_700 h-0"/>
     <div className='mt-5 flex grid desktop:grid-cols-2 tablet:grid-cols-1 gap-8'>
     {data.seminars.map((seminar, index) => (
+      <Link
+      href={`/seminar/0${data.id}${seminar.id}`}
+      key={seminar.id}
+    >
     <OpenSeminarsDetailBox
       key={`${seminar.id}_${index}_seminar`} 
       data={seminar}
     />
+    </Link>
   ))}
   </div>
   </div>
