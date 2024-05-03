@@ -28,7 +28,7 @@ const SeminarMenuBar = ({
       {SEMINAR_CATEGORYS.map((category) => (
         <button
           key={category.value} 
-          className={`text-[0.75rem] border border-1 py-2 px-3 border-solid rounded-lg ${
+          className={`text-[0.75rem] border py-2 px-3 border-solid rounded-lg ${
             selectedCategory === category.value ? 'mono_white' : 'border-mono_500 text-mono_500'
           }`}
           onClick={() => handleCategoryChange(category.value)}
