@@ -22,7 +22,9 @@ export default function Navigation() {
           <Link href="/seminar">Seminar</Link>
           <Link href="/project">Project</Link>
           <Link href="/member">Member</Link>
-          <Link href="/recruit">Recruit</Link>
+          <Link href="/recruit" prefetch>
+            Recruit
+          </Link>
         </div>
       </div>
     </nav>
