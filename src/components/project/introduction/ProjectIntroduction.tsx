@@ -28,7 +28,7 @@ const ProjectIntroduction = ({ projectData }: { projectData: ProjectData }) => {
       <section className="w-full max-w-[1200px] tablet:px-10 px-4">
         <div className="w-full mx-auto flex desktop:flex-row desktop:justify-start flex-col justify-center desktop:items-end gap-8 mt-20">
           <Image
-            className="desktop:min-w-[34rem] w-full rounded-md"
+            className="desktop:min-w-[34rem] desktop:max-w-[34rem] flex-1 w-full rounded-md"
             src={ProjectImg}
             alt="프로젝트 프로필"
             priority
@@ -42,7 +42,7 @@ const ProjectIntroduction = ({ projectData }: { projectData: ProjectData }) => {
             style={{ transformOrigin: '10% 60%' }}
             className="flex flex-col justify-end my-3"
           >
-            <div className="flex flex-row gap-[0.625rem] pb-5">
+            <div className="flex flex-1 flex-row gap-[0.625rem] pb-5">
               <GithubIcon />
               <FileIcon />
               <YoutubeIcon />
