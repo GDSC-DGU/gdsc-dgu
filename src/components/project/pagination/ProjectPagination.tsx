@@ -1,4 +1,4 @@
-import ProjectCard from '../card/ProjectCard';
+import { motion } from 'framer-motion';
 
 /**
  * @description
@@ -12,21 +12,33 @@ import ProjectCard from '../card/ProjectCard';
  * @returns The rendered pagination component.
  */
 
-const ProjectPagination = () => {
+const ProjectPagination = ({
+  pageNum,
+  currentPage,
+  changeCurrentPage,
+}: {
+  pageNum: number[];
+  currentPage: number;
+  changeCurrentPage: (page: number) => void;
+}) => {
   return (
-    <section className="w-full px-10 pt-[3.75rem] flex justify-center items-center gap-3">
-      <button className="w-5 h-5 bg-transparent border border-white rounded text-sm leading-4">
-        1
-      </button>
-      <button className="w-5 h-5 bg-transparent border border-[#73787E] text-[#73787E] rounded text-sm leading-4">
-        2
-      </button>
-      <button className="w-5 h-5 bg-transparent border border-[#73787E] text-[#73787E] rounded text-sm leading-4">
-        3
-      </button>
-      <button className="w-5 h-5 bg-transparent border border-[#73787E] text-[#73787E] rounded text-sm leading-4">
-        4
-      </button>
+    <section className="w-full pt-[3.75rem] flex justify-center items-center gap-3">
+      {pageNum.map((page) => (
+        <motion.button
+          onClick={() => changeCurrentPage(page)}
+          whileHover={{ scale: 1.2 }}
+          whileTap={{ scale: 0.8 }}
+          transition={{ duration: 0.2 }}
+          key={page}
+          className={`flex justify-center items-center w-6 h-6 bg-transparent border ${
+            page === currentPage
+              ? 'border-white'
+              : 'border-mono_500 text-mono_500'
+          } rounded Btn cursor-pointer`}
+        >
+          {page}
+        </motion.button>
+      ))}
     </section>
   );
 };
