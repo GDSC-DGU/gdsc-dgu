@@ -27,6 +27,7 @@ const OpenSeminarDetailSeminars = ({ data }: { data: OpenSeminar }) => {
     <div className='mt-5 flex grid desktop:grid-cols-2 tablet:grid-cols-1 gap-8'>
     {data.seminars.map((seminar, index) => (
        <motion.section
+       key={seminar.id}
        initial={{ y: 20, opacity: 0 }}
        whileInView={{ y: 0, opacity: 1 }}
        transition={{ duration: 0.5, delay: 0.2 }}
@@ -37,7 +38,6 @@ const OpenSeminarDetailSeminars = ({ data }: { data: OpenSeminar }) => {
      >
       <Link
       href={`/seminar/0${data.id}${seminar.id}`}
-      key={seminar.id}
     >
     <OpenSeminarsDetailBox
       key={`${seminar.id}_${index}_seminar`} 

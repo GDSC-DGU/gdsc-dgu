@@ -49,6 +49,7 @@ const SeminarToggle = () => {
     <div className="mt-5">
         {OPEN_SEMINAR_DATA.map((seminar) => (
                <Link
+               key={seminar.id} 
                href={`/seminar/open/${seminar.id}`}
              >
              <SeminarToggleMenu 
