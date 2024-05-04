@@ -13,7 +13,7 @@ const NumberAbout: React.FC<{ label: string; number: string }> = ({
 const AboutGDSC = () => {
   return (
     <div className="w-full flex justify-center items-center">
-      <section className="w-full max-w-[1200px] tablet:px-10 px-4 py-40 flex flex-wrap flex-col gap-6 desktop:flex-row">
+      <section className="w-full max-w-[1200px] tablet:px-10 px-4 py-40 flex flex-wrap flex-col gap-6 tablet:flex-row">
         {/* 텍스트 */}
         <div className="flex flex-col mr-8 ">
           <p className="H3 pb-6">
@@ -44,7 +44,13 @@ const AboutGDSC = () => {
         </div>
 
         {/* 이미지 */}
-        <div className="flex-grow bg-red-900  h-[378px]"> </div>
+        <div className="desktop:flex-grow desktop:h-[378px] bg-red-100 desktop:w-auto w-full">
+          <div className="desktop:block hidden bg-cover h-full w-full bg-[url('/images/main/aboutGDSC_map.png')]" />
+          <img
+            className="desktop:hidden block object-contain w-full"
+            src="/images/main/aboutGDSC_map.png"
+          />
+        </div>
       </section>
     </div>
   );

@@ -9,7 +9,7 @@ const config: Config = {
   theme: {
     extend: {
       screens: {
-        desktop: '769px',
+        desktop: '961px',
         tablet: '521px',
         bigTablet: '960px',
         mainDesktop: '1200px',
@@ -45,7 +45,7 @@ const config: Config = {
         '4.75': '19px', // 19px를 나타내는 키를 추가합니다.
       },
       width: {
-        '70rem': '70rem',
+        '70rem': '70rem', // '70rem'이라는 key로 70rem 너비를 설정
         '5/8': '62.5%',
         '100/125': '80%',
       },
