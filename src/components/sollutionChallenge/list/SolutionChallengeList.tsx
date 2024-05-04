@@ -40,7 +40,7 @@ const SolutionChallengeList = () => {
         selectedYear={selectedYear}
         changeSelectedYear={changeSelectedYear}
       />
-      <div className="w-full grid desktop:grid-cols-3 tablet:grid-cols-2 grid-cols-1 gap-8 mx-auto">
+      <div className="w-full grid bigTablet:grid-cols-3 tablet:grid-cols-2 grid-cols-1 gap-8 mx-auto">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

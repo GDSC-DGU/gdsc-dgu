@@ -21,7 +21,7 @@ import ProjectPagination from '../pagination/ProjectPagination';
 const ProjectDesktopList = () => {
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [projects, setProjects] = useState<ProjectData[]>([]);
-  const itemsPerPage = 10;
+  const itemsPerPage = 9;
 
   const pageNum = [];
   for (let i = 1; i <= Math.ceil(PROJECTS.length / itemsPerPage); i++) {
@@ -42,7 +42,7 @@ const ProjectDesktopList = () => {
 
   return (
     <section className="w-full max-w-[1200px] tablet:px-10 px-4 mx-auto">
-      <div className="w-full grid desktop:grid-cols-3 tablet:grid-cols-2 grid-cols-1 gap-8 mx-auto">
+      <div className="w-full grid bigTablet:grid-cols-3 tablet:grid-cols-2 grid-cols-1 gap-8 mx-auto">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
