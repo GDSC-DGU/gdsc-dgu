@@ -9,6 +9,6 @@ export interface SeminarThumnail {
     description: string;
     presenter: string;
     role: string;
-    profile_image_url: string;
+    image_url: string;
 }
   

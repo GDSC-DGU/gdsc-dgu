@@ -8,7 +8,11 @@ export const TIME_LINE = [
     date: '2023.9',
   },
   {
-    generate: '2nd',
+    generate: '2st',
     date: '2024.9',
+  },
+  {
+    generate: '3st',
+    date: '2025.9',
   },
 ];

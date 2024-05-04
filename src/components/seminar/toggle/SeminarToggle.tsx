@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import SeminarToggleMenu from './SeminarToggleMenu';
 import ChervonDownIcon from '@/svg/icons/common/chervon_down.svg';
 import { OPEN_SEMINAR_DATA } from '@/constants/seminar/openSeminarData';
+import Link from 'next/link';
 
 /**
  * @description
@@ -23,21 +24,26 @@ const SeminarToggle = () => {
       };
 
   return (
-<div className="w-full flex-col">
-  <div className="mt-4 w-full flex justify-end">
-    <button onClick={toggleMenuVisibility} className="flex font-normal">
+<div className="flex-col">
+  <div className="mt-5 flex justify-end">
+    <button onClick={toggleMenuVisibility} className="flex B2 font-medium">
       목록 보기
       <ChervonDownIcon className={`self-center ${isMenuVisible ? 'rotate-180' : ''}`} />
     </button>
   </div>
-  <div className={`overflow-hidden transition-max-height duration-500 ease-in-out ${isMenuVisible ? 'max-h-[1000px]' : 'max-h-0'}`}>
+  <div className={`overflow-hidden transition-max-height duration-500 ease-in-out ${!isMenuVisible && 'max-h-0'}`}>
   {isMenuVisible && (
-    <div className="mt-10 shadow-md">
-        {OPEN_SEMINAR_DATA.map((openSeminar) => (
+    <div className="mt-5">
+        {OPEN_SEMINAR_DATA.map((seminar) => (
+               <Link
+               href={`/seminar/open/${seminar.id}`}
+               key={seminar.id}
+             >
              <SeminarToggleMenu 
-             key={openSeminar.id}
-             data={openSeminar}
+             key={seminar.id}
+             data={seminar}
              />
+             </Link>
       ))}
     </div>
   )}

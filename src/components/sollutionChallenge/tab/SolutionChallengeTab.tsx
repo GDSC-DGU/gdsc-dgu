@@ -1,4 +1,9 @@
+'use client';
+
+import { slideUpVariants } from '@/constants/project/slideUpVariants';
 import LightIcon from '@/svg/icons/solutionChallenge/lightIcon.svg';
+import { motion, useInView } from 'framer-motion';
+import { useRef } from 'react';
 
 /**
  * @description
@@ -12,32 +17,59 @@ import LightIcon from '@/svg/icons/solutionChallenge/lightIcon.svg';
  * @returns The rendered Tab component.
  */
 
-const SolutionChallengeTab = () => {
+const SolutionChallengeTab = ({
+  selectedYear,
+  changeSelectedYear,
+}: {
+  selectedYear: string;
+  changeSelectedYear: (year: string) => void;
+}) => {
+  const yearData: string[] = ['2024', '2023', '2022', '2021', '2020'];
+  const motionRef = useRef(null);
+  const isInView = useInView(motionRef, { once: true });
+
   return (
-    <section className="w-4/5 mx-auto px-10">
-      <section className="w-full mt-8 mb-10 p-5 flex flex-row items-center gap-2 rounded-xl bg-[#1C1D1F]">
+    <section>
+      <section
+        ref={motionRef}
+        style={{
+          transform: isInView ? 'none' : 'translateX(-200px)',
+          opacity: isInView ? 1 : 0,
+          transition: 'all 0.9s cubic-bezier(0.17, 0.55, 0.55, 1) 0.5s',
+        }}
+        className="w-full mt-8 mb-10 p-5 flex flex-row items-center gap-2 rounded-xl bg-mono_900"
+      >
         <LightIcon className="scale-90" />
-        <div>
+        <div className="B1">
           2024 Solution Challenge 에서 GDSC DGU의 2팀이 TOP100에 진출했습니다.
         </div>
       </section>
-      <section className="pb-10 px-3 flex items-center gap-3">
-        <button className="py-2 px-3 bg-transparent border border-white rounded-lg text-sm leading-4">
-          2024
-        </button>
-        <button className="py-2 px-3 bg-transparent border border-[#73787E] text-[#73787E] rounded-lg text-sm leading-4">
-          2023
-        </button>
-        <button className="py-2 px-3 bg-transparent border border-[#73787E] text-[#73787E] rounded-lg text-sm leading-4">
-          2022
-        </button>
-        <button className="py-2 px-3 bg-transparent border border-[#73787E] text-[#73787E] rounded-lg text-sm leading-4">
-          2021
-        </button>
-        <button className="py-2 px-3 bg-transparent border border-[#73787E] text-[#73787E] rounded-lg text-sm leading-4">
-          2020
-        </button>
-      </section>
+      <motion.section
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5, delay: 0.6 }}
+        viewport={{ once: true, amount: 0.9 }}
+        variants={slideUpVariants}
+        style={{ transformOrigin: '10% 60%' }}
+        className="w-full pb-10 px-3 flex items-center gap-3"
+      >
+        {yearData.map((year) => (
+          <motion.button
+            onClick={() => changeSelectedYear(year)}
+            whileHover={{ scale: 1.1 }}
+            whileTap={{ scale: 0.8 }}
+            transition={{ duration: 0.2 }}
+            key={year}
+            className={`py-2 px-3 bg-transparent border ${
+              year === selectedYear
+                ? 'border-white'
+                : 'border-mono_500 text-mono_500'
+            } rounded-lg Btn`}
+          >
+            {year}
+          </motion.button>
+        ))}
+      </motion.section>
     </section>
   );
 };

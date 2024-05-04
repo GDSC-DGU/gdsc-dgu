@@ -2,6 +2,7 @@
 
 import { SeminarThumnail } from '@/interfaces/seminar/seminarThumbnail';
 import React, { useState } from 'react';
+import BannerImg from '@/svg/seminar/seminar_banner.svg';
 
 /**
  * @description
@@ -18,24 +19,24 @@ const SeminarDetailHeader = ({ data }: { data: SeminarThumnail }) => {
   const [categoryData, setCategoryData] = useState([data.type, `${data.flag}st`, data.topic]);
 
   return (
-    <div className="w-full flex-col justify-center gap-[1rem] inline-flex min-h-fit relative"> 
-    <div className="flex gap-2" >
+    <> 
+    <div className="mt-10 px-3 flex gap-3" >
       {categoryData.map((category, index) => (
         <button
-          className="border border-1 py-2 px-3 border-2 border-solid text-xs font-normal rounded-lg border-zinc-1000"
+          className={`text-[0.75rem] font-medium py-2 px-3 border border-solid rounded-lg ${index === 0 ? "mono_white" :  "border-mono_500 text-mono_500"}`}
           key={index}
         >
           {category}
         </button>
       ))}
       </div>
-    <p className="mt-10 text-5xl font-normal leading-[3rem] tracking-wide">
+    <p className="w-full px-3 pt-8 H3 font-normal">
       {data.title}
     </p>
-    <p className="text-md font-normal leading-[3rem] tracking-wide">
+    <p className="w-full px-3 pt-3 H6 font-medium">
     {data.description}
     </p>
-  </div>
+  </>
   );
 };
 export default SeminarDetailHeader;

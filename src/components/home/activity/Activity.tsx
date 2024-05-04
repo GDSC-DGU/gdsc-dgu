@@ -1,4 +1,12 @@
+'use client';
 import HomeTitle from '../title/HomeTitle';
+
+import { Navigation, Autoplay } from 'swiper/modules';
+
+import 'swiper/css';
+import 'swiper/css/navigation';
+
+import { Swiper, SwiperSlide } from 'swiper/react';
 
 const ActivityCard: React.FC<Activity> = ({ icon, title, description }) => {
   return (
@@ -89,10 +97,23 @@ const Activity = () => {
               <img className="w-[352px] h-[198px] flex-shrink-0 bg-red-900" />
               <img className="w-[352px] h-[198px] flex-shrink-0 bg-red-900" />
             </div>
-
             {/* 스크롤되는 부분 */}
 
-            {/* 스크롤되는 부분 */}
+            <Swiper
+              // navigation={true}
+              autoplay={{ delay: 2000 }}
+              modules={[Navigation, Autoplay]}
+              className="tablet:hidden flex w-full"
+              loop
+            >
+              {[1, 2, 3].map((item, index) => {
+                return (
+                  <SwiperSlide key={index}>
+                    <img className="w-[352px] h-[198px] flex-shrink-0 bg-red-900" />
+                  </SwiperSlide>
+                );
+              })}
+            </Swiper>
           </div>
           {/* 내용 */}
         </section>
