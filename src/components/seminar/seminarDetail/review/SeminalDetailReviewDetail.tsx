@@ -1,5 +1,7 @@
 import { SeminarReview } from '@/interfaces/seminar/seminarReview';
 import React from 'react';
+import { motion } from 'framer-motion';
+import { seminarCardVariants } from '@/constants/seminar/seminarCardVariants';
 
 /**
  * @description
@@ -16,8 +18,16 @@ const SeminarDetailReviewDetail = ({ data }: { data: SeminarReview }) => {
 
   return (
     <div className="mt-5 flex flex-col p-5 bg-mono_900 rounded-xl"> 
-    <p className='B1 font-bold font-medium'>사람 이름</p>
-    <p className='mt-3 B1 font-normal'>리뷰 내용</p>
+    <p className='B1 font-bold font-medium pointer-events-none'>사람 이름</p>
+    <motion.section
+          viewport={{ once: true, amount: 0.9 }}
+          variants={seminarCardVariants}
+          style={{ transformOrigin: '10% 60%' }}
+          whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+          whileTap={{ scale: 0.8 }}
+        >
+    <p className='mt-3 B1 font-normal pointer-events-none'>리뷰 내용</p>
+    </motion.section>
   </div>
   );
 };

@@ -20,7 +20,7 @@ const SeminarDetailHeader = ({ data }: { data: SeminarThumnail }) => {
 
   return (
     <> 
-    <div className="mt-10 px-3 flex gap-3" >
+    <div className="mt-10 px-3 flex gap-3 pointer-events-none" >
       {categoryData.map((category, index) => (
         <button
           className={`text-[0.75rem] font-medium py-2 px-3 border border-solid rounded-lg ${index === 0 ? "mono_white" :  "border-mono_500 text-mono_500"}`}

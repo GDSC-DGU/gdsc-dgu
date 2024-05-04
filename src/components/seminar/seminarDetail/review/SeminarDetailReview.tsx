@@ -1,6 +1,8 @@
 import { SEMINAR_REVIEW } from '@/constants/seminar/seminarReviewData';
 import React from 'react';
 import SeminarDetailReviewDetail from './SeminalDetailReviewDetail';
+import { motion } from 'framer-motion';
+import { seminarCardVariants } from '@/constants/seminar/seminarCardVariants';
 
 /**
  * @description
@@ -17,14 +19,24 @@ const SeminarDetailReview = () => {
 
   return (
     <div className="w-full flex mt-10 flex-col inline-flex min-h-fit relative"> 
-    <p className="H4 font-normal px-2 py-3">
+    <p className="H4 font-normal px-2 py-3 pointer-events-none">
       Review
     </p>
     <p className="mb-3 border border-solid text-mono_700 h-0"/>
     {SEMINAR_REVIEW.map((review) => (
+       <motion.section
+       key={review.id}
+       initial={{ y: 20, opacity: 0 }}
+       whileInView={{ y: 0, opacity: 1 }}
+       transition={{ duration: 0.5, delay: 0.5 }}
+       viewport={{ once: true, amount: 0.9 }}
+       variants={seminarCardVariants}
+       style={{ transformOrigin: '10% 60%' }}
+     >
         <SeminarDetailReviewDetail 
         key={`${review.id}_review`} 
         data={review}/>
+         </motion.section>
         ))}
   </div>
   );
