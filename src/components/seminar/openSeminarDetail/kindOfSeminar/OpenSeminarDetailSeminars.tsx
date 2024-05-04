@@ -2,6 +2,8 @@ import React from 'react';
 import OpenSeminarsDetailBox from './OpenSeminarsDetailBox';
 import { OpenSeminar } from '@/interfaces/seminar/openSeminar';
 import Link from 'next/link';
+import { seminarCardVariants } from '@/constants/seminar/seminarCardVariants';
+import { motion } from 'framer-motion';
 
 /**
  * @description
@@ -24,6 +26,15 @@ const OpenSeminarDetailSeminars = ({ data }: { data: OpenSeminar }) => {
     <p className="mb-3 border border-solid text-mono_700 h-0"/>
     <div className='mt-5 flex grid desktop:grid-cols-2 tablet:grid-cols-1 gap-8'>
     {data.seminars.map((seminar, index) => (
+       <motion.section
+       initial={{ y: 20, opacity: 0 }}
+       whileInView={{ y: 0, opacity: 1 }}
+       transition={{ duration: 0.5, delay: 0.2 }}
+       viewport={{ once: true, amount: 0.9 }}
+       variants={seminarCardVariants}
+       style={{ transformOrigin: '10% 60%' }}
+       className="w-full"
+     >
       <Link
       href={`/seminar/0${data.id}${seminar.id}`}
       key={seminar.id}
@@ -33,6 +44,7 @@ const OpenSeminarDetailSeminars = ({ data }: { data: OpenSeminar }) => {
       data={seminar}
     />
     </Link>
+    </motion.section>
   ))}
   </div>
   </div>

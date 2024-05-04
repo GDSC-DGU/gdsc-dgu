@@ -1,4 +1,3 @@
-import { OpenSeminar } from '@/interfaces/seminar/openSeminar';
 import { SeminarThumnail } from '@/interfaces/seminar/seminarThumbnail';
 import Image from 'next/image';
 import React from 'react';
