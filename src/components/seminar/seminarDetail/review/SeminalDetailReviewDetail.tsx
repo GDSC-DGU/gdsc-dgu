@@ -15,9 +15,9 @@ import React from 'react';
 const SeminarDetailReviewDetail = ({ data }: { data: SeminarReview }) => {
 
   return (
-    <div className="w-full flex flex-col p-5 bg-zinc-900 rounded-lg"> 
-    <p className='text-md'>사람 이름</p>
-    <p className='mt-2 text-sm'>리뷰 내용</p>
+    <div className="mt-5 flex flex-col p-5 bg-mono_900 rounded-xl"> 
+    <p className='B1 font-bold font-medium'>사람 이름</p>
+    <p className='mt-3 B1 font-normal'>리뷰 내용</p>
   </div>
   );
 };

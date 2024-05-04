@@ -9,7 +9,9 @@ import React, { useState } from 'react';
 const SeminarPage = () => {
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
-  return <div className="w-4/5 px-10 my-20 mx-auto">
+  return <section className="flex justify-center">
+  <div className="max-w-[1200px] desktop:px-10 tablet:px-10 px-4 bg-mono_black">
+     <div className="w-full">
 {/* header */}
 <SeminarHeader />
 
@@ -21,7 +23,10 @@ const SeminarPage = () => {
 
 {/* seminar list */}
 <SeminarThumbnailList selectedCategory={selectedCategory} />
-  </div>;
+<div className="h-[120px]"></div>
+  </div>
+  </div>
+  </section>;
 };
 
 export default SeminarPage;

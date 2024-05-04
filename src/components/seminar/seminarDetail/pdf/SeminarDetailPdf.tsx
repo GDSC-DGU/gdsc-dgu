@@ -15,9 +15,9 @@ import PinImg from '@/svg/seminar/pin.svg';
 const SeminarDetailPdf = () => {
 
   return (
-    <div className="w-full flex mt-20 gap-4 pl-4 py-5 bg-zinc-900 rounded-lg"> 
+    <div className="flex mt-10 p-5 gap-2 flex bg-mono_900 rounded-xl"> 
     <PinImg />
-    <p>세미나 자료 보기</p>
+    <p className='B1 font-normal'>세미나 자료 보기</p>
   </div>
   );
 };

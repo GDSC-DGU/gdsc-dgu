@@ -35,7 +35,7 @@ const SeminarThumbnailList = ({ selectedCategory }: { selectedCategory: string }
   
   // 페이지 번호 계산
     const pageNumbers = [];
-    for (let i = 1; i <= Math.ceil(SEMINAR_DATA.length / itemsPerPage); i++) {
+    for (let i = 1; i <= Math.ceil(filteredData.length / itemsPerPage); i++) {
       pageNumbers.push(i);
     }
   
@@ -47,11 +47,11 @@ const SeminarThumbnailList = ({ selectedCategory }: { selectedCategory: string }
   
   
     return (
-        <div className="w-full mt-20">
-          {/* 썸네일 레스트 */}
-        <div className="grid grid-cols-2 lg:grid-cols-3 gap-10 mb-20" style={{
-          aspectRatio: 16/9,
-        }}>
+        <div className="mt-10">
+          {/* 썸네일 리스트 */}
+
+          {/* desktop인 경우 */}
+        <div className="desktop:grid tablet:hidden hidden desktop:grid-cols-3 gap-x-8 gap-y-10">
         {currentItems.map((seminar) => (
           <Link
           href={`/seminar/${seminar.id}`}
@@ -64,13 +64,30 @@ const SeminarThumbnailList = ({ selectedCategory }: { selectedCategory: string }
           </Link>
         ))}
         </div>
+
+         {/*tablet, mobile인 경우 */}
+        <div className="desktop:hidden grid tablet:grid-cols-2 grid-cols-1 gap-x-8 gap-y-10">
+        {SEMINAR_DATA.map((seminar) => (
+          <Link
+          href={`/seminar/${seminar.id}`}
+          key={seminar.id}
+        >
+          <SeminarThumbnail
+          key={seminar.id}
+          data={seminar}
+          />
+          </Link>
+        ))}
+        </div>
         {/* 페이지네이션 버튼 */}
-        <div className="flex justify-center gap-4">
+
+         {/* desktop인 경우에만 보이기 */}
+        <div className="pt-10 mt-5 desktop:flex tablet:hidden hidden justify-center gap-3">
           {pageNumbers.map(number => (
             <button
             key={number}
             onClick={() => paginate(number)}
-            className={`px-2 py-1 text-xs border border-2 rounded-lg ${currentPage === number ? 'text-zinc-1000' : 'text-zinc-500 border-zinc-500'}`}
+            className={`text-[0.75rem] font-medium w-5 y-5 justify-center items-center text-center border rounded ${currentPage === number ? 'text-mono_white border-mono_white' : 'text-mono_500 border-mono_500'}`}
           >
               {number}
             </button>
