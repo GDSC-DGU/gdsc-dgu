@@ -20,8 +20,8 @@ interface Props {
 const RecruitTargetRowText: FC<Props> = ({ title, content }) => {
   return (
     <div className="inline-flex">
-      <p className="tracking-tight pr-3">{title}</p>
-      <p className="">{content}</p>
+      <p className="Sh1 pr-3">{title}</p>
+      <p className="B1">{content}</p>
     </div>
   );
 };
