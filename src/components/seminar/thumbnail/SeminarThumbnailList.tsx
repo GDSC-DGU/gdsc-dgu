@@ -1,10 +1,12 @@
 'use client';
 
 import React, { useState } from 'react';
-import { useRouter } from 'next/navigation';
 import SeminarThumbnail from "./SeminarThumbnail";
 import { SEMINAR_DATA } from '@/constants/seminar/seminarData';
 import Link from 'next/link'
+import { motion } from 'framer-motion';
+import { seminarCardVariants } from '@/constants/seminar/seminarCardVariants';
+import SeminarPagination from './SeminarPagination';
 
 /**
  * @description
@@ -20,8 +22,7 @@ import Link from 'next/link'
  * @returns The rendered header component.
  */
 
-const SeminarThumbnailList = ({ selectedCategory }: { selectedCategory: string }) => {   
-  const router = useRouter();   
+const SeminarThumbnailList = ({ selectedCategory }: { selectedCategory: string }) => {     
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 12;  // 한 페이지당 표시할 항목 수
   
@@ -53,46 +54,61 @@ const SeminarThumbnailList = ({ selectedCategory }: { selectedCategory: string }
           {/* desktop인 경우 */}
         <div className="desktop:grid tablet:hidden hidden desktop:grid-cols-3 gap-x-8 gap-y-10">
         {currentItems.map((seminar) => (
+           <motion.section
+           key={seminar.id}
+           whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+           whileTap={{ scale: 0.8 }}
+           initial={{ y: 20, opacity: 0 }}
+           whileInView={{ y: 0, opacity: 1 }}
+           transition={{ duration: 0.2 }}
+           viewport={{ once: true, amount: 0.9 }}
+           variants={seminarCardVariants}
+           style={{ transformOrigin: '10% 60%' }}
+         >
           <Link
           href={`/seminar/${seminar.id}`}
-          key={seminar.id}
         >
           <SeminarThumbnail
           key={seminar.id}
           data={seminar}
           />
           </Link>
+          </motion.section>
         ))}
         </div>
 
          {/*tablet, mobile인 경우 */}
         <div className="desktop:hidden grid tablet:grid-cols-2 grid-cols-1 gap-x-8 gap-y-10">
         {SEMINAR_DATA.map((seminar) => (
+          <motion.section
+          key={seminar.id}
+          whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+          whileTap={{ scale: 0.8 }}
+          initial={{ y: 20, opacity: 0 }}
+          whileInView={{ y: 0, opacity: 1 }}
+          transition={{ duration: 0.5, delay: 0.5 }}
+          viewport={{ once: true, amount: 0.9 }}
+          variants={seminarCardVariants}
+          style={{ transformOrigin: '10% 60%' }}
+        >
           <Link
           href={`/seminar/${seminar.id}`}
-          key={seminar.id}
         >
           <SeminarThumbnail
           key={seminar.id}
           data={seminar}
           />
           </Link>
+          </motion.section>
         ))}
         </div>
         {/* 페이지네이션 버튼 */}
+        <SeminarPagination
+        pageNumbers={pageNumbers}
+        currentPage={currentPage}
+        paginate={paginate}
+      />
 
-         {/* desktop인 경우에만 보이기 */}
-        <div className="pt-10 mt-5 desktop:flex tablet:hidden hidden justify-center gap-3">
-          {pageNumbers.map(number => (
-            <button
-            key={number}
-            onClick={() => paginate(number)}
-            className={`text-[0.75rem] font-medium w-5 y-5 justify-center items-center text-center border rounded ${currentPage === number ? 'text-mono_white border-mono_white' : 'text-mono_500 border-mono_500'}`}
-          >
-              {number}
-            </button>
-          ))}
-        </div>
       </div>
     );
   };

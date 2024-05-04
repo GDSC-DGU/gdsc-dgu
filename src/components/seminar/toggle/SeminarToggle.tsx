@@ -4,7 +4,9 @@ import React, { useState } from 'react';
 import SeminarToggleMenu from './SeminarToggleMenu';
 import ChervonDownIcon from '@/svg/icons/common/chervon_down.svg';
 import { OPEN_SEMINAR_DATA } from '@/constants/seminar/openSeminarData';
+import { motion } from 'framer-motion';
 import Link from 'next/link';
+import { toggleVariants } from '@/constants/seminar/seminarToggleVariants';
 
 /**
  * @description
@@ -17,6 +19,7 @@ import Link from 'next/link';
  * Renders the header component for the recruitment section.
  * @returns The rendered header component.
  */
+
 const SeminarToggle = () => {
     const [isMenuVisible, setIsMenuVisible] = useState(false); // 오픈 세미나 목록 토클 버튼
     const toggleMenuVisibility = () => {
@@ -26,18 +29,27 @@ const SeminarToggle = () => {
   return (
 <div className="flex-col">
   <div className="mt-5 flex justify-end">
-    <button onClick={toggleMenuVisibility} className="flex B2 font-medium">
+  <motion.button
+           whileHover={{ scale: 1.05 }}
+           whileTap={{ scale: 0.8 }}
+           transition={{ duration: 0.2 }}
+           onClick={toggleMenuVisibility} 
+           className="flex B2 font-medium"
+         >
       목록 보기
-      <ChervonDownIcon className={`self-center ${isMenuVisible ? 'rotate-180' : ''}`} />
-    </button>
+      <ChervonDownIcon className={`self-center ${isMenuVisible ? 'rotate-180' : 'rotate-0'}`} />
+    </motion.button>
   </div>
-  <div className={`overflow-hidden transition-max-height duration-500 ease-in-out ${!isMenuVisible && 'max-h-0'}`}>
-  {isMenuVisible && (
+  <motion.section
+        initial="closed"
+        animate={isMenuVisible ? "opened" : "closed"}
+        variants={toggleVariants}
+        className={isMenuVisible ? "" : "overflow-hidden"}
+      >
     <div className="mt-5">
         {OPEN_SEMINAR_DATA.map((seminar) => (
                <Link
                href={`/seminar/open/${seminar.id}`}
-               key={seminar.id}
              >
              <SeminarToggleMenu 
              key={seminar.id}
@@ -46,8 +58,7 @@ const SeminarToggle = () => {
              </Link>
       ))}
     </div>
-  )}
-</div>
+  </motion.section>
 </div>
   );
 };

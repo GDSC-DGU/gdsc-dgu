@@ -1,3 +1,6 @@
+import { OpenSeminar } from "@/interfaces/seminar/openSeminar";
+import { motion } from 'framer-motion';
+
 /**
  * @description
  * 세미나 페이지 오픈 세미나 토클 메뉴
@@ -6,15 +9,20 @@
  * @since 2024.04.18
  */
 
-import { OpenSeminar } from "@/interfaces/seminar/openSeminar";
-
 /**
  * Renders the header component for the recruitment section.
  * @returns The rendered header component.
  */
+
 const SeminarToggleMenu = ({data}: {data:OpenSeminar}) => {      
   return (
     <div>
+        <motion.section
+           key={data.id}
+           whileHover={{ scale: 1.05 }}
+           whileTap={{ scale: 0.8 }}
+           transition={{ duration: 0.2 }}
+         >
       <div
         className="p-3 flex justify-between items-center">
             <div className="flex-col">
@@ -25,6 +33,7 @@ const SeminarToggleMenu = ({data}: {data:OpenSeminar}) => {
               {data.status === false ? "종료" : "진행중"}
             </p>
       </div>
+      </motion.section>
       <p className="mt-3 border border-solid text-mono_700 h-0"/>
       </div>
   );
