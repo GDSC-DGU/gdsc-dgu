@@ -24,12 +24,12 @@ const SeminarMenuBar = ({
   };
 
   return (
-    <div className="mt-14 w-full flex gap-3.5 items-center">
+    <div className="mt-10 px-3 flex gap-3 items-center">
       {SEMINAR_CATEGORYS.map((category) => (
         <button
           key={category.value} 
-          className={`border border-1 py-2 px-3 border-2 border-solid text-sm font-normal rounded-lg ${
-            selectedCategory === category.value ? 'border-zinc-1000' : 'border-zinc-500 text-zinc-500'
+          className={`text-[0.75rem] border py-2 px-3 border-solid rounded-lg ${
+            selectedCategory === category.value ? 'mono_white' : 'border-mono_500 text-mono_500'
           }`}
           onClick={() => handleCategoryChange(category.value)}
         >

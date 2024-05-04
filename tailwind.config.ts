@@ -11,6 +11,13 @@ const config: Config = {
       screens: {
         desktop: '961px',
         tablet: '521px',
+        bigTablet: '960px',
+        mainDesktop: '1200px',
+        xxl: { min: '1920px' },
+        xl: { min: '1200px', max: '1919px' },
+        lg: { min: '960px', max: '1199px' },
+        md: { min: '768px', max: '959px' },
+        sm: { max: '767px' },
       },
       colors: {
         mono_50: '#F7F8FA',
@@ -39,6 +46,8 @@ const config: Config = {
       },
       width: {
         '70rem': '70rem', // '70rem'이라는 key로 70rem 너비를 설정
+        '5/8': '62.5%',
+        '100/125': '80%',
       },
     },
   },

@@ -11,10 +11,8 @@ interface RecruitPartKeywordProps {
  */
 const RecruitPartKeyword: FC<RecruitPartKeywordProps> = ({ keyword }) => {
   return (
-    <div className="px-3 py-2 bg-zinc-700 rounded-lg border border-zinc-700 justify-center items-center gap-2.5 flex">
-      <div className="text-center text-sm font-medium leading-none">
-        {keyword}
-      </div>
+    <div className="px-3 py-2 bg-mono_700 rounded-lg border border-mono_700 justify-center items-center gap-2.5 flex">
+      <div className="text-center Btn">{keyword}</div>
     </div>
   );
 };

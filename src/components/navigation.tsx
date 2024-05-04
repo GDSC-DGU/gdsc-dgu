@@ -65,6 +65,7 @@ export default function Navigation() {
   ];
 
   return (
+
     <>
       <div className=" fixed z-[99999] w-lvw flex flex-col justify-center items-center bg-black">
         <div className="max-w-[1200px] w-full flex justify-between items-center tablet:px-10 px-4 py-6 ">

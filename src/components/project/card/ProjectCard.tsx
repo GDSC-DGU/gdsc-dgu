@@ -1,5 +1,8 @@
 import ProjectImg from '@/images/project_img.png';
+import { ProjectData } from '@/interfaces/project/projectData';
 import Link from 'next/link';
+import { motion } from 'framer-motion';
+import { slideUpVariants } from '@/constants/project/slideUpVariants';
 
 /**
  * @description
@@ -13,10 +16,19 @@ import Link from 'next/link';
  * @returns The rendered card component.
  */
 
-const ProjectCard = () => {
+const ProjectCard = ({ project }: { project: ProjectData }) => {
   return (
-    <section>
-      <Link href="/project/1">
+    <motion.section
+      whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
+      whileTap={{ scale: 0.8 }}
+      initial={{ y: 20, opacity: 0 }}
+      whileInView={{ y: 0, opacity: 1 }}
+      transition={{ duration: 0.5 }}
+      viewport={{ once: true, amount: 0.9 }}
+      variants={slideUpVariants}
+      style={{ transformOrigin: '10% 60%' }}
+    >
+      <Link href={`/project/${project.id}`}>
         <div
           className="w-full h-[12.375rem] rounded-md flex-col justify-center items-center cursor-pointer"
           style={{
@@ -25,17 +37,15 @@ const ProjectCard = () => {
             backgroundPosition: 'center', // Aligns the background image to the center
           }}
         ></div>
-        <div className="w-full p-4 pt-3 rounded-b-md bg-[#1C1D1F]">
-          <div className="pb-4 text-[1.25rem] leading-7">제목</div>
-          <div className="pb-5 text-sm leading-6">
-            서비스 소개! 두줄까지 적어주세요.
+        <div className="w-full p-4 pt-3 rounded-b-md bg-mono_900">
+          <div className="pb-1 H6">{project.title}</div>
+          <div className="B2 h-[3.2rem] text-overflow-custom">
+            {project.introduce}
           </div>
-          <div className="text-xs leading-[0.875rem] text-[#9FA4A8]">
-            특이 사항
-          </div>
+          <div className="pt-5 Cap text-mono_400">{project.feature}</div>
         </div>
       </Link>
-    </section>
+    </motion.section>
   );
 };
 

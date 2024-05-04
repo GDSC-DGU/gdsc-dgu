@@ -1,4 +1,3 @@
-// src/app/timeline/page.tsx
 'use client';
 import React, { useState } from 'react';
 import TimelineHeader from "@/components/timeline/header/TimelineHeader";
@@ -14,21 +13,23 @@ export default function TimelinePage() {
   };
 
   return (
-    <main className="w-full px-10">
-      <TimelineHeader />
-      <section className="w-4/5 flex flex-col mx-auto my-10">
-        <section className="w-full flex justify-start items-center gap-3">
-          {['1st', '2nd', '3rd'].map(generation => (
-            <GenerationButton
-              key={generation}
-              label={generation}
-              isActive={activeGeneration === generation}
-              onClick={() => handleButtonClick(generation)}
-            />
-          ))}
+    <main className="flex justify-center">
+      <div className="max-w-[1200px] desktop:px-10 tablet:px-10 px-4">
+        <TimelineHeader />
+        <section className="mx-auto my-10">
+          <section className="flex justify-start items-center gap-3">
+            {['1st', '2st', '3st'].map(generation => (
+              <GenerationButton
+                key={generation}
+                label={generation}
+                isActive={activeGeneration === generation}
+                onClick={() => handleButtonClick(generation)}
+              />
+            ))}
+          </section>
         </section>
-      </section>
-      <TimelineMonthlyPart timelineData={TIMELINE_CARDS_INFO[activeGeneration]} />
+        <TimelineMonthlyPart timelineData={TIMELINE_CARDS_INFO[activeGeneration]} />
+      </div>
     </main>
   );
 };

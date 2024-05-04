@@ -1,6 +1,8 @@
-import BannerSvg from 'public/svg/member_header.svg';
-import BannerPng from 'public/images/member_banner.png';
+'use client';
+import BannerHead from 'public/images/member_header.png';
+import BannerPng from 'public/images/member_banner_up.png';
 import Image from 'next/image';
+import { motion } from 'framer-motion';
 
 /**
  * @description
@@ -16,30 +18,41 @@ import Image from 'next/image';
 const MemberHeader = () => {
   return (
     <div>
-      <div className="w-full flex justify-center mt-[5rem] mb-[5rem]">
-        <BannerSvg style={{ height: '100%' }} />
-      </div>
-      <div
-        className="flex justify-center"
-        style={{ width: '100%', maxWidth: '[70rem]' }}
+      <motion.div
+        className="w-full flex justify-center mt-[5rem] mb-[5rem]"
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true, amount: 0.2 }}
       >
-        <div
-          style={{
-            position: 'relative',
-            width: '[70rem]',
-            height: '[39.375rem]',
-          }}
-        >
+        <div style={{ maxWidth: '701px', width: '100%' }}>
           <Image
-            src={BannerPng}
-            alt="BannerPng"
+            src={BannerHead}
+            alt="GDSC 사이트 멤버 페이지 배너 텍스트 이미지"
             priority
-            width={1120}
+            width={1400}
             height={630}
-            layout="fixed"
+            layout="responsive"
           />
         </div>
-      </div>
+      </motion.div>
+      <motion.div
+        className="w-full flex justify-center"
+        initial={{ y: 0, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 1 }}
+        viewport={{ once: true, amount: 0.2 }}
+      >
+        <div style={{ width: '100%' }}>
+          <Image
+            src={BannerPng}
+            alt="GDSC 멤버들 단체사진"
+            priority
+            width={1400}
+            height={630}
+          />
+        </div>
+      </motion.div>
     </div>
   );
 };

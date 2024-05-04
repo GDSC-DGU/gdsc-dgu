@@ -1,5 +1,6 @@
-import ProjectList from '@/components/project/list/ProjectList';
+import ProjectList from '@/components/project/list/ProjectDesktopList';
 import SolutionChallengeHeader from '@/components/sollutionChallenge/header/SolutionChallengeHeader';
+import SolutionChallengeList from '@/components/sollutionChallenge/list/SolutionChallengeList';
 import SolutionChallengeTab from '@/components/sollutionChallenge/tab/SolutionChallengeTab';
 import React from 'react';
 
@@ -9,19 +10,15 @@ export const metadata = {
 
 const SolutionChallengePage = () => {
   return (
-    <main className="w-full pb-[7.5rem]">
+    <main className="w-full flex flex-col items-center pb-[7.5rem]">
       {/* -----------------------------------------------*/}
       {/* -------------------- 배너 ----------------------*/}
       {/* -----------------------------------------------*/}
       <SolutionChallengeHeader />
       {/* -----------------------------------------------*/}
-      {/* -------------------- 상단 탭 --------------------*/}
-      {/* -----------------------------------------------*/}
-      <SolutionChallengeTab />
-      {/* -----------------------------------------------*/}
       {/* ------------------ 프로젝트 리스트 ----------------*/}
       {/* -----------------------------------------------*/}
-      <ProjectList />
+      <SolutionChallengeList />
     </main>
   );
 };

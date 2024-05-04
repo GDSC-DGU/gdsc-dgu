@@ -29,6 +29,7 @@ const TimeLine = ({
 
   const scrollContainer = useRef(null);
 
+  //컬러 시스템 적용 불가
   const getCircleColor = (index: any) => {
     if (index === selected) return '#FB8C00';
     if (index < selected) return '#FFCC80';
@@ -42,8 +43,8 @@ const TimeLine = ({
 
   return (
     <div>
-      <div className="w-full flex justify-center mt-20 mb-20">
-        <div className="flex">
+      <div className="w-full justify-center mb-20">
+        <div className="flex justify-center ">
           {TIME_LINE.map((item, index) => (
             <React.Fragment key={index}>
               <div className="px-4.75 flex flex-col items-center justify-center space-y-2">
