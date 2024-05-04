@@ -65,9 +65,15 @@ const OpenSeminarDetailBanner = ({ data }: { data: OpenSeminar }) => {
     variants={seminarCardVariants}
     style={{ transformOrigin: '10% 60%' }}
   >
-      <button className={`w-full rounded py-4 text-[0.75rem] font-medium ${data.status === false ? "text-mono_500 border border-mono_500 pointer-events-none" : "text-mono_black bg-white"}`}>
+          <motion.button
+           key={data.id}
+           whileHover={{ scale: data.status ? 1.05 : 1.0 }}
+           whileTap={{ scale: 0.8 }}
+           transition={{ duration: 0.2 }}
+           className={`w-full rounded py-4 text-[0.75rem] font-medium ${data.status === false ? "text-mono_500 border border-mono_500 pointer-events-none" : "text-mono_black bg-white"}`}
+         >
         {data.status === false ? '모집 기간이 아니에요.' : '모집 신청하기'}
-      </button>
+      </motion.button>
       </motion.section>
         </div>
     </div>
