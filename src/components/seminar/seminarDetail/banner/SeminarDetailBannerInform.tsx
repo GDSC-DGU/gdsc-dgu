@@ -15,21 +15,21 @@ const SeminarDetailBannerInform = ({ type, data, speaker_data }: { type: string,
   >
     {data === 'Speaker' ? (
        <div>
-       <p className="H6 font-medium pointer-events-none">
+       <p className="H6 pointer-events-none">
            {type}
        </p>
-       <div className="B1 font-medium flex gap-2 pointer-events-none">
-           {data} <p className="B1 font-normal text-mono_200">{speaker_data}</p>
+       <div className="B1 flex gap-2 pointer-events-none">
+           {data} <p className="B1 text-mono_200">{speaker_data}</p>
        </div>
        </div>
     )
   :
   (
     <div>
-       <p className="H6 font-medium pointer-events-none">
+       <p className="H6 pointer-events-none">
             {type}
         </p>
-        <p className="B1 font-normal pointer-events-none">
+        <p className="B1 pointer-events-none">
             {data}
         </p>
     </div>

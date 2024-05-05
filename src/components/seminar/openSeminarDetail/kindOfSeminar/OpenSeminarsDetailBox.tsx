@@ -28,10 +28,10 @@ const OpenSeminarsDetailBox = ({ data }: { data: SeminarThumnail }) => {
         />
         </div>
         <div className='flex flex-col justify-center'>
-        <div className="B1 font-medium flex gap-2">
-            {data.presenter_name} <p className="B1 font-normal text-mono_200">{data.presenter_role}</p>
+        <div className="B1 flex gap-2">
+            {data.presenter_name} <p className="B1 text-mono_200">{data.presenter_role}</p>
         </div>
-        <p className='className="B1 font-normal'>{data.title}</p>
+        <p className='className="B1'>{data.title}</p>
         </div>
   </div>
   );

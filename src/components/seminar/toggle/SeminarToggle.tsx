@@ -34,7 +34,7 @@ const SeminarToggle = () => {
            whileTap={{ scale: 0.8 }}
            transition={{ duration: 0.2 }}
            onClick={toggleMenuVisibility} 
-           className="flex B2 font-medium"
+           className="flex B2"
          >
       목록 보기
       <ChervonDownIcon className={`self-center ${isMenuVisible ? 'rotate-180' : 'rotate-0'}`} />

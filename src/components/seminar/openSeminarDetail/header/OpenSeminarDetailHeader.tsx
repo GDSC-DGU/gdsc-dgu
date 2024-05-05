@@ -29,10 +29,10 @@ const OpenSeminarDetailHeader = ({ data }: { data: OpenSeminar }) => {
         </button>
       ))}
       </div>
-    <p className="w-full px-3 pt-8 H3 font-normal">
+    <p className="w-full px-3 pt-8 H3">
       {data.seminar_month_date}{" "}{data.type}
     </p>
-    <p className="w-full px-3 pt-3 H6 font-medium">
+    <p className="w-full px-3 pt-3 H6">
     {data.description}
     </p>
   </>

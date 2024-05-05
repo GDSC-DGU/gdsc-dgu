@@ -18,7 +18,7 @@ const OpenSeminarDetailInformation = ({ data }: { data: OpenSeminar }) => {
 
   return (
     <div className="w-full flex mt-10 pt-6 flex-col inline-flex min-h-fit relative"> 
-    <p className="H4 font-normal px-2 pb-4">
+    <p className="H4 px-2 pb-4">
       Information
     </p>
     <p className="mb-3 border border-solid text-mono_700 h-0"/>

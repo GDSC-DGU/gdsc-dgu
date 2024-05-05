@@ -21,8 +21,8 @@ const SeminarHeader = () => {
 
   return (
     <>
-    <div className="w-full px-3 pt-10 H3 font-normal">Seminar</div> 
-    <div className="px-3 pt-3 H6 font-medium">여러분과 함께 나누고싶은 이야기</div>
+    <div className="w-full px-3 pt-10 H3">Seminar</div> 
+    <div className="px-3 pt-3 H6">여러분과 함께 나누고싶은 이야기</div>
     <p className="mt-6 border border-solid text-mono_700 h-0"/>
     <motion.section
            whileHover={{ scale: 1.05 }}

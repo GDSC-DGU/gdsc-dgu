@@ -19,7 +19,7 @@ const SeminarDetailReview = () => {
 
   return (
     <div className="w-full flex mt-10 flex-col inline-flex min-h-fit relative"> 
-    <p className="H4 font-normal px-2 py-3 pointer-events-none">
+    <p className="H4 px-2 py-3 pointer-events-none">
       Review
     </p>
     <p className="mb-3 border border-solid text-mono_700 h-0"/>

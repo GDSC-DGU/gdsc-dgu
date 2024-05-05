@@ -30,10 +30,10 @@ const SeminarDetailHeader = ({ data }: { data: SeminarThumnail }) => {
         </button>
       ))}
       </div>
-    <p className="w-full px-3 pt-8 H3 font-normal">
+    <p className="w-full px-3 pt-8 H3">
       {data.title}
     </p>
-    <p className="w-full px-3 pt-3 H6 font-medium">
+    <p className="w-full px-3 pt-3 H6">
     {data.description}
     </p>
   </>

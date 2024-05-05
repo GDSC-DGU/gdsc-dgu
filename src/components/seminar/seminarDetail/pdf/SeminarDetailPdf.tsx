@@ -35,7 +35,7 @@ const SeminarDetailPdf = () => {
     className="flex gap-2 cursor-pointer"
   >
     <PinImg />
-    <p className='B1 font-normal'>세미나 자료 보기</p>
+    <p className='B1'>세미나 자료 보기</p>
     </motion.section>
   </motion.section>
   );
