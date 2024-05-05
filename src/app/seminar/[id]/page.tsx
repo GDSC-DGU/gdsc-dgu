@@ -15,7 +15,6 @@ import { changePathtoNumber } from '@/hooks/seminar/changePathtoNumber';
 const SeminarDetailPage = () => {
   const pathname = usePathname();
   let id = changePathtoNumber(pathname);
-  console.log(id);
 
   let data: SeminarThumnail | undefined;
 
