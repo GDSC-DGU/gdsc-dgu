@@ -303,4 +303,244 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
     },
+    {
+        id: 16,
+        flag: 1,
+        type: 'Camping Seminar',
+        topic: 'Web/App',
+        date: '2023.09.22 (FRI) 19:30',
+        location: '동국대학교 원흥관 PBL',
+        title: `
+        휴, 하마터면 
+        의사 될 뻔...
+        `,
+        description: `
+        의사를 목표로 공부를 하다가,
+        프로그래밍을 시작한 과정들을 토대로 개발 공부를 하며 깨달은 것들
+        `,
+        presenter_name: '서희찬',
+        presenter_role: 'Lead',
+        seminar_image_url: SeminarThumbnailCardImg.src,
+        presenter_image_url: PresenterProfileImg.src,
+    },
+    {
+        id: 17,
+        flag: 1,
+        type: 'Camping Seminar',
+        topic: 'Web/App',
+        date: '2023.09.22 (FRI) 19:30',
+        location: '동국대학교 원흥관 PBL',
+        title: `
+        휴, 하마터면 
+        의사 될 뻔...
+        `,
+        description: `
+        의사를 목표로 공부를 하다가,
+        프로그래밍을 시작한 과정들을 토대로 개발 공부를 하며 깨달은 것들
+        `,
+        presenter_name: '서희찬',
+        presenter_role: 'Lead',
+        seminar_image_url: SeminarThumbnailCardImg.src,
+        presenter_image_url: PresenterProfileImg.src,
+    },
+    {
+        id: 18,
+        flag: 1,
+        type: 'Camping Seminar',
+        topic: 'Web/App',
+        date: '2023.09.22 (FRI) 19:30',
+        location: '동국대학교 원흥관 PBL',
+        title: `
+        휴, 하마터면 
+        의사 될 뻔...
+        `,
+        description: `
+        의사를 목표로 공부를 하다가,
+        프로그래밍을 시작한 과정들을 토대로 개발 공부를 하며 깨달은 것들
+        `,
+        presenter_name: '서희찬',
+        presenter_role: 'Lead',
+        seminar_image_url: SeminarThumbnailCardImg.src,
+        presenter_image_url: PresenterProfileImg.src,
+    },
+    {
+        id: 19,
+        flag: 1,
+        type: 'Camping Seminar',
+        topic: 'Web/App',
+        date: '2023.09.22 (FRI) 19:30',
+        location: '동국대학교 원흥관 PBL',
+        title: `
+        휴, 하마터면 
+        의사 될 뻔...
+        `,
+        description: `
+        의사를 목표로 공부를 하다가,
+        프로그래밍을 시작한 과정들을 토대로 개발 공부를 하며 깨달은 것들
+        `,
+        presenter_name: '서희찬',
+        presenter_role: 'Lead',
+        seminar_image_url: SeminarThumbnailCardImg.src,
+        presenter_image_url: PresenterProfileImg.src,
+    },
+    {
+        id: 20,
+        flag: 1,
+        type: 'Camping Seminar',
+        topic: 'Web/App',
+        date: '2023.09.22 (FRI) 19:30',
+        location: '동국대학교 원흥관 PBL',
+        title: `
+        휴, 하마터면 
+        의사 될 뻔...
+        `,
+        description: `
+        의사를 목표로 공부를 하다가,
+        프로그래밍을 시작한 과정들을 토대로 개발 공부를 하며 깨달은 것들
+        `,
+        presenter_name: '서희찬',
+        presenter_role: 'Lead',
+        seminar_image_url: SeminarThumbnailCardImg.src,
+        presenter_image_url: PresenterProfileImg.src,
+    },
+    {
+        id: 21,
+        flag: 1,
+        type: 'Camping Seminar',
+        topic: 'Web/App',
+        date: '2023.09.22 (FRI) 19:30',
+        location: '동국대학교 원흥관 PBL',
+        title: `
+        휴, 하마터면 
+        의사 될 뻔...
+        `,
+        description: `
+        의사를 목표로 공부를 하다가,
+        프로그래밍을 시작한 과정들을 토대로 개발 공부를 하며 깨달은 것들
+        `,
+        presenter_name: '서희찬',
+        presenter_role: 'Lead',
+        seminar_image_url: SeminarThumbnailCardImg.src,
+        presenter_image_url: PresenterProfileImg.src,
+    },
+    {
+        id: 22,
+        flag: 1,
+        type: 'Camping Seminar',
+        topic: 'Web/App',
+        date: '2023.09.22 (FRI) 19:30',
+        location: '동국대학교 원흥관 PBL',
+        title: `
+        휴, 하마터면 
+        의사 될 뻔...
+        `,
+        description: `
+        의사를 목표로 공부를 하다가,
+        프로그래밍을 시작한 과정들을 토대로 개발 공부를 하며 깨달은 것들
+        `,
+        presenter_name: '서희찬',
+        presenter_role: 'Lead',
+        seminar_image_url: SeminarThumbnailCardImg.src,
+        presenter_image_url: PresenterProfileImg.src,
+    },
+    {
+        id: 23,
+        flag: 1,
+        type: 'Camping Seminar',
+        topic: 'Web/App',
+        date: '2023.09.22 (FRI) 19:30',
+        location: '동국대학교 원흥관 PBL',
+        title: `
+        휴, 하마터면 
+        의사 될 뻔...
+        `,
+        description: `
+        의사를 목표로 공부를 하다가,
+        프로그래밍을 시작한 과정들을 토대로 개발 공부를 하며 깨달은 것들
+        `,
+        presenter_name: '서희찬',
+        presenter_role: 'Lead',
+        seminar_image_url: SeminarThumbnailCardImg.src,
+        presenter_image_url: PresenterProfileImg.src,
+    },
+    {
+        id: 24,
+        flag: 1,
+        type: 'Camping Seminar',
+        topic: 'Server/Cloud',
+        date: '2023.09.22 (FRI) 19:30',
+        location: '동국대학교 원흥관 PBL',
+        title: `
+        휴, 하마터면 
+        의사 될 뻔...
+        `,
+        description: `
+        의사를 목표로 공부를 하다가,
+        프로그래밍을 시작한 과정들을 토대로 개발 공부를 하며 깨달은 것들
+        `,
+        presenter_name: '서희찬',
+        presenter_role: 'Lead',
+        seminar_image_url: SeminarThumbnailCardImg.src,
+        presenter_image_url: PresenterProfileImg.src,
+    },
+    {
+        id: 25,
+        flag: 1,
+        type: 'Camping Seminar',
+        topic: 'Server/Cloud',
+        date: '2023.09.22 (FRI) 19:30',
+        location: '동국대학교 원흥관 PBL',
+        title: `
+        휴, 하마터면 
+        의사 될 뻔...
+        `,
+        description: `
+        의사를 목표로 공부를 하다가,
+        프로그래밍을 시작한 과정들을 토대로 개발 공부를 하며 깨달은 것들
+        `,
+        presenter_name: '서희찬',
+        presenter_role: 'Lead',
+        seminar_image_url: SeminarThumbnailCardImg.src,
+        presenter_image_url: PresenterProfileImg.src,
+    },
+    {
+        id: 26,
+        flag: 1,
+        type: 'Camping Seminar',
+        topic: 'Server/Cloud',
+        date: '2023.09.22 (FRI) 19:30',
+        location: '동국대학교 원흥관 PBL',
+        title: `
+        휴, 하마터면 
+        의사 될 뻔...
+        `,
+        description: `
+        의사를 목표로 공부를 하다가,
+        프로그래밍을 시작한 과정들을 토대로 개발 공부를 하며 깨달은 것들
+        `,
+        presenter_name: '서희찬',
+        presenter_role: 'Lead',
+        seminar_image_url: SeminarThumbnailCardImg.src,
+        presenter_image_url: PresenterProfileImg.src,
+    },
+    {
+        id: 27,
+        flag: 1,
+        type: 'Camping Seminar',
+        topic: 'AI/ML',
+        date: '2023.09.22 (FRI) 19:30',
+        location: '동국대학교 원흥관 PBL',
+        title: `
+        휴, 하마터면 
+        의사 될 뻔...
+        `,
+        description: `
+        의사를 목표로 공부를 하다가,
+        프로그래밍을 시작한 과정들을 토대로 개발 공부를 하며 깨달은 것들
+        `,
+        presenter_name: '서희찬',
+        presenter_role: 'Lead',
+        seminar_image_url: SeminarThumbnailCardImg.src,
+        presenter_image_url: PresenterProfileImg.src,
+    },
 ]
