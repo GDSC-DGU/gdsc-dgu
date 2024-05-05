@@ -79,7 +79,7 @@ const SeminarThumbnailList = ({ selectedCategory }: { selectedCategory: string }
 
          {/*tablet, mobile인 경우 */}
         <div className="desktop:hidden grid tablet:grid-cols-2 grid-cols-1 gap-x-8 gap-y-10">
-        {SEMINAR_DATA.map((seminar) => (
+          {filteredData.map((seminar) => (
           <motion.section
           key={seminar.id}
           whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
