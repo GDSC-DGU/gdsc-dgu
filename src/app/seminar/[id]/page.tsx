@@ -14,7 +14,7 @@ import { changePathtoNumber } from '@/hooks/seminar/changePathtoNumber';
 
 const SeminarDetailPage = () => {
   const pathname = usePathname();
-  let id = changePathtoNumber(pathname);
+  let id = changePathtoNumber(pathname || '');
 
   let data: SeminarThumnail | undefined;
 
@@ -57,7 +57,7 @@ const SeminarDetailPage = () => {
     <SeminarDetailPdf key={`${data.id}_pdf`}/>
 
     {/* review */}
-    <SeminarDetailReview key={`${data.id}_review`} />
+    <SeminarDetailReview key={`${data.id}_review`} data={data.reviews} />
 
   </div>
   <div className="h-[7.5rem]"></div>
