@@ -3,4 +3,3 @@ export interface SeminarReview {
     author: string;
     content: string;
 }
-  

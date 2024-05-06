@@ -18,7 +18,7 @@ const SeminarDetailReviewDetail = ({ data }: { data: SeminarReview }) => {
 
   return (
     <div className="mt-5 flex flex-col p-5 bg-mono_900 rounded-xl"> 
-    <p className='B1 pointer-events-none'>사람 이름</p>
+    <p className='B1 pointer-events-none'>{data.author}</p>
     <motion.section
           viewport={{ once: true, amount: 0.9 }}
           variants={seminarCardVariants}
@@ -26,7 +26,7 @@ const SeminarDetailReviewDetail = ({ data }: { data: SeminarReview }) => {
           whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
           whileTap={{ scale: 0.8 }}
         >
-    <p className='mt-3 B1 pointer-events-none'>리뷰 내용</p>
+    <p className='mt-3 B1 pointer-events-none'>{data.content}</p>
     </motion.section>
   </div>
   );

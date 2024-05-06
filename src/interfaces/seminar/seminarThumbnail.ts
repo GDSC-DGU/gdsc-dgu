@@ -1,3 +1,5 @@
+import { SeminarReview } from "./seminarReview";
+
 export interface SeminarThumnail {
     id: number;
     flag: number;
@@ -11,5 +13,7 @@ export interface SeminarThumnail {
     presenter_role: string;
     seminar_image_url: string;
     presenter_image_url: string;
+    pdf_url: string;
+    reviews: SeminarReview[];
 }
   

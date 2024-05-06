@@ -1,6 +1,8 @@
 import SeminarThumbnailCardImg from '@/svg/seminar/seminar_thumbnail_card.png';
 import PresenterProfileImg from '@/svg/seminar/presenter_profile_img.png';
 import { SeminarThumnail } from '@/interfaces/seminar/seminarThumbnail';
+import { SeminarReview } from '@/interfaces/seminar/seminarReview';
+import { SEMINAR_REVIEWS_DATA } from './seminarReviewData';
 
 export const SEMINAR_DATA: SeminarThumnail[] = [
     {
@@ -22,6 +24,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 2,
@@ -42,6 +46,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 3,
@@ -62,6 +68,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 4,
@@ -82,6 +90,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 5,
@@ -102,6 +112,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 6,
@@ -122,6 +134,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 7,
@@ -142,6 +156,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 8,
@@ -162,6 +178,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 9,
@@ -182,6 +200,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 10,
@@ -202,6 +222,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 11,
@@ -222,6 +244,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 12,
@@ -242,6 +266,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 13,
@@ -262,6 +288,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 14,
@@ -282,6 +310,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 15,
@@ -302,6 +332,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 16,
@@ -322,6 +354,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 17,
@@ -342,6 +376,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 18,
@@ -362,6 +398,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 19,
@@ -382,6 +420,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 20,
@@ -402,6 +442,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 21,
@@ -422,6 +464,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 22,
@@ -442,6 +486,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 23,
@@ -462,6 +508,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 24,
@@ -482,6 +530,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 25,
@@ -502,6 +552,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 26,
@@ -522,6 +574,8 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 27,
@@ -542,5 +596,7 @@ export const SEMINAR_DATA: SeminarThumnail[] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
 ]
