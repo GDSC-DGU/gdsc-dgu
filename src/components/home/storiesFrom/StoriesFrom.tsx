@@ -14,7 +14,7 @@ interface Story {
 const ImageBox: React.FC<Story> = ({ label, img }) => {
   return (
     <div className="flex flex-col gap-6 w-full">
-      <img className="w-full   bg-red-900 " src="/images/main/story_ex.png" />
+      <img className="w-full bg-red-900 " src="/images/main/story_ex.png" />
       <div className="H6">{label}</div>
     </div>
   );
@@ -43,6 +43,7 @@ const StoriesFrom = () => {
         {/* title */}
 
         {/* content */}
+        {/* 데스크탑, 테블릿 */}
         <div className="tablet:flex w-full gap-10 max-w-[640px] hidden">
           <div className="flex-grow flex flex-col gap-14">
             <ImageBox label="1" img="" />
@@ -55,22 +56,23 @@ const StoriesFrom = () => {
             <ImageBox label="1" img="" />
           </div>
         </div>
-
-        <Swiper
-          // navigation={true}
-          autoplay={{ delay: 3000 }}
-          modules={[Navigation, Autoplay]}
-          className="tablet:hidden flex w-full"
-          loop
-        >
-          {StoryList.map((item, index) => {
-            return (
-              <SwiperSlide key={index}>
-                <ImageBox label={item.label} img={item.img} />
-              </SwiperSlide>
-            );
-          })}
-        </Swiper>
+        {/* 모바일 */}
+        <div className="tablet:hidden flex w-full ">
+          <Swiper
+            autoplay={{ delay: 3000 }}
+            modules={[Navigation, Autoplay]}
+            className="w-full"
+            loop
+          >
+            {StoryList.map((item, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <ImageBox label={item.label} img={item.img} />
+                </SwiperSlide>
+              );
+            })}
+          </Swiper>
+        </div>
 
         {/* content */}
       </section>
