@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState } from 'react';
-import SeminarThumbnail from "./SeminarThumbnail";
+import SeminarThumbnailBox from './SeminarThumbnail';
 import { SEMINAR_DATA } from '@/constants/seminar/seminarData';
 import Link from 'next/link'
 import { motion } from 'framer-motion';
@@ -68,7 +68,7 @@ const SeminarThumbnailList = ({ selectedCategory }: { selectedCategory: string }
           <Link
           href={`/seminar/${seminar.id}`}
         >
-          <SeminarThumbnail
+          <SeminarThumbnailBox
           key={seminar.id}
           data={seminar}
           />
@@ -94,7 +94,7 @@ const SeminarThumbnailList = ({ selectedCategory }: { selectedCategory: string }
           <Link
           href={`/seminar/${seminar.id}`}
         >
-          <SeminarThumbnail
+          <SeminarThumbnailBox
           key={seminar.id}
           data={seminar}
           />

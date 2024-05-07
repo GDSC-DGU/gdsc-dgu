@@ -1,4 +1,4 @@
-import { SeminarThumnail } from "./seminarThumbnail";
+import { SeminarThumbnail } from "./seminarThumbnail";
 
 export interface OpenSeminar {
     id: number;
@@ -11,5 +11,5 @@ export interface OpenSeminar {
     information: string;
     image_url: string;
     status: boolean;
-    seminars: SeminarThumnail[];
+    seminars: SeminarThumbnail[];
 }

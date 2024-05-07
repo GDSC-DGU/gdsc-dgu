@@ -1,6 +1,6 @@
 import React from 'react';
 import Image from 'next/image';
-import { SeminarThumnail } from '@/interfaces/seminar/seminarThumbnail';
+import { SeminarThumbnail } from '@/interfaces/seminar/seminarThumbnail';
 import TranslateImg from '@/svg/seminar/translate_img.png';
 import { motion } from 'framer-motion';
 import { seminarCardVariants } from '@/constants/seminar/seminarCardVariants';
@@ -18,7 +18,7 @@ import SeminarDetailBannerInform from './SeminarDetailBannerInform';
  * Renders the header component for the recruitment section.
  * @returns The rendered header component.
  */
-const SeminarDetailBanner = ({ data }: { data: SeminarThumnail }) => {
+const SeminarDetailBanner = ({ data }: { data: SeminarThumbnail }) => {
   return (
     <div className="w-full mt-8 pb-6 flex desktop:flex-row tablet:flex-col flex-col flex-col gap-8">
       {/* 왼쪽 컨텐츠 */}

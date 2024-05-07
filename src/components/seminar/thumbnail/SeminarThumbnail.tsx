@@ -1,4 +1,4 @@
-import { SeminarThumnail } from '@/interfaces/seminar/seminarThumbnail';
+import { SeminarThumbnail } from '@/interfaces/seminar/seminarThumbnail';
 import Image from 'next/image';
 
 /**
@@ -12,7 +12,7 @@ import Image from 'next/image';
  * Renders the header component for the recruitment section.
  * @returns The rendered header component.
  */
-const SeminarThumbnail = ({ data }: { data: SeminarThumnail }) => {
+const SeminarThumbnailBox = ({ data }: { data: SeminarThumbnail }) => {
   return (
     <div className="w-full aspect-w-16 aspect-h-9">
     <Image
@@ -26,4 +26,4 @@ const SeminarThumbnail = ({ data }: { data: SeminarThumnail }) => {
   </div>
   );
 };
-export default SeminarThumbnail;
+export default SeminarThumbnailBox;

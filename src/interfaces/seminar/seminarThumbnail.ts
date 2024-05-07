@@ -1,6 +1,6 @@
 import { SeminarReview } from "./seminarReview";
 
-export interface SeminarThumnail {
+export interface SeminarThumbnail {
     id: number;
     flag: number;
     type: string;

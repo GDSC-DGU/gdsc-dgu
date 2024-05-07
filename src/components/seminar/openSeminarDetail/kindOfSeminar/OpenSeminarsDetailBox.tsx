@@ -1,4 +1,4 @@
-import { SeminarThumnail } from '@/interfaces/seminar/seminarThumbnail';
+import { SeminarThumbnail } from '@/interfaces/seminar/seminarThumbnail';
 import Image from 'next/image';
 import React from 'react';
 
@@ -13,7 +13,7 @@ import React from 'react';
  * Renders the header component for the recruitment section.
  * @returns The rendered header component.
  */
-const OpenSeminarsDetailBox = ({ data }: { data: SeminarThumnail }) => {
+const OpenSeminarsDetailBox = ({ data }: { data: SeminarThumbnail }) => {
 
   return (
     <div className="w-full flex flex-row p-4 bg-mono_900 rounded gap-4"> 

@@ -1,10 +1,10 @@
 import SeminarThumbnailCardImg from '@/svg/seminar/seminar_thumbnail_card.png';
 import PresenterProfileImg from '@/svg/seminar/presenter_profile_img.png';
-import { SeminarThumnail } from '@/interfaces/seminar/seminarThumbnail';
+import { SeminarThumbnail } from '@/interfaces/seminar/seminarThumbnail';
 import { SeminarReview } from '@/interfaces/seminar/seminarReview';
 import { SEMINAR_REVIEWS_DATA } from './seminarReviewData';
 
-export const SEMINAR_DATA: SeminarThumnail[] = [
+export const SEMINAR_DATA: SeminarThumbnail[] = [
     {
         id: 1,
         flag: 1,

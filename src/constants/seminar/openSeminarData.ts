@@ -1,9 +1,10 @@
 import SeminarThumbnailCardImg from '@/svg/seminar/seminar_thumbnail_card.png';
 import PresenterProfileImg from '@/svg/seminar/presenter_profile_img.png';
 import { OpenSeminar } from '@/interfaces/seminar/openSeminar';
-import { SeminarThumnail } from '@/interfaces/seminar/seminarThumbnail';
+import { SeminarThumbnail } from '@/interfaces/seminar/seminarThumbnail';
+import { SEMINAR_REVIEWS_DATA } from './seminarReviewData';
 
-export const OPEN_DETAIL_SEMINAR_DATA:SeminarThumnail [] = [
+export const OPEN_DETAIL_SEMINAR_DATA:SeminarThumbnail [] = [
     {
         id: 1,
         flag: 1,
@@ -23,6 +24,8 @@ export const OPEN_DETAIL_SEMINAR_DATA:SeminarThumnail [] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 2,
@@ -43,6 +46,8 @@ export const OPEN_DETAIL_SEMINAR_DATA:SeminarThumnail [] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 3,
@@ -63,6 +68,8 @@ export const OPEN_DETAIL_SEMINAR_DATA:SeminarThumnail [] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
     {
         id: 4,
@@ -83,6 +90,8 @@ export const OPEN_DETAIL_SEMINAR_DATA:SeminarThumnail [] = [
         presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
         presenter_image_url: PresenterProfileImg.src,
+        pdf_url: "/pdf/test_pdf.pdf",
+        reviews: SEMINAR_REVIEWS_DATA[0],
     },
 ]
 

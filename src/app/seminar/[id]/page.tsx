@@ -9,14 +9,14 @@ import { OPEN_SEMINAR_DATA } from '@/constants/seminar/openSeminarData';
 import SeminarDetailPdf from '@/components/seminar/seminarDetail/pdf/SeminarDetailPdf';
 import NotFoundPage from '@/app/not-found';
 import SeminarDetailReview from '@/components/seminar/seminarDetail/review/SeminarDetailReview';
-import { SeminarThumnail } from '@/interfaces/seminar/seminarThumbnail';
+import { SeminarThumbnail } from '@/interfaces/seminar/seminarThumbnail';
 import { changePathtoNumber } from '@/hooks/seminar/changePathtoNumber';
 
 const SeminarDetailPage = () => {
   const pathname = usePathname();
   let id = changePathtoNumber(pathname || '');
 
-  let data: SeminarThumnail | undefined;
+  let data: SeminarThumbnail | undefined;
 
   // 일반객체
     data = SEMINAR_DATA.find(seminar => `${seminar.id}` === `${id}`);

@@ -1,5 +1,4 @@
 import React from 'react';
-import { SeminarThumnail } from '@/interfaces/seminar/seminarThumbnail';
 import { motion } from 'framer-motion';
 import { seminarCardVariants } from '@/constants/seminar/seminarCardVariants';
 

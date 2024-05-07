@@ -1,6 +1,6 @@
 'use client';
 
-import { SeminarThumnail } from '@/interfaces/seminar/seminarThumbnail';
+import { SeminarThumbnail } from '@/interfaces/seminar/seminarThumbnail';
 import React, { useState } from 'react';
 import BannerImg from '@/svg/seminar/seminar_banner.svg';
 
@@ -15,7 +15,7 @@ import BannerImg from '@/svg/seminar/seminar_banner.svg';
  * Renders the header component for the recruitment section.
  * @returns The rendered header component.
  */
-const SeminarDetailHeader = ({ data }: { data: SeminarThumnail }) => {
+const SeminarDetailHeader = ({ data }: { data: SeminarThumbnail }) => {
   const [categoryData, setCategoryData] = useState([data.type, `${data.flag}st`, data.topic]);
 
   return (
