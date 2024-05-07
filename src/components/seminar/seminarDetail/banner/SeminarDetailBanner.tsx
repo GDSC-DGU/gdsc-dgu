@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import { SeminarThumbnail } from '@/interfaces/seminar/seminarThumbnail';
@@ -5,6 +7,7 @@ import TranslateImg from '@/svg/seminar/translate_img.png';
 import { motion } from 'framer-motion';
 import { seminarCardVariants } from '@/constants/seminar/seminarCardVariants';
 import SeminarDetailBannerInform from './SeminarDetailBannerInform';
+import { SeminarMember } from '@/interfaces/seminar/seminarMember';
 
 
 /**
@@ -18,7 +21,7 @@ import SeminarDetailBannerInform from './SeminarDetailBannerInform';
  * Renders the header component for the recruitment section.
  * @returns The rendered header component.
  */
-const SeminarDetailBanner = ({ data }: { data: SeminarThumbnail }) => {
+const SeminarDetailBanner = ({ seminar, member }: { seminar: SeminarThumbnail, member: SeminarMember }) => {
   return (
     <div className="w-full mt-8 pb-6 flex desktop:flex-row tablet:flex-col flex-col flex-col gap-8">
       {/* 왼쪽 컨텐츠 */}
@@ -31,14 +34,15 @@ const SeminarDetailBanner = ({ data }: { data: SeminarThumbnail }) => {
     variants={seminarCardVariants}
     style={{ transformOrigin: '10% 60%' }}
   >
+     <div className='rounded-lg overflow-hidden'>
         <Image
-          src={data.seminar_image_url}
-          alt={`${data.presenter_name}'s_seminarimage`}
+          src={seminar.seminar_image_url}
+          alt={`${seminar.title} image`}
           width={1600}
           height={900}
           quality={100}
-          priority
         />
+        </div>
          </motion.section>
       </div>
     {/* 오른쪽 컨텐츠 */}
@@ -51,12 +55,11 @@ const SeminarDetailBanner = ({ data }: { data: SeminarThumbnail }) => {
           width={352}
           height={56}
           quality={100}
-          priority
         />
         </div>
-        <SeminarDetailBannerInform type='Date' data={data.date} speaker_data=''/>
-        <SeminarDetailBannerInform type='Location' data={data.location} speaker_data=''/>
-        <SeminarDetailBannerInform type='Speaker' data={data.presenter_name} speaker_data={data.presenter_role}/>
+        <SeminarDetailBannerInform type='Date' data={seminar.date} speaker_data=''/>
+        <SeminarDetailBannerInform type='Location' data={seminar.location} speaker_data=''/>
+        <SeminarDetailBannerInform type='Speaker' data={member.name} speaker_data={member.role}/>
     </div>
     </div>
   </div>

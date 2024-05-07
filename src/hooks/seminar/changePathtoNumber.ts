@@ -1,13 +1,10 @@
-export const changePathtoNumber = (pathname: string) => {
-    const match = pathname.match(/\/seminar\/(\d+)/);
-    const seminar_id = match ? match[1] : null;
 
-    return seminar_id;
-}
+// path 'seminar/${seminar.id} 중 seminar.id만 반환
+export const changePathtoSeperate = (pathname: string) => {
+    // URL에서 '/seminar/' 다음에 오는 부분을 추출하여 직접 반환
+    const basePath = '/seminar/';
+    const start = pathname.indexOf(basePath) + basePath.length;
+    const seminarId = pathname.substring(start); // 이 부분이 바로 seminarId
 
-export const changeOpenPathtoNumber = (pathname:string) => {
-    const match = pathname.match(/\/seminar\/open\/(\d+)/);
-    const seminar_id = match ? parseInt(match[1], 10) : null;
-
-    return seminar_id;
-}
+    return seminarId; // 추출된 seminarId 반환
+  }

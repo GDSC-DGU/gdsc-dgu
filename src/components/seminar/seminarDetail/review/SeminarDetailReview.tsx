@@ -1,4 +1,6 @@
-import React from 'react';
+'use client';
+
+import React, {useEffect, useState} from 'react';
 import SeminarDetailReviewDetail from './SeminalDetailReviewDetail';
 import { motion } from 'framer-motion';
 import { seminarCardVariants } from '@/constants/seminar/seminarCardVariants';
@@ -15,7 +17,7 @@ import { SeminarReview } from '@/interfaces/seminar/seminarReview';
  * Renders the header component for the recruitment section.
  * @returns The rendered header component.
  */
-const SeminarDetailReview = ({ data }: { data: SeminarReview[] }) => {
+const SeminarDetailReview = ({reviews}:{reviews:SeminarReview[]}) => {
 
   return (
     <div className="w-full flex mt-10 flex-col inline-flex min-h-fit relative"> 
@@ -23,7 +25,7 @@ const SeminarDetailReview = ({ data }: { data: SeminarReview[] }) => {
       Review
     </p>
     <p className="mb-3 border border-solid text-mono_700 h-0"/>
-    {data.map((review) => (
+    {reviews.map((review) => (
        <motion.section
        key={review.id}
        initial={{ y: 20, opacity: 0 }}
@@ -35,7 +37,7 @@ const SeminarDetailReview = ({ data }: { data: SeminarReview[] }) => {
      >
         <SeminarDetailReviewDetail 
         key={`${review.id}_review`} 
-        data={review}/>
+        review={review}/>
          </motion.section>
         ))}
   </div>

@@ -15,8 +15,8 @@ import BannerImg from '@/svg/seminar/seminar_banner.svg';
  * Renders the header component for the recruitment section.
  * @returns The rendered header component.
  */
-const SeminarDetailHeader = ({ data }: { data: SeminarThumbnail }) => {
-  const [categoryData, setCategoryData] = useState([data.type, `${data.flag}st`, data.topic]);
+const SeminarDetailHeader = ({ seminar }: { seminar: SeminarThumbnail }) => {
+  const [categoryData, setCategoryData] = useState([seminar.type, `${seminar.flag}st`, seminar.topic]);
 
   return (
     <> 
@@ -31,10 +31,10 @@ const SeminarDetailHeader = ({ data }: { data: SeminarThumbnail }) => {
       ))}
       </div>
     <p className="w-full px-3 pt-8 H3">
-      {data.title}
+      {seminar.title}
     </p>
     <p className="w-full px-3 pt-3 H6">
-    {data.description}
+    {seminar.description}
     </p>
   </>
   );

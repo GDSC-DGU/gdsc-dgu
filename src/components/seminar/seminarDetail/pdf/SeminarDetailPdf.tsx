@@ -1,7 +1,10 @@
+'use client';
+
 import React from 'react';
 import PinImg from '@/svg/seminar/pin.svg';
 import { motion } from 'framer-motion';
 import { seminarCardVariants } from '@/constants/seminar/seminarCardVariants';
+import { SeminarThumbnail } from '@/interfaces/seminar/seminarThumbnail';
 
 /**
  * @description
@@ -14,7 +17,7 @@ import { seminarCardVariants } from '@/constants/seminar/seminarCardVariants';
  * Renders the header component for the recruitment section.
  * @returns The rendered header component.
  */
-const SeminarDetailPdf = () => {
+const SeminarDetailPdf = ({seminar}:{seminar:SeminarThumbnail}) => {
 
   return (
     <motion.section
@@ -35,7 +38,9 @@ const SeminarDetailPdf = () => {
     className="flex gap-2 cursor-pointer"
   >
     <PinImg />
-    <p className='B1'>세미나 자료 보기</p>
+    <a href={seminar.pdf_url} download={`${seminar.title}_${seminar.date}`} className="B1">
+    세미나 자료 보기
+  </a>
     </motion.section>
   </motion.section>
   );
