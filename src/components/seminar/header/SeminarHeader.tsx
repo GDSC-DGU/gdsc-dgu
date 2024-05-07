@@ -1,7 +1,8 @@
+'use client';
+
 import BannerImg from '@/svg/seminar/seminar_banner.svg';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { OpenSeminar } from '@/interfaces/seminar/openSeminar';
 import { OPEN_SEMINAR_DATA } from '@/constants/seminar/openSeminarData';
 
 /**

@@ -2,11 +2,12 @@
 
 import React, { useState } from 'react';
 import SeminarThumbnailBox from './SeminarThumbnail';
-import { SEMINAR_DATA } from '@/constants/seminar/seminarData';
 import Link from 'next/link'
 import { motion } from 'framer-motion';
 import { seminarCardVariants } from '@/constants/seminar/seminarCardVariants';
 import SeminarPagination from './SeminarPagination';
+import { SeminarThumbnail } from '@/interfaces/seminar/seminarThumbnail';
+import SeminarMenuBar from '../menubar/SeminarMenuBar';
 
 /**
  * @description
@@ -22,12 +23,13 @@ import SeminarPagination from './SeminarPagination';
  * @returns The rendered header component.
  */
 
-const SeminarThumbnailList = ({ selectedCategory }: { selectedCategory: string }) => {     
+const SeminarThumbnailList = ({ seminar }: { seminar:SeminarThumbnail[] }) => {     
   const [currentPage, setCurrentPage] = useState(1);
+  const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const itemsPerPage = 12;  // 한 페이지당 표시할 항목 수
-  
+
     // topic으로 데이터 필터링
-  const filteredData = selectedCategory !== "all" ? SEMINAR_DATA.filter(seminar => seminar.topic === selectedCategory) : SEMINAR_DATA;
+  const filteredData = selectedCategory !== "all" ? seminar.filter(seminar => seminar.topic === selectedCategory) : seminar;
 
   // 페이지네이션
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -48,14 +50,18 @@ const SeminarThumbnailList = ({ selectedCategory }: { selectedCategory: string }
   
   
     return (
+      <div>
+        {/* select button */}
+        <SeminarMenuBar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+      
         <div className="mt-10">
           {/* 썸네일 리스트 */}
 
           {/* desktop인 경우 */}
         <div className="desktop:grid tablet:hidden hidden desktop:grid-cols-3 gap-x-8 gap-y-10">
-        {currentItems.map((seminar) => (
+        {currentItems.map((seminar:SeminarThumbnail, index:number) => (
            <motion.section
-           key={seminar.id}
+           key={index}
            whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
            whileTap={{ scale: 0.8 }}
            initial={{ y: 20, opacity: 0 }}
@@ -65,23 +71,23 @@ const SeminarThumbnailList = ({ selectedCategory }: { selectedCategory: string }
            variants={seminarCardVariants}
            style={{ transformOrigin: '10% 60%' }}
          >
-          <Link
-          href={`/seminar/${seminar.id}`}
-        >
-          <SeminarThumbnailBox
-          key={seminar.id}
-          data={seminar}
-          />
-          </Link>
+             <Link
+             href={`/seminar/${seminar.id}`}
+           >
+             <SeminarThumbnailBox
+             key={index}
+             seminar={seminar}
+             />
+             </Link>
           </motion.section>
         ))}
         </div>
 
          {/*tablet, mobile인 경우 */}
         <div className="desktop:hidden grid tablet:grid-cols-2 grid-cols-1 gap-x-8 gap-y-10">
-          {filteredData.map((seminar) => (
+          {filteredData.map((seminar:SeminarThumbnail, index:number) => (
           <motion.section
-          key={seminar.id}
+          key={index}
           whileHover={{ scale: 1.05, transition: { duration: 0.3 } }}
           whileTap={{ scale: 0.8 }}
           initial={{ y: 20, opacity: 0 }}
@@ -90,15 +96,15 @@ const SeminarThumbnailList = ({ selectedCategory }: { selectedCategory: string }
           viewport={{ once: true, amount: 0.9 }}
           variants={seminarCardVariants}
           style={{ transformOrigin: '10% 60%' }}
-        >
+          >
           <Link
-          href={`/seminar/${seminar.id}`}
-        >
-          <SeminarThumbnailBox
-          key={seminar.id}
-          data={seminar}
-          />
-          </Link>
+             href={`/seminar/${seminar.id}`}
+           >
+             <SeminarThumbnailBox
+          key={index}
+          seminar={seminar}
+             />
+             </Link>
           </motion.section>
         ))}
         </div>
@@ -109,6 +115,7 @@ const SeminarThumbnailList = ({ selectedCategory }: { selectedCategory: string }
         paginate={paginate}
       />
 
+      </div>
       </div>
     );
   };

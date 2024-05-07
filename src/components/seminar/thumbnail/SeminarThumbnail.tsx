@@ -1,3 +1,4 @@
+import { SeminarMember } from '@/interfaces/seminar/seminarMember';
 import { SeminarThumbnail } from '@/interfaces/seminar/seminarThumbnail';
 import Image from 'next/image';
 
@@ -12,17 +13,20 @@ import Image from 'next/image';
  * Renders the header component for the recruitment section.
  * @returns The rendered header component.
  */
-const SeminarThumbnailBox = ({ data }: { data: SeminarThumbnail }) => {
+const SeminarThumbnailBox = ({ seminar }: { seminar: SeminarThumbnail }) => {
   return (
     <div className="w-full aspect-w-16 aspect-h-9">
+          <div className='rounded-lg overflow-hidden'>
     <Image
-      src={data.seminar_image_url}
-      alt={`${data.presenter_name}'s_seminarimage`}
+      src={seminar.seminar_image_url}
+      alt={`${seminar.title} image`}
       width={1600}
       height={900}
       quality={100}
       priority
+      rel="preload"
     />
+    </div>
   </div>
   );
 };
