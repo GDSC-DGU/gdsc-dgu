@@ -6,7 +6,7 @@ import { SEMINAR_REVIEWS_DATA } from './seminarReviewData';
 
 export const OPEN_DETAIL_SEMINAR_DATA:SeminarThumbnail [] = [
     {
-        id: 1,
+        id: '1',
         flag: 1,
         type: 'Open Seminar',
         topic: 'DevTalk',
@@ -20,15 +20,11 @@ export const OPEN_DETAIL_SEMINAR_DATA:SeminarThumbnail [] = [
         의사를 목표로 공부를 하다가,
         프로그래밍을 시작한 과정들을 토대로 개발 공부를 하며 깨달은 것들
         `,
-        presenter_name: '서희찬',
-        presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
-        presenter_image_url: PresenterProfileImg.src,
-        pdf_url: "/pdf/test_pdf.pdf",
-        reviews: SEMINAR_REVIEWS_DATA[0],
+        pdf_url: SeminarThumbnailCardImg.src,
     },
     {
-        id: 2,
+        id: '2',
         flag: 1,
         type: 'Open Seminar',
         topic: 'DevTalk',
@@ -42,15 +38,11 @@ export const OPEN_DETAIL_SEMINAR_DATA:SeminarThumbnail [] = [
         의사를 목표로 공부를 하다가,
         프로그래밍을 시작한 과정들을 토대로 개발 공부를 하며 깨달은 것들
         `,
-        presenter_name: '서희찬',
-        presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
-        presenter_image_url: PresenterProfileImg.src,
-        pdf_url: "/pdf/test_pdf.pdf",
-        reviews: SEMINAR_REVIEWS_DATA[0],
+        pdf_url: SeminarThumbnailCardImg.src,
     },
     {
-        id: 3,
+        id: '3',
         flag: 1,
         type: 'Open Seminar',
         topic: 'DevTalk',
@@ -64,15 +56,11 @@ export const OPEN_DETAIL_SEMINAR_DATA:SeminarThumbnail [] = [
         의사를 목표로 공부를 하다가,
         프로그래밍을 시작한 과정들을 토대로 개발 공부를 하며 깨달은 것들
         `,
-        presenter_name: '서희찬',
-        presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
-        presenter_image_url: PresenterProfileImg.src,
-        pdf_url: "/pdf/test_pdf.pdf",
-        reviews: SEMINAR_REVIEWS_DATA[0],
+        pdf_url: SeminarThumbnailCardImg.src,
     },
     {
-        id: 4,
+        id: '4',
         flag: 1,
         type: 'Open Seminar',
         topic: 'DevTalk',
@@ -86,12 +74,8 @@ export const OPEN_DETAIL_SEMINAR_DATA:SeminarThumbnail [] = [
         의사를 목표로 공부를 하다가,
         프로그래밍을 시작한 과정들을 토대로 개발 공부를 하며 깨달은 것들
         `,
-        presenter_name: '서희찬',
-        presenter_role: 'Lead',
         seminar_image_url: SeminarThumbnailCardImg.src,
-        presenter_image_url: PresenterProfileImg.src,
-        pdf_url: "/pdf/test_pdf.pdf",
-        reviews: SEMINAR_REVIEWS_DATA[0],
+        pdf_url: SeminarThumbnailCardImg.src,
     },
 ]
 
