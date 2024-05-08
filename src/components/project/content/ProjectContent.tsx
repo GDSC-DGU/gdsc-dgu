@@ -1,5 +1,7 @@
-import ProjectMember from './ProjectMember';
-import ToggleIcon from '@/svg/icons/project/toggleIcon.svg';
+import { ProjectData } from '@/interfaces/project/projectData';
+import ProjectToggle from './ProjectToggle';
+import { slideUpVariants } from '@/constants/project/slideUpVariants';
+import { motion } from 'framer-motion';
 
 /**
  * @description
@@ -13,27 +15,24 @@ import ToggleIcon from '@/svg/icons/project/toggleIcon.svg';
  * @returns The rendered project content component.
  */
 
-const ProjectContent = () => {
+const ProjectContent = ({ projectData }: { projectData: ProjectData }) => {
   return (
-    <section className="w-4/5 px-10 pb-[7.5rem] mx-auto">
-      <section>
-        <div className="w-full flex flex-row justify-between items-center mb-8 px-2 pb-3 border-b border-solid border-[#3E4348]">
-          <div className="text-[2.125rem] leading-[2.5rem]">Team</div>
-          <button className="">
-            <ToggleIcon />
-          </button>
-        </div>
-        <div className="w-full grid min-[960px]:grid-cols-2 gap-8">
-          <ProjectMember />
-          <ProjectMember />
-          <ProjectMember />
-          <ProjectMember />
-        </div>
-      </section>
-      <section className="mt-[5rem] leading-7">
-        노션 내용 크롤링 <br /> CONG(콩) : 축하 아카이빙 서비스 <br /> CONG은 왜
-        필요할까? <br />{' '}
-      </section>
+    <section className="w-full max-w-[1200px] tablet:px-10 px-4">
+      <motion.section
+        initial={{ y: 20, opacity: 0 }}
+        whileInView={{ y: 0, opacity: 1 }}
+        transition={{ duration: 0.5 }}
+        viewport={{ once: true, amount: 0.9 }}
+        variants={slideUpVariants}
+        style={{ transformOrigin: '10% 60%' }}
+        className="w-full pb-[7.5rem] mx-auto"
+      >
+        <ProjectToggle teamData={projectData?.team || []} />
+        <section className="w-full mt-[5rem]">
+          <div className="H6">노션 내용 크롤링</div>
+          <div className="B1">{projectData?.content}</div>
+        </section>
+      </motion.section>
     </section>
   );
 };

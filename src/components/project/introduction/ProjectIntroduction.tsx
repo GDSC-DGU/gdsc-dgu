@@ -1,8 +1,14 @@
+'use client';
+
 import GithubIcon from '@/svg/icons/project/githubIcon.svg';
 import YoutubeIcon from '@/svg/icons/project/youtubeIcon.svg';
 import FileIcon from '@/svg/icons/project/fileIcon.svg';
 import ProjectImg from '@/images/project_img.png';
 import Image from 'next/image';
+import { ProjectData } from '@/interfaces/project/projectData';
+import ProjectIntroductionBand from './ProjectIntroductionBand';
+import { motion } from 'framer-motion';
+import { slideUpVariants } from '@/constants/project/slideUpVariants';
 
 /**
  * @description
@@ -16,39 +22,40 @@ import Image from 'next/image';
  * @returns The rendered project introduction component.
  */
 
-const ProjectIntroduction = () => {
+const ProjectIntroduction = ({ projectData }: { projectData: ProjectData }) => {
   return (
-    <section>
-      <section className="w-4/5 mx-auto flex max-[960px]:flex-col justify-center gap-8 mt-20 px-10">
-        <div
-          className="flex-1 w-full min-h-[19.125rem] rounded-md flex-col justify-center items-center"
-          style={{
-            backgroundImage: `url(${ProjectImg.src})`,
-            backgroundSize: 'cover', // Sets the background image to cover the div
-            backgroundPosition: 'center', // Aligns the background image to the center
-          }}
-        ></div>
-        <div className="flex-1 flex flex-col justify-end my-3">
-          <div className="flex flex-row gap-[0.625rem] pb-5">
-            <GithubIcon />
-            <FileIcon />
-            <YoutubeIcon />
-          </div>
-          <div className="pb-4 text-5xl leading-[3.5rem]">서비스명</div>
-          <div className="pb-4 text-xl leading-[1.9rem] font-medium">
-            서비스의 캐치프라이즈, 컨셉을 잘 나타낼 수 있는 말을 간결하게
-            적고자합니다.
-          </div>
+    <section className="w-full flex flex-col items-center">
+      <section className="w-full max-w-[1200px] tablet:px-10 px-4">
+        <div className="w-full mx-auto flex desktop:flex-row desktop:justify-start flex-col justify-center desktop:items-end gap-8 mt-20">
+          <Image
+            className="desktop:min-w-[34rem] desktop:max-w-[34rem] flex-1 w-full rounded-md"
+            src={ProjectImg}
+            alt="프로젝트 프로필"
+            priority
+          />
+          <motion.div
+            initial={{ y: 20, opacity: 0 }}
+            whileInView={{ y: 0, opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            viewport={{ once: true, amount: 0.9 }}
+            variants={slideUpVariants}
+            style={{ transformOrigin: '10% 60%' }}
+            className="flex flex-col justify-end my-3"
+          >
+            <div className="flex flex-1 flex-row gap-[0.625rem] pb-5">
+              <GithubIcon />
+              <FileIcon />
+              <YoutubeIcon />
+            </div>
+            <div className="pb-4 H3">{projectData?.title}</div>
+            <div className="pb-4 H6">{projectData?.introduce}</div>
+          </motion.div>
         </div>
       </section>
-      <section className="w-full my-16 bg-[#1C1D1F]">
-        <div className="w-4/5 mx-auto flex max-[960px]:flex-col justify-between items-center p-10">
-          <div className="text-2xl">
-            서비스가 어디서 시작됐는지, 서비스의 띠지
-          </div>
-          <div className="text-2xl">추가적인 성과</div>
-        </div>
-      </section>
+      {/* -----------------------------------------------*/}
+      {/* ------------ 프로젝트 소개 띠지 --------------------*/}
+      {/* -----------------------------------------------*/}
+      <ProjectIntroductionBand projectData={projectData} />
     </section>
   );
 };
