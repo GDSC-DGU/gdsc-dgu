@@ -3,7 +3,6 @@
 import GithubIcon from '@/svg/icons/project/githubIcon.svg';
 import YoutubeIcon from '@/svg/icons/project/youtubeIcon.svg';
 import FileIcon from '@/svg/icons/project/fileIcon.svg';
-import ProjectImg from '@/images/project_img.png';
 import Image from 'next/image';
 import { ProjectData } from '@/interfaces/project/projectData';
 import ProjectIntroductionBand from './ProjectIntroductionBand';
@@ -29,8 +28,10 @@ const ProjectIntroduction = ({ projectData }: { projectData: ProjectData }) => {
         <div className="w-full mx-auto flex desktop:flex-row desktop:justify-start flex-col justify-center desktop:items-end gap-8 mt-20">
           <Image
             className="desktop:min-w-[34rem] desktop:max-w-[34rem] flex-1 w-full rounded-md"
-            src={ProjectImg}
+            src={projectData.image}
             alt="프로젝트 프로필"
+            width={800}
+            height={800}
             priority
           />
           <motion.div

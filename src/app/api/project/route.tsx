@@ -1,5 +1,5 @@
 import { Client } from '@notionhq/client';
-import { NextRequest, NextResponse } from 'next/server';
+import { NextRequest } from 'next/server';
 
 const notion = new Client({
   auth: process.env.NOTION_SECRET_KEY,
@@ -7,7 +7,6 @@ const notion = new Client({
 const databaseId = process.env.NOTION_PROJECT_DATABASE_ID || '';
 
 async function queryAllProjectData(type: string): Promise<any[]> {
-  // 📌 DB에 데이터를 추가할때와는 다르게 pages.create가 아닌 database.query를 사용
   try {
     const response = await notion.databases.query({
       database_id: databaseId,
@@ -46,7 +45,7 @@ export async function GET(req: NextRequest) {
 
   try {
     const data = await queryAllProjectData(type);
-    // 📌 response.results 반환
+
     return new Response(JSON.stringify({ data, message: 'Success' }), {
       status: 200,
       headers: {

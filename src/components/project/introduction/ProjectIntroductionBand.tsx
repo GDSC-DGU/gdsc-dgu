@@ -33,7 +33,7 @@ const ProjectIntroductionBand = ({
       className="w-full flex flex-col items-center my-16 bg-mono_900"
     >
       <div className="w-full max-w-[1200px] tablet:px-10 px-4 flex desktop:flex-row flex-col justify-between items-center py-10">
-        <div className="H5">서비스가 어디서 시작됐는지, 서비스의 띠지</div>
+        <div className="H5"></div>
         <div className="H5">{projectData?.performance}</div>
       </div>
     </section>
