@@ -26,7 +26,7 @@ const SeminarToggleMenu = ({openSeminar}: {openSeminar:OpenSeminar}) => {
       <div
         className="p-3 flex justify-between items-center">
             <div className="flex-col">
-      <p className="H6">{openSeminar.title}{" "}{openSeminar.type}</p>
+      <p className="H6">{openSeminar.title}</p>
       <p className="Cap">{openSeminar.date}</p>
       </div>
       <p className={`text-[0.75rem] font-medium py-2 px-3 border border-solid rounded-lg ${openSeminar.status === false ? "text-mono_500 border-mono_500" : "text-mono_white border-mono_white"}`}>

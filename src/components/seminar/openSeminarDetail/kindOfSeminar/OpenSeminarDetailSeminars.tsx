@@ -39,6 +39,13 @@ const OpenSeminarDetailSeminars = ({ detailSeminars }: { detailSeminars:OpenSemi
        style={{ transformOrigin: '10% 60%' }}
        className="w-full"
      >
+          <motion.section
+          viewport={{ once: true, amount: 0.9 }}
+          variants={seminarCardVariants}
+          style={{ transformOrigin: '10% 60%' }}
+          whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+          whileTap={{ scale: 0.8 }}
+        >
       <Link
       href={`/seminar/${seminar.id}`}
     >
@@ -47,6 +54,7 @@ const OpenSeminarDetailSeminars = ({ detailSeminars }: { detailSeminars:OpenSemi
       seminar={seminar}
     />
     </Link>
+    </motion.section>
     </motion.section>
   ))}
   </div>
