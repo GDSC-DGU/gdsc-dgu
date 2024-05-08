@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
@@ -18,7 +20,7 @@ import SeminarDetailBannerInform from '../../seminarDetail/banner/SeminarDetailB
  * Renders the header component for the recruitment section.
  * @returns The rendered header component.
  */
-const OpenSeminarDetailBanner = ({ data }: { data: OpenSeminar }) => {
+const OpenSeminarDetailBanner = ({ openSeminar }: { openSeminar: OpenSeminar }) => {
   return (
     <div className="w-full mt-8 flex desktop:flex-row tablet:flex-col flex-col flex-col gap-8">
       {/* 왼쪽 컨텐츠 */}
@@ -32,12 +34,11 @@ const OpenSeminarDetailBanner = ({ data }: { data: OpenSeminar }) => {
     style={{ transformOrigin: '10% 60%' }}
   >
         <Image
-          src={data.image_url}
-          alt={`${data.seminar_month_date}'s open_seminarimage`}
+          src={openSeminar.image_url}
+          alt={`${openSeminar.date}'s open_seminarimage`}
           width={1600}
           height={900}
           quality={100}
-          priority
         />
         </motion.section>
       </div>
@@ -51,11 +52,10 @@ const OpenSeminarDetailBanner = ({ data }: { data: OpenSeminar }) => {
           width={352}
           height={56}
           quality={100}
-          priority
         />
         </div>
-        <SeminarDetailBannerInform type='Date' data={data.seminar_opening_date} speaker_data=''/>
-        <SeminarDetailBannerInform type='Location' data={data.location} speaker_data=''/>
+        <SeminarDetailBannerInform type='Date' data={openSeminar.date} speaker_data=''/>
+        <SeminarDetailBannerInform type='Location' data={openSeminar.location} speaker_data=''/>
         <div>
         <motion.section
     initial={{ y: 20, opacity: 0 }}
@@ -66,13 +66,13 @@ const OpenSeminarDetailBanner = ({ data }: { data: OpenSeminar }) => {
     style={{ transformOrigin: '10% 60%' }}
   >
           <motion.button
-           key={data.id}
-           whileHover={{ scale: data.status ? 1.05 : 1.0 }}
+           key={openSeminar.id}
+           whileHover={{ scale: openSeminar.status ? 1.05 : 1.0 }}
            whileTap={{ scale: 0.8 }}
            transition={{ duration: 0.2 }}
-           className={`w-full rounded py-4 text-[0.75rem] font-medium ${data.status === false ? "text-mono_500 border border-mono_500 pointer-events-none" : "text-mono_black bg-white"}`}
+           className={`w-full rounded py-4 text-[0.75rem] font-medium ${openSeminar.status === false ? "text-mono_500 border border-mono_500 pointer-events-none" : "text-mono_black bg-white"}`}
          >
-        {data.status === false ? '모집 기간이 아니에요.' : '모집 신청하기'}
+        {openSeminar.status === false ? '모집 기간이 아니에요.' : '모집 신청하기'}
       </motion.button>
       </motion.section>
         </div>

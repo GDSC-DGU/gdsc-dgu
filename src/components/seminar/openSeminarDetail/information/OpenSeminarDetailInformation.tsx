@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { OpenSeminar } from '@/interfaces/seminar/openSeminar';
 import { seminarCardVariants } from '@/constants/seminar/seminarCardVariants';
@@ -14,7 +16,7 @@ import { motion } from 'framer-motion';
  * Renders the header component for the recruitment section.
  * @returns The rendered header component.
  */
-const OpenSeminarDetailInformation = ({ data }: { data: OpenSeminar }) => {
+const OpenSeminarDetailInformation = ({ openSeminar }: { openSeminar: OpenSeminar }) => {
 
   return (
     <div className="w-full flex mt-10 pt-6 flex-col inline-flex min-h-fit relative"> 
@@ -32,12 +34,6 @@ const OpenSeminarDetailInformation = ({ data }: { data: OpenSeminar }) => {
           style={{ transformOrigin: '10% 60%' }}
           className="w-full"
         >
-   {data.information.split('<br>').map((line, index) => (
-          <React.Fragment key={index}>
-            {line}
-            <br />
-          </React.Fragment>
-        ))}
         </motion.section>
    </div>
   </div>

@@ -1,9 +1,12 @@
+'use client';
+
 import React from 'react';
 import OpenSeminarsDetailBox from './OpenSeminarsDetailBox';
-import { OpenSeminar } from '@/interfaces/seminar/openSeminar';
+import { OpenSeminar, OpenSeminarDetailSeminar } from '@/interfaces/seminar/openSeminar';
 import Link from 'next/link';
 import { seminarCardVariants } from '@/constants/seminar/seminarCardVariants';
 import { motion } from 'framer-motion';
+import { SeminarMember } from '@/interfaces/seminar/seminarMember';
 
 /**
  * @description
@@ -16,7 +19,7 @@ import { motion } from 'framer-motion';
  * Renders the header component for the recruitment section.
  * @returns The rendered header component.
  */
-const OpenSeminarDetailSeminars = ({ data }: { data: OpenSeminar }) => {
+const OpenSeminarDetailSeminars = ({ detailSeminars }: { detailSeminars:OpenSeminarDetailSeminar[] }) => {
 
   return (
     <div className="w-full mt-10 pt-6 flex-col inline-flex min-h-fit relative"> 
@@ -25,7 +28,7 @@ const OpenSeminarDetailSeminars = ({ data }: { data: OpenSeminar }) => {
     </p>
     <p className="mb-3 border border-solid text-mono_700 h-0"/>
     <div className='mt-5 flex grid desktop:grid-cols-2 tablet:grid-cols-1 gap-8'>
-    {data.seminars.map((seminar, index) => (
+    {detailSeminars.map((seminar) => (
        <motion.section
        key={seminar.id}
        initial={{ y: 20, opacity: 0 }}
@@ -37,11 +40,11 @@ const OpenSeminarDetailSeminars = ({ data }: { data: OpenSeminar }) => {
        className="w-full"
      >
       <Link
-      href={`/seminar/0${data.id}${seminar.id}`}
+      href={`/seminar/${seminar.id}`}
     >
     <OpenSeminarsDetailBox
-      key={`${seminar.id}_${index}_seminar`} 
-      data={seminar}
+      key={`${seminar.id}_seminar`} 
+      seminar={seminar}
     />
     </Link>
     </motion.section>

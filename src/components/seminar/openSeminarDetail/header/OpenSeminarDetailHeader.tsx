@@ -14,8 +14,8 @@ import React, { useState } from 'react';
  * Renders the header component for the recruitment section.
  * @returns The rendered header component.
  */
-const OpenSeminarDetailHeader = ({ data }: { data: OpenSeminar }) => {
-  const [categoryData, setCategoryData] = useState([data.type, `${data.flag}st`]);
+const OpenSeminarDetailHeader = ({ openSeminar }: { openSeminar: OpenSeminar }) => {
+  const [categoryData, setCategoryData] = useState([openSeminar.type, `${openSeminar.flag}st`]);
 
   return (
     <> 
@@ -30,10 +30,10 @@ const OpenSeminarDetailHeader = ({ data }: { data: OpenSeminar }) => {
       ))}
       </div>
     <p className="w-full px-3 pt-8 H3">
-      {data.seminar_month_date}{" "}{data.type}
+      {openSeminar.title}
     </p>
     <p className="w-full px-3 pt-3 H6">
-    {data.description}
+    {openSeminar.description}
     </p>
   </>
   );
