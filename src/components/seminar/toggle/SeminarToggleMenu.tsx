@@ -14,11 +14,11 @@ import { motion } from 'framer-motion';
  * @returns The rendered header component.
  */
 
-const SeminarToggleMenu = ({data}: {data:OpenSeminar}) => {      
+const SeminarToggleMenu = ({openSeminar}: {openSeminar:OpenSeminar}) => {      
   return (
     <div>
         <motion.section
-           key={data.id}
+           key={openSeminar.id}
            whileHover={{ scale: 1.05 }}
            whileTap={{ scale: 0.8 }}
            transition={{ duration: 0.2 }}
@@ -26,11 +26,11 @@ const SeminarToggleMenu = ({data}: {data:OpenSeminar}) => {
       <div
         className="p-3 flex justify-between items-center">
             <div className="flex-col">
-      <p className="H6">{data.seminar_month_date}{" "}{data.type}</p>
-      <p className="Cap">{data.seminar_opening_date}</p>
+      <p className="H6">{openSeminar.title}{" "}{openSeminar.type}</p>
+      <p className="Cap">{openSeminar.date}</p>
       </div>
-      <p className={`text-[0.75rem] font-medium py-2 px-3 border border-solid rounded-lg ${data.status === false ? "text-mono_500 border-mono_500" : "text-mono_white border-mono_white"}`}>
-              {data.status === false ? "종료" : "진행중"}
+      <p className={`text-[0.75rem] font-medium py-2 px-3 border border-solid rounded-lg ${openSeminar.status === false ? "text-mono_500 border-mono_500" : "text-mono_white border-mono_white"}`}>
+              {openSeminar.status === false ? "종료" : "모집중"}
             </p>
       </div>
       </motion.section>

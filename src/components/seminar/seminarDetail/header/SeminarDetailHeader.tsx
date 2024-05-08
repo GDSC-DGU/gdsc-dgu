@@ -2,7 +2,6 @@
 
 import { SeminarThumbnail } from '@/interfaces/seminar/seminarThumbnail';
 import React, { useState } from 'react';
-import BannerImg from '@/svg/seminar/seminar_banner.svg';
 
 /**
  * @description

@@ -23,13 +23,13 @@ import SeminarMenuBar from '../menubar/SeminarMenuBar';
  * @returns The rendered header component.
  */
 
-const SeminarThumbnailList = ({ seminar }: { seminar:SeminarThumbnail[] }) => {     
+const SeminarThumbnailList = ({ seminars }: { seminars:SeminarThumbnail[] }) => {     
   const [currentPage, setCurrentPage] = useState(1);
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
   const itemsPerPage = 12;  // 한 페이지당 표시할 항목 수
 
     // topic으로 데이터 필터링
-  const filteredData = selectedCategory !== "all" ? seminar.filter(seminar => seminar.topic === selectedCategory) : seminar;
+  const filteredData = selectedCategory !== "all" ? seminars.filter(seminar => seminar.topic === selectedCategory) : seminars;
 
   // 페이지네이션
   const indexOfLastItem = currentPage * itemsPerPage;

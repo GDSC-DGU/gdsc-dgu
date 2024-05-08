@@ -3,10 +3,10 @@
 import React, { useState } from 'react';
 import SeminarToggleMenu from './SeminarToggleMenu';
 import ChervonDownIcon from '@/svg/icons/common/chervon_down.svg';
-import { OPEN_SEMINAR_DATA } from '@/constants/seminar/openSeminarData';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
 import { toggleVariants } from '@/constants/seminar/seminarToggleVariants';
+import { OpenSeminar } from '@/interfaces/seminar/openSeminar';
 
 /**
  * @description
@@ -20,7 +20,7 @@ import { toggleVariants } from '@/constants/seminar/seminarToggleVariants';
  * @returns The rendered header component.
  */
 
-const SeminarToggle = () => {
+const SeminarToggle = ({openSeminars}:{openSeminars:OpenSeminar[]}) => {
     const [isMenuVisible, setIsMenuVisible] = useState(false); // 오픈 세미나 목록 토클 버튼
     const toggleMenuVisibility = () => {
         setIsMenuVisible(!isMenuVisible);
@@ -47,14 +47,14 @@ const SeminarToggle = () => {
         className={isMenuVisible ? "" : "overflow-hidden"}
       >
     <div className="mt-5">
-        {OPEN_SEMINAR_DATA.map((seminar) => (
+        {openSeminars.map((seminar) => (
                <Link
                key={seminar.id} 
                href={`/seminar/open/${seminar.id}`}
              >
              <SeminarToggleMenu 
              key={seminar.id}
-             data={seminar}
+             openSeminar={seminar}
              />
              </Link>
       ))}

@@ -13,12 +13,18 @@ const SeminarDetailPage = async () => {
   const header = headers();
   const pathname = header.get('next-url')
 
-  const seminarId = changePathtoSeperate(pathname ?? '');
+  const seminarId = changePathtoSeperate(pathname ?? '', 'seminar');
 
-  // seminar data 정의
-  const seminarResponse = await fetch('http://localhost:3001/api/seminar');
+  // all seminar data 정의
+  const seminarResponse = await fetch(`http://localhost:3001/api/seminar/all`);
   const seminarList = await seminarResponse.json();
   const seminars = refactorSeminarData(seminarList.data ?? []);
+    // 세미나 디테일 데이터로 분리
+    let seminar =  seminars.find(seminar => `${seminar.id}` === `${seminarId}`);
+
+    if(!seminar) {
+      return <NotFoundPage />;
+    }
 
   // reviews 데이터 정의
   const seminarReviewResponse = await fetch(`http://localhost:3001/api/seminar/review?seminarId=${seminarId}`);
@@ -28,14 +34,7 @@ const SeminarDetailPage = async () => {
   // member 데이터 정의
   const memberResponse = await fetch(`http://localhost:3001/api/member?seminarId=${seminarId}`);
   const memberList = await memberResponse.json();
-  const member = refactorSeminarMemberData(memberList.data[0] ?? SEMINAR_MEMBER_DATA);
-
-  // 세미나 디테일 데이터로 분리
-  const seminar = seminars.find(seminar => `${seminar.id}` === `${seminarId}`);
-    // 오픈 세미나 데이터
-  if (!seminar) {
-      return <NotFoundPage />;
-    }
+  const member = refactorSeminarMemberData(memberList.data[0] ?? SEMINAR_MEMBER_DATA, seminar.id);
 
   return <section className="flex justify-center">
   <div className="max-w-[1200px] desktop:px-10 tablet:px-10 px-4 bg-mono_black">
