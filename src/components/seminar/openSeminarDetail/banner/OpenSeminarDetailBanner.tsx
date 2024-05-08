@@ -22,9 +22,9 @@ import SeminarDetailBannerInform from '../../seminarDetail/banner/SeminarDetailB
  */
 const OpenSeminarDetailBanner = ({ openSeminar }: { openSeminar: OpenSeminar }) => {
   return (
-    <div className="w-full mt-8 flex desktop:flex-row tablet:flex-col flex-col flex-col gap-8">
+    <div className="w-full mt-8 flex desktop:flex-row bigTablet:flex-row lg:flex-row tablet:flex-col md:flex-col flex-col gap-8">
       {/* 왼쪽 컨텐츠 */}
-      <div className="desktop:min-w-[544px] tablet:w-full w-full aspect-w-16 aspect-h-9">
+      <div className="desktop:min-w-[544px] bigTablet:min-w-[544px] lg:min-w-[544px] tablet:w-full md:w-full w-full aspect-w-16 aspect-h-9">
       <motion.section
     initial={{ y: 20, opacity: 0 }}
     whileInView={{ y: 0, opacity: 1 }}
@@ -43,9 +43,9 @@ const OpenSeminarDetailBanner = ({ openSeminar }: { openSeminar: OpenSeminar }) 
         </motion.section>
       </div>
     {/* 오른쪽 컨텐츠 */}
-    <div className="flex desktop:items-end desktop:mt-0 tablet:mt-8 mt-8">
+    <div className="flex desktop:items-end bigTablet:items-end lg:items-end desktop:mt-0 bigTablet:mt-0 lg:mt-0 tablet:mt-8 md:mt-8 mt-8">
     <div className="w-full flex flex-col gap-6 py-3 whitespace-nowrap">
-        <div className='desktop:flex tablet:hidden hidden'>
+        <div className='desktop:flex bigTablet:flex lg:flex tablet:hidden md:hidden hidden'>
     <Image
           src={TranslateImg.src}
           alt="translate_img"

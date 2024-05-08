@@ -22,7 +22,7 @@ const SeminarPage = async () => {
   }
       
   return <section className="flex justify-center">
-  <div className="max-w-[1200px] desktop:px-10 tablet:px-10 px-4 bg-mono_black">
+  <div className="max-w-[1200px] desktop:px-10 bigTablet:px-10 lg:px-10 md:px-10 tablet:px-10 px-4 bg-mono_black">
      <div className="w-full">
 
       {/* header */}

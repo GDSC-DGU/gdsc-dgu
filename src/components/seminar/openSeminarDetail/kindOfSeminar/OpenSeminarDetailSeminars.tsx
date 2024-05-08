@@ -27,7 +27,7 @@ const OpenSeminarDetailSeminars = ({ detailSeminars }: { detailSeminars:OpenSemi
       Seminars
     </p>
     <p className="mb-3 border border-solid text-mono_700 h-0"/>
-    <div className='mt-5 flex grid desktop:grid-cols-2 tablet:grid-cols-1 gap-8'>
+    <div className='mt-5 flex grid desktop:grid-cols-2 bigTablet:grid-cols-2 lg:grid-cols-2 tablet:grid-cols-1 md:grid-cols-1 gap-8'>
     {detailSeminars.map((seminar) => (
        <motion.section
        key={seminar.id}
@@ -43,7 +43,7 @@ const OpenSeminarDetailSeminars = ({ detailSeminars }: { detailSeminars:OpenSemi
           viewport={{ once: true, amount: 0.9 }}
           variants={seminarCardVariants}
           style={{ transformOrigin: '10% 60%' }}
-          whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+          whileHover={{ scale: 1.05, transition: { duration: 0.5 } }}
           whileTap={{ scale: 0.8 }}
         >
       <Link

@@ -58,7 +58,7 @@ const SeminarThumbnailList = ({ seminars }: { seminars:SeminarThumbnail[] }) => 
           {/* 썸네일 리스트 */}
 
           {/* desktop인 경우 */}
-        <div className="desktop:grid tablet:hidden hidden desktop:grid-cols-3 gap-x-8 gap-y-10">
+        <div className="desktop:grid bigTablet:grid lg:grid tablet:hidden md:hidden hidden desktop:grid-cols-3 gap-x-8 gap-y-10 bigTablet:grid-cols-3 gap-x-8 gap-y-10 lg:grid-cols-3 gap-x-8 gap-y-10">
         {currentItems.map((seminar:SeminarThumbnail, index:number) => (
            <motion.section
            key={index}
@@ -66,7 +66,7 @@ const SeminarThumbnailList = ({ seminars }: { seminars:SeminarThumbnail[] }) => 
            whileTap={{ scale: 0.8 }}
            initial={{ y: 20, opacity: 0 }}
            whileInView={{ y: 0, opacity: 1 }}
-           transition={{ duration: 0.2 }}
+           transition={{ duration: 0.5 }}
            viewport={{ once: true, amount: 0.9 }}
            variants={seminarCardVariants}
            style={{ transformOrigin: '10% 60%' }}
@@ -84,7 +84,7 @@ const SeminarThumbnailList = ({ seminars }: { seminars:SeminarThumbnail[] }) => 
         </div>
 
          {/*tablet, mobile인 경우 */}
-        <div className="desktop:hidden grid tablet:grid-cols-2 grid-cols-1 gap-x-8 gap-y-10">
+        <div className="desktop:hidden bigTablet:hidden lg:hidden grid tablet:grid-cols-2 md:grid-cols-2 grid-cols-1 gap-x-8 gap-y-10">
           {filteredData.map((seminar:SeminarThumbnail, index:number) => (
           <motion.section
           key={index}
@@ -92,7 +92,7 @@ const SeminarThumbnailList = ({ seminars }: { seminars:SeminarThumbnail[] }) => 
           whileTap={{ scale: 0.8 }}
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
-          transition={{ duration: 0.5, delay: 0.5 }}
+          transition={{ duration: 0.5 }}
           viewport={{ once: true, amount: 0.9 }}
           variants={seminarCardVariants}
           style={{ transformOrigin: '10% 60%' }}

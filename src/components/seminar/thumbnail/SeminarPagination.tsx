@@ -8,7 +8,7 @@ interface PaginationProps {
   
   const SeminarPagination: React.FC<PaginationProps> = ({ pageNumbers, currentPage, paginate }) => {
     return (
-      <div className="pt-10 mt-5 desktop:flex tablet:hidden hidden justify-center gap-3">
+      <div className="pt-10 mt-5 desktop:flex bigTablet:flex lg:flex tablet:hidden md:hidden hidden justify-center gap-3">
                 {/* desktop에서만 보이기 */}
         {pageNumbers.map(number => (
             <motion.button

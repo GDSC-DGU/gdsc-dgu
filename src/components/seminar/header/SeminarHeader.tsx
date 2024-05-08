@@ -28,7 +28,7 @@ const SeminarHeader = ({openSeminars}:{openSeminars:OpenSeminar[]}) => {
     <motion.section
            whileHover={{ scale: 1.05 }}
            whileTap={{ scale: 0.8 }}
-           transition={{ duration: 0.2 }}
+           transition={{ duration: 0.5 }}
          >
         <Link
                key={active_seminar_id} 
