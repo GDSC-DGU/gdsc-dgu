@@ -37,8 +37,19 @@ type Data = {
 };
 
 export async function GET(req: NextRequest) {
+  const url = new URL(req.url);
+  const tag = url.searchParams.get('Tag');  // 쿼리 파라미터에서 세미나 ID 가져오기
+
+  if (!tag) {
+    return new Response(JSON.stringify({ message: 'Tag is required' }), {
+      status: 400,
+      headers: {
+        'Content-Type': 'application/json',
+      },
+    });
+  }
+
   const databaseId = process.env.NOTION_SEMINAR_DATABASE_ID || ''; 
-  const tag = '🏕️ Camping Seminar'; 
 
   try {
     const data = await querySeminarData(databaseId, tag);
