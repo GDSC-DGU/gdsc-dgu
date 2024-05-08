@@ -3,7 +3,7 @@
 import BannerImg from '@/svg/seminar/seminar_banner.svg';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import { OPEN_SEMINAR_DATA } from '@/constants/seminar/openSeminarData';
+import { OpenSeminar } from '@/interfaces/seminar/openSeminar';
 
 /**
  * @description
@@ -16,9 +16,9 @@ import { OPEN_SEMINAR_DATA } from '@/constants/seminar/openSeminarData';
  * Renders the header component for the recruitment section.
  * @returns The rendered header component.
  */
-const SeminarHeader = () => {  
+const SeminarHeader = ({openSeminars}:{openSeminars:OpenSeminar[]}) => {  
   // 현재 진행 세미나
-  const active_seminar_id = OPEN_SEMINAR_DATA.find(seminar => seminar.status)?.id;
+  const active_seminar_id = openSeminars.find(seminar => seminar.status)?.id;
 
   return (
     <>
@@ -30,9 +30,10 @@ const SeminarHeader = () => {
            whileTap={{ scale: 0.8 }}
            transition={{ duration: 0.2 }}
          >
-                <Link
-          href={`seminar/open/${active_seminar_id}`}
-        >
+        <Link
+               key={active_seminar_id} 
+               href={`/seminar/open/${active_seminar_id}`}
+             >
     <BannerImg className='mt-10 scale-100' />
     </Link>
     </motion.section>
