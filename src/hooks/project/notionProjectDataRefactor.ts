@@ -34,6 +34,10 @@ export function refactorProjectData(item: any, memberList: any[]): ProjectData {
     ),
     content: '',
     date: '',
+    youtube:
+      item?.properties['유튜브 링크']?.rich_text[0]?.plain_text ?? undefined,
+    github:
+      item?.properties['깃허브 링크']?.rich_text[0]?.plain_text ?? undefined,
   };
 }
 

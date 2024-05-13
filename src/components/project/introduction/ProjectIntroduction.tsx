@@ -8,6 +8,7 @@ import { ProjectData } from '@/interfaces/project/projectData';
 import ProjectIntroductionBand from './ProjectIntroductionBand';
 import { motion } from 'framer-motion';
 import { slideUpVariants } from '@/constants/project/slideUpVariants';
+import Link from 'next/link';
 
 /**
  * @description
@@ -44,9 +45,17 @@ const ProjectIntroduction = ({ projectData }: { projectData: ProjectData }) => {
             className="flex flex-col justify-end my-3"
           >
             <div className="flex flex-1 flex-row gap-[0.625rem] pb-5">
-              <GithubIcon />
-              <FileIcon />
-              <YoutubeIcon />
+              {projectData?.github && (
+                <Link href={projectData?.github}>
+                  <GithubIcon />
+                </Link>
+              )}
+              {/* <FileIcon /> */}
+              {projectData?.youtube && (
+                <Link href={projectData?.youtube}>
+                  <YoutubeIcon />
+                </Link>
+              )}
             </div>
             <div className="pb-4 H3">{projectData?.title}</div>
             <div className="pb-4 H6">{projectData?.introduce}</div>
