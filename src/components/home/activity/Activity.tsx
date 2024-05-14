@@ -1,5 +1,6 @@
 'use client';
 import HomeTitle from '../title/HomeTitle';
+import { motion } from 'framer-motion';
 
 import { Navigation, Autoplay } from 'swiper/modules';
 
@@ -7,10 +8,32 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { aniSlideRight, aniSlideUp } from '../animation/animaiton';
+
+const SeminarCard: React.FC<Seminar> = ({ img, link }) => {
+  return (
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={aniSlideRight}
+      transition={{ delay: 1 }} // 두 번째 컴포넌트의 delay를 1초로 설정
+    >
+      <img className="tablet:w-[352px] w-full h-[198px] flex-shrink-0 bg-red-900" />
+    </motion.div>
+  );
+};
 
 const ActivityCard: React.FC<Activity> = ({ icon, title, description }) => {
   return (
-    <div className="flex-grow">
+    <motion.div
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={aniSlideUp}
+      transition={{ delay: 1 }} // 두 번째 컴포넌트의 delay를 1초로 설정
+      className="flex-grow"
+    >
       <img className="bg-red-900 w-24 h-24" />
       <div className="H6 pb-2 pt-6">{title}</div>
       <div className="B1 flex flex-col">
@@ -18,15 +41,26 @@ const ActivityCard: React.FC<Activity> = ({ icon, title, description }) => {
           <p key={index}>{item}</p>
         ))}
       </div>
-    </div>
+    </motion.div>
   );
 };
+
+interface Seminar {
+  img: string;
+  link: string;
+}
 
 interface Activity {
   icon: string;
   title: string;
   description: string[];
 }
+
+const SeminarList: Seminar[] = [
+  { img: '111', link: '@22' },
+  { img: '111', link: '##' },
+  { img: '111', link: '##' },
+];
 
 const ActivityList: Activity[] = [
   {
@@ -89,32 +123,33 @@ const Activity = () => {
           {/* 제목 */}
 
           {/* 내용 */}
-          <div className="w-full  flex  overflow-scroll">
+          <div className="w-full  overflow-scroll tablet:flex hidden">
             {/* 풀페이지에서 overflow를 어떻게 보여줘야할지 모르겠네... */}
             {/* <div className="absolute w-lvw h-[198px] bg-slate-900 top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2"></div> */}
-            <div className="flex flex-shrink-0 gap-6">
-              <img className="w-[352px] h-[198px] flex-shrink-0 bg-red-900" />
-              <img className="w-[352px] h-[198px] flex-shrink-0 bg-red-900" />
-              <img className="w-[352px] h-[198px] flex-shrink-0 bg-red-900" />
+            <div className="flex flex-shrink-0 gap-6 overflow-scroll">
+              {SeminarList.map((item, index) => {
+                return <SeminarCard img={item.img} link={item.link} />;
+              })}
             </div>
             {/* 스크롤되는 부분 */}
-
+          </div>
+          <div className="tablet:hidden flex w-full">
             <Swiper
-              // navigation={true}
               autoplay={{ delay: 2000 }}
               modules={[Navigation, Autoplay]}
-              className="tablet:hidden flex w-full"
               loop
+              className="w-full"
             >
-              {[1, 2, 3].map((item, index) => {
+              {SeminarList.map((item, index) => {
                 return (
                   <SwiperSlide key={index}>
-                    <img className="w-[352px] h-[198px] flex-shrink-0 bg-red-900" />
+                    <SeminarCard img={item.img} link={item.link} />
                   </SwiperSlide>
                 );
               })}
             </Swiper>
           </div>
+
           {/* 내용 */}
         </section>
         {/* 세미나 */}

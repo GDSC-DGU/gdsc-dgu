@@ -1,11 +1,21 @@
+'use client';
+import { aniSlideRight, aniSlideUp } from '../animation/animaiton';
 import HomeTitle from '../title/HomeTitle';
+import { motion } from 'framer-motion';
 
 const ChannelCard: React.FC<Channel> = ({ title, description }) => {
   return (
-    <div className="flex-grow bg-mono_900 p-7 gap-3 text-white table:">
+    <motion.div
+      className="flex-grow bg-mono_900 p-7 gap-3 text-white table:"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.2 }}
+      variants={aniSlideRight}
+      transition={{ delay: 1 }} // 두 번째 컴포넌트의 delay를 1초로 설정
+    >
       <p className="H5">{title}</p>
       <p className="B2">{description}</p>
-    </div>
+    </motion.div>
   );
 };
 
@@ -48,7 +58,7 @@ const MoreAbout = () => {
             '이것도 세줄이상이면 좋겠습니다!',
           ]}
         />
-        <section className=" grid  desktop:grid-cols-4 tablet:grid-cols-2  grid-cols-1 gap-x-8 gap-y-8">
+        <section className=" grid   only_tablet:grid-cols-2  desktop:grid-cols-4 grid-cols-1 gap-x-8 gap-y-8">
           {ChannelList.map((item, index) => (
             <ChannelCard
               key={index}
