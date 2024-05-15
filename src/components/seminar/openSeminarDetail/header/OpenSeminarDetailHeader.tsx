@@ -15,7 +15,7 @@ import React, { useState } from 'react';
  * @returns The rendered header component.
  */
 const OpenSeminarDetailHeader = ({ openSeminar }: { openSeminar: OpenSeminar }) => {
-  const [categoryData, setCategoryData] = useState([openSeminar.type, `${openSeminar.flag}st`]);
+  const [categoryData, setCategoryData] = useState([openSeminar.type, openSeminar.flag]);
 
   return (
     <> 

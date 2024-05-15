@@ -11,11 +11,11 @@ export function refactorSeminarData(items: any[]): SeminarThumbnail[] {
     return items.map(item => ({
       id: item.id ?? '',
       flag: 1,
-      type: item.properties.Tags?.multi_select[0]?.name ?? 'Unknown',
-      topic: item.properties.Topic?.select?.name ?? 'Unknown', 
-      date: item.properties.Date?.date?.start ?? 'Unknown Date',
+      type: item.properties.Tags?.multi_select[0]?.name ?? '',
+      topic: item.properties.Topic?.select?.name ?? '', 
+      date: item.properties.Date?.date?.start ?? '',
       location: item.properties.Location?.rich_text[0]?.plain_text ?? '동국대학교', 
-      title: item.properties.Name?.title[0]?.plain_text ?? 'Unknown Title',
+      title: item.properties.Name?.title[0]?.plain_text ?? '',
       description: item.properties.Description?.rich_text[0]?.plain_text ?? '',
       seminar_image_url: item.cover?.file?.url ?? SeminarThumbnailCardImg.src,
       pdf_url: item.properties['Files & media']?.files[0]?.file?.url ?? "", // 임시 pdf 데이터
@@ -26,11 +26,11 @@ export function refactorSeminarData(items: any[]): SeminarThumbnail[] {
 export function refactorOpenSeminarData(items: any[]): OpenSeminar[] {
   return items.map(item => ({
     id: item.id ?? '',
-    flag: 1,
-    type: item.properties['다중 선택'].multi_select[0]?.name ?? 'Unknown',
-    date: item.properties.Date?.date?.start ?? 'Unknown Date',
+    flag: item.properties['다중 선택'].multi_select[1]?.name ?? '',
+    type: item.properties['다중 선택'].multi_select[0]?.name ?? '',
+    date: item.properties.Date?.date?.start ?? '',
     location: item.properties.Location?.rich_text[0]?.plain_text ?? '동국대학교', // static value as per example
-    title: item.properties['이름']?.title[0]?.plain_text ?? 'Unknown Title',
+    title: item.properties['이름']?.title[0]?.plain_text ?? '',
     description: item.properties.Description?.rich_text[0]?.plain_text ?? '',
     image_url: item.cover?.file?.url ?? OpenSeminarThumbnailCardImg.src,
     status: (item.properties.status?.status?.name === "종료" ? false : true) ?? false,
@@ -54,8 +54,8 @@ export function refactorOpenSeminarInformationData(items: any[]): SeminarThumbna
     return items.map(item => ({
       id: item.id ?? '',
       seminar_id: item.properties.Seminar.relation[0]?.id ?? '',
-      author: item.properties.name?.title[0]?.plain_text ?? 'Unknown',
-      content: item.properties.Review.rich_text[0]?.plain_text ?? 'No Review'
+      author: item.properties.name?.title[0]?.plain_text ?? '',
+      content: item.properties.Review.rich_text[0]?.plain_text ?? ''
     }));
   }
 
@@ -64,8 +64,8 @@ export function refactorOpenSeminarInformationData(items: any[]): SeminarThumbna
         return {
             id: item.id ?? 'Unknown',
             seminar_id: id ?? 'Unknown',
-            name: item.properties['이름']?.title[0]?.plain_text ?? 'Unknown',
-            role: item.properties.Part?.multi_select[0]?.name ?? 'Unknown',
+            name: item.properties['이름']?.title[0]?.plain_text ?? '',
+            role: item.properties.Part?.multi_select[0]?.name ?? '',
             profile_img: item.properties.ProfileImage?.url ?? PresenterProfileImg.src,
         };
       }
@@ -76,8 +76,8 @@ export function refactorOpenSeminarInformationData(items: any[]): SeminarThumbna
               id: seminar.id,
               seminar_id: seminar.id,
               member_id: member.id ?? '',
-              member_name: member.name ?? 'Unknown',
-              member_role: member.role ?? 'Unknown',
+              member_name: member.name ?? '',
+              member_role: member.role ?? '',
               member_profile_image: member.profileImage ?? PresenterProfileImg.src,
               seminar_title: seminar.title,
             };

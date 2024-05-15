@@ -7,7 +7,7 @@ export const OPEN_DETAIL_SEMINAR_DATA:SeminarThumbnail [] = [
     {
         id: '1',
         flag: 1,
-        type: '🌲 Open Seminar',
+        type: 'Open Seminar',
         topic: '',
         date: '',
         location: '동국대학교',
@@ -21,7 +21,7 @@ export const OPEN_DETAIL_SEMINAR_DATA:SeminarThumbnail [] = [
     {
         id: '2',
         flag: 1,
-        type: '🌲 Open Seminar',
+        type: 'Open Seminar',
         topic: '',
         date: '',
         location: '동국대학교',
@@ -35,7 +35,7 @@ export const OPEN_DETAIL_SEMINAR_DATA:SeminarThumbnail [] = [
     {
         id: '3',
         flag: 1,
-        type: '🌲 Open Seminar',
+        type: 'Open Seminar',
         topic: '',
         date: '',
         location: '동국대학교',
@@ -49,7 +49,7 @@ export const OPEN_DETAIL_SEMINAR_DATA:SeminarThumbnail [] = [
     {
         id: '4',
         flag: 1,
-        type: '🌲 Open Seminar',
+        type: 'Open Seminar',
         topic: '',
         date: '',
         location: '동국대학교',
@@ -65,8 +65,8 @@ export const OPEN_DETAIL_SEMINAR_DATA:SeminarThumbnail [] = [
 export const OPEN_SEMINAR_DATA: OpenSeminar[] = [
     {
         id: '',
-        flag: 1,
-        type: '🌲 Open Seminar',
+        flag: '1st',
+        type: 'Open Seminar',
         date: '',
         location: '동국대학교',
         title: '',
@@ -79,8 +79,8 @@ export const OPEN_SEMINAR_DATA: OpenSeminar[] = [
     },
     {
         id: '',
-        flag: 1,
-        type: '🌲 Open Seminar',
+        flag: '1st',
+        type: 'Open Seminar',
         date: '',
         location: '동국대학교',
         title: '',
@@ -93,8 +93,8 @@ export const OPEN_SEMINAR_DATA: OpenSeminar[] = [
     },
     {
         id: '',
-        flag: 1,
-        type: '🌲 Open Seminar',
+        flag: '1st',
+        type: 'Open Seminar',
         date: '',
         location: '동국대학교',
         title: '',

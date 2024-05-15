@@ -2,7 +2,7 @@ import { SeminarThumbnail } from "./seminarThumbnail";
 
 export interface OpenSeminar {
     id: string;
-    flag: number;
+    flag: string;
     type: string;
     date: string;
     location: string;
