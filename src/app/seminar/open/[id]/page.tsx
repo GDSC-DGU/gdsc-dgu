@@ -45,6 +45,10 @@ const OpenSeminarDetailPage = async () => {
       })
     );
 
+    const markDownResponse = await fetch(`http://localhost:3001/api/seminar/open/info?pageId=${openSeminar.id}`);
+    const markdown = await markDownResponse.json();
+    // console.log('real ::: ', markdown);
+    
   return <section className="flex justify-center">
   <div className="max-w-[1200px] desktop:px-10 bigTablet:px-10 lg:px-10 md:px-10 tablet:px-10 px-4 bg-mono_black">
      <div className="w-full">
@@ -56,7 +60,7 @@ const OpenSeminarDetailPage = async () => {
     {/* seminars */}
     <OpenSeminarDetailSeminars key={`${openSeminar.id}_seminars`} detailSeminars={results}/>
      {/* information */}
-     <OpenSeminarDetailInformation key={`${openSeminar.id}_information`} openSeminar={openSeminar}/>
+    <OpenSeminarDetailInformation key={`${openSeminar.id}_information`} information={markdown}/>
 
 
   </div>

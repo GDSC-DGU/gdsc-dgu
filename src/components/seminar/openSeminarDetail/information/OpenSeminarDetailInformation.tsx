@@ -1,9 +1,9 @@
-'use client';
+'use client'
 
 import React from 'react';
-import { OpenSeminar } from '@/interfaces/seminar/openSeminar';
 import { seminarCardVariants } from '@/constants/seminar/seminarCardVariants';
 import { motion } from 'framer-motion';
+import ReactMarkdown from 'react-markdown';
 
 /**
  * @description
@@ -16,7 +16,7 @@ import { motion } from 'framer-motion';
  * Renders the header component for the recruitment section.
  * @returns The rendered header component.
  */
-const OpenSeminarDetailInformation = ({ openSeminar }: { openSeminar: OpenSeminar }) => {
+const OpenSeminarDetailInformation = ({ information }: { information:any }) => {
 
   return (
     <div className="w-full flex mt-10 pt-6 flex-col inline-flex min-h-fit relative"> 
@@ -24,7 +24,7 @@ const OpenSeminarDetailInformation = ({ openSeminar }: { openSeminar: OpenSemina
       Information
     </p>
     <p className="mb-3 border border-solid text-mono_700 h-0"/>
-   <div className='text-[1rem] font-normal w-full mt-8 text-mono_white'>
+   <div className='text-[1rem] font-normal mt-8 text-mono_white'>
    <motion.section
           initial={{ y: 20, opacity: 0 }}
           whileInView={{ y: 0, opacity: 1 }}
@@ -34,6 +34,7 @@ const OpenSeminarDetailInformation = ({ openSeminar }: { openSeminar: OpenSemina
           style={{ transformOrigin: '10% 60%' }}
           className="w-full"
         >
+          <ReactMarkdown>{information?.data?.parent}</ReactMarkdown>
         </motion.section>
    </div>
   </div>
