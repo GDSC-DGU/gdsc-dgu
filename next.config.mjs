@@ -28,6 +28,7 @@ const nextConfig = {
     fileLoaderRule.exclude = /\.svg$/i;
     return config;
   },
+  staticPageGenerationTimeout: 120, // 타임아웃 시간을 120초로 설정
 };
 
 export default nextConfig;
