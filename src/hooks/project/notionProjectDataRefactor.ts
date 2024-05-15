@@ -1,5 +1,6 @@
 import { ProjectData } from '@/interfaces/project/projectData';
-import ProjectImg from '@/images/project_img.png';
+import ProjectImg from '@/images/default_project.png';
+import MemberImg from '@/images/default_member.png';
 import { ProjectMemberData } from '@/interfaces/project/projectMemberData';
 
 // 프로젝트 목록 데이터
@@ -48,6 +49,6 @@ export function refactorMemberListData(items: any[]): ProjectMemberData[] {
     name: item?.properties['이름']?.title[0]?.plain_text ?? '',
     role: item.properties.Part?.multi_select[0]?.name ?? '',
     seminar: '',
-    // 프로필 이미지도 추가하기
+    image: MemberImg.src, // 프로필 이미지도 추가하기
   }));
 }

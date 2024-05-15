@@ -29,10 +29,10 @@ const ProjectIntroduction = ({ projectData }: { projectData: ProjectData }) => {
         <div className="w-full mx-auto flex desktop:flex-row desktop:justify-start flex-col justify-center desktop:items-end gap-8 mt-20">
           <Image
             className="desktop:min-w-[34rem] desktop:max-w-[34rem] flex-1 w-full rounded-md"
-            src={projectData.image}
+            src={projectData?.image}
             alt="프로젝트 프로필"
-            width={800}
-            height={800}
+            width={540}
+            height={540}
             priority
           />
           <motion.div
