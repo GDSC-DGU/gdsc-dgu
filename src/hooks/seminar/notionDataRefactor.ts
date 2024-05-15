@@ -78,7 +78,7 @@ export function refactorOpenSeminarInformationData(items: any[]): SeminarThumbna
               member_id: member.id ?? '',
               member_name: member.name ?? '',
               member_role: member.role ?? '',
-              member_profile_image: member.profileImage ?? PresenterProfileImg.src,
+              member_profile_image: member.profile_img ?? PresenterProfileImg.src,
               seminar_title: seminar.title,
             };
         }
