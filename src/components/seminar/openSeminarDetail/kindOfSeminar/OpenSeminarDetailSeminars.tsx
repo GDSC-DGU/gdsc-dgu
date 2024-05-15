@@ -28,6 +28,7 @@ const OpenSeminarDetailSeminars = ({ detailSeminars }: { detailSeminars:OpenSemi
     </p>
     <p className="mb-3 border border-solid text-mono_700 h-0"/>
     <div className='mt-5 flex grid desktop:grid-cols-2 bigTablet:grid-cols-2 lg:grid-cols-2 tablet:grid-cols-1 md:grid-cols-1 gap-8'>
+      {detailSeminars.length === 0 && <p className="B1"></p>}
     {detailSeminars.map((seminar) => (
        <motion.section
        key={seminar.id}
