@@ -3,7 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { SeminarThumbnail } from '@/interfaces/seminar/seminarThumbnail';
-import TranslateImg from '@/svg/seminar/translate_img.png';
+import TranslateImg from '@/images/seminar/translate_img.png';
 import { motion } from 'framer-motion';
 import { seminarCardVariants } from '@/constants/seminar/seminarCardVariants';
 import SeminarDetailBannerInform from './SeminarDetailBannerInform';

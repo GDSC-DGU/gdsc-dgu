@@ -1,8 +1,9 @@
 import { SeminarMember } from "@/interfaces/seminar/seminarMember";
 import { SeminarReview } from "@/interfaces/seminar/seminarReview";
 import { SeminarThumbnail } from "@/interfaces/seminar/seminarThumbnail";
-import SeminarThumbnailCardImg from '@/svg/seminar/seminar_thumbnail_card.png';
-import PresenterProfileImg from '@/svg/seminar/presenter_profile_img.png';
+import SeminarThumbnailCardImg from '@/images/seminar/default_seminar.png';
+import OpenSeminarThumbnailCardImg from '@/images/seminar/default_open_seminar.png';
+import PresenterProfileImg from '@/images/seminar/presenter/presenter_profile_img.png';
 import { OpenSeminar, OpenSeminarDetailSeminar, Relation } from "@/interfaces/seminar/openSeminar";
 
 // seminar data
@@ -11,13 +12,13 @@ export function refactorSeminarData(items: any[]): SeminarThumbnail[] {
       id: item.id ?? '',
       flag: 1,
       type: item.properties.Tags?.multi_select[0]?.name ?? 'Unknown',
-      topic: item.properties.Topic?.select?.name ?? 'all', 
+      topic: item.properties.Topic?.select?.name ?? 'Unknown', 
       date: item.properties.Date?.date?.start ?? 'Unknown Date',
-      location: item.properties.Location?.rich_text[0]?.plain_text ?? 'No Location', 
+      location: item.properties.Location?.rich_text[0]?.plain_text ?? '동국대학교', 
       title: item.properties.Name?.title[0]?.plain_text ?? 'Unknown Title',
-      description: item.properties.Description?.rich_text[0]?.plain_text ?? 'No Description',
+      description: item.properties.Description?.rich_text[0]?.plain_text ?? '',
       seminar_image_url: item.cover?.file?.url ?? SeminarThumbnailCardImg.src,
-      pdf_url: item.properties['Files & media']?.files[0]?.file?.url ?? PresenterProfileImg.src, // 임시 pdf 데이터
+      pdf_url: item.properties['Files & media']?.files[0]?.file?.url ?? "", // 임시 pdf 데이터
     }));
   }
 
@@ -28,10 +29,10 @@ export function refactorOpenSeminarData(items: any[]): OpenSeminar[] {
     flag: 1,
     type: item.properties['다중 선택'].multi_select[0]?.name ?? 'Unknown',
     date: item.properties.Date?.date?.start ?? 'Unknown Date',
-    location: item.properties.Location?.rich_text[0]?.plain_text ?? 'No Location', // static value as per example
+    location: item.properties.Location?.rich_text[0]?.plain_text ?? '동국대학교', // static value as per example
     title: item.properties['이름']?.title[0]?.plain_text ?? 'Unknown Title',
-    description: item.properties.Description?.rich_text[0]?.plain_text ?? 'No Description',
-    image_url: item.cover?.file?.url ?? SeminarThumbnailCardImg.src,
+    description: item.properties.Description?.rich_text[0]?.plain_text ?? '',
+    image_url: item.cover?.file?.url ?? OpenSeminarThumbnailCardImg.src,
     status: (item.properties.status?.status?.name === "종료" ? false : true) ?? false,
     seminars: item.properties.Seminars?.relation ?? [{id: '1'}, {id: '2'}, {id: '3'}, {id: '4'}],
   }));

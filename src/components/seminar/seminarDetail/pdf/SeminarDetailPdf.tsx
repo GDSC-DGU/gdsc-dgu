@@ -29,19 +29,25 @@ const SeminarDetailPdf = ({seminar}:{seminar:SeminarThumbnail}) => {
     style={{ transformOrigin: '10% 60%' }}
     className="mt-10 p-5 bg-mono_900 rounded-xl"
   >
-        <motion.section
-    whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
-    whileTap={{ scale: 0.8 }}
-    viewport={{ once: true, amount: 0.9 }}
-    variants={seminarCardVariants}
-    style={{ transformOrigin: '10% 60%' }}
-    className="flex gap-2 cursor-pointer"
-  >
-    <PinImg />
-    <a href={seminar.pdf_url} download={`${seminar.title}_${seminar.date}`} className="B1">
-    세미나 자료 보기
-  </a>
+    {seminar.pdf_url === "" ? (
+      <p className="B1">
+      자료가 없습니다.
+    </p>
+    ):(
+      <motion.section
+      whileHover={{ scale: 1.05, transition: { duration: 0.2 } }}
+      whileTap={{ scale: 0.8 }}
+      viewport={{ once: true, amount: 0.9 }}
+      variants={seminarCardVariants}
+      style={{ transformOrigin: '10% 60%' }}
+      className="flex gap-2 cursor-pointer"
+    >
+      <PinImg />
+      <a href={seminar.pdf_url} download={`${seminar.title}_${seminar.date}`} className="B1">
+      세미나 자료 보기
+    </a>
     </motion.section>
+    )}
   </motion.section>
   );
 };

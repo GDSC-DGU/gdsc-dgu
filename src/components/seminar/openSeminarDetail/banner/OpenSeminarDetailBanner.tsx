@@ -4,7 +4,7 @@ import React from 'react';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
 import { seminarCardVariants } from '@/constants/seminar/seminarCardVariants';
-import TranslateImg from '@/svg/seminar/translate_img.png';
+import TranslateImg from '@/images/seminar/presenter/presenter_profile_img.png';
 import { OpenSeminar } from '@/interfaces/seminar/openSeminar';
 import SeminarDetailBannerInform from '../../seminarDetail/banner/SeminarDetailBannerInform';
 
