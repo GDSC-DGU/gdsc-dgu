@@ -4,6 +4,9 @@ import SeminarToggle from '@/components/seminar/toggle/SeminarToggle';
 import { refactorOpenSeminarData, refactorSeminarData } from '@/hooks/seminar/notionDataRefactor';
 import NotFoundPage from '../not-found';
 
+
+export const dynamic = "force-dynamic";
+
 const SeminarPage = async () => {
   // seminar 데이터 가져오기
   const tag = '🏕️ Camping Seminar'

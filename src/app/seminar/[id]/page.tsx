@@ -8,6 +8,8 @@ import { headers } from "next/headers";
 import { changePathtoSeperate } from '@/hooks/seminar/changePathtoNumber';
 import { SEMINAR_MEMBER_DATA } from '@/constants/seminar/seminarMemberData';
 
+export const dynamic = "force-dynamic";
+
 const SeminarDetailPage = async () => {
   // server comp에서 path 가져오기
   const header = headers();
