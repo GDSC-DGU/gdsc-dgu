@@ -47,12 +47,18 @@ const SeminarThumbnailList = ({ seminars }: { seminars:SeminarThumbnail[] }) => 
       setCurrentPage(pageNumber);
       // /seminar/${seminar.id}/page
     };
+
+    // 카테고리 변경 시 페이지를 첫 페이지로 리셋
+  const handleCategoryChange = (category: string) => {
+    setSelectedCategory(category);
+    setCurrentPage(1);
+  };
   
   
     return (
       <div>
         {/* select button */}
-        <SeminarMenuBar selectedCategory={selectedCategory} setSelectedCategory={setSelectedCategory} />
+        <SeminarMenuBar selectedCategory={selectedCategory} setSelectedCategory={handleCategoryChange} />
       
         <div className="mt-10">
           {/* 썸네일 리스트 */}
