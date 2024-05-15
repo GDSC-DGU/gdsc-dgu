@@ -7,12 +7,12 @@ import NotFoundPage from '../not-found';
 const SeminarPage = async () => {
   // seminar 데이터 가져오기
   const tag = '🏕️ Camping Seminar'
-  const seminarResponse = await fetch(`http://localhost:3001/api/seminar?Tag=${tag}`);
+  const seminarResponse = await fetch(`${process.env.SERVER_HOST}/api/seminar?Tag=${tag}`);
   const seminarList = await seminarResponse.json();
   const seminars = refactorSeminarData(seminarList.data || []);
 
       // open seminar 데이터 가져오기
-      const openSeminarResponse = await fetch('http://localhost:3001/api/seminar/open');
+      const openSeminarResponse = await fetch(`${process.env.SERVER_HOST}/api/seminar/open`);
       const openSeminar = await openSeminarResponse.json();
       const openSeminars = refactorOpenSeminarData(openSeminar.data || {});
 

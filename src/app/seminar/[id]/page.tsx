@@ -16,7 +16,7 @@ const SeminarDetailPage = async () => {
   const seminarId = changePathtoSeperate(pathname ?? '', 'seminar');
 
   // all seminar data 정의
-  const seminarResponse = await fetch(`http://localhost:3001/api/seminar/all`);
+  const seminarResponse = await fetch(`${process.env.SERVER_HOST}/api/seminar/all`);
   const seminarList = await seminarResponse.json();
   const seminars = refactorSeminarData(seminarList.data ?? []);
     // 세미나 디테일 데이터로 분리
@@ -27,12 +27,12 @@ const SeminarDetailPage = async () => {
     }
 
   // reviews 데이터 정의
-  const seminarReviewResponse = await fetch(`http://localhost:3001/api/seminar/review?seminarId=${seminarId}`);
+  const seminarReviewResponse = await fetch(`${process.env.SERVER_HOST}/api/seminar/review?seminarId=${seminarId}`);
   const seminarReviewList = await seminarReviewResponse.json();
   const reviews = refactorSeminarReviewData(seminarReviewList.reviews ?? []);
 
   // member 데이터 정의
-  const memberResponse = await fetch(`http://localhost:3001/api/member?seminarId=${seminarId}`);
+  const memberResponse = await fetch(`${process.env.SERVER_HOST}/api/member?seminarId=${seminarId}`);
   const memberList = await memberResponse.json();
   const member = refactorSeminarMemberData(memberList.data[0] ?? SEMINAR_MEMBER_DATA, seminar.id);
 

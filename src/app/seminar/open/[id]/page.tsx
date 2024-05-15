@@ -16,7 +16,7 @@ const OpenSeminarDetailPage = async () => {
     const openSeminarId = changePathtoSeperate(pathname ?? '', 'seminar/open');
 
     // seminar 데이터 가져오기
-    const openSeminarResponse = await fetch('http://localhost:3001/api/seminar/open');
+    const openSeminarResponse = await fetch(`${process.env.SERVER_HOST}/api/seminar/open`);
     const openSeminarList = await openSeminarResponse.json();
     const openSeminars = refactorOpenSeminarData(openSeminarList.data || {});
       // 오픈 세미나 디테일 데이터로 분리
@@ -29,7 +29,7 @@ const OpenSeminarDetailPage = async () => {
 
     // seminar 데이터 가져오기
     const tag = '🌲 Open Seminar'
-    const seminarResponse = await fetch(`http://localhost:3001/api/seminar?Tag=${tag}`);
+    const seminarResponse = await fetch(`${process.env.SERVER_HOST}/api/seminar?Tag=${tag}`);
     const seminarList = await seminarResponse.json();
     const seminars = refactorSeminarData(seminarList.data || []);
     const detailSeminarInfo = findSeminarsByIds(seminars, openSeminar.seminars);
@@ -38,14 +38,14 @@ const OpenSeminarDetailPage = async () => {
     // 각 세미나에 대한 멤버 데이터를 비동기로 불러오기
     const results = await Promise.all(
       detailSeminarInfo.map(async seminar => {
-        const memberResponse = await fetch(`http://localhost:3001/api/member?seminarId=${seminar.id}`);
+        const memberResponse = await fetch(`${process.env.SERVER_HOST}/api/member?seminarId=${seminar.id}`);
         const memberList = await memberResponse.json();
         const member = refactorSeminarMemberData(memberList.data[0] ?? SEMINAR_MEMBER_DATA, seminar.id);
         return refactorOpenSeminarDetailSeminarsData(seminar, member) ?? OPEN_SEMINAR_DETAIL_SEMINAR_DATA[0];
       })
     );
 
-    const markDownResponse = await fetch(`http://localhost:3001/api/seminar/open/info?pageId=${openSeminar.id}`);
+    const markDownResponse = await fetch(`${process.env.SERVER_HOST}/api/seminar/open/info?pageId=${openSeminar.id}`);
     const markdown = await markDownResponse.json();
     // console.log('real ::: ', markdown);
     
