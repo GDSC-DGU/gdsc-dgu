@@ -32,8 +32,8 @@ const SolutionChallengeHeader = () => {
           backgroundBlendMode: 'multiply',
         }}
       >
-        <article className="flex flex-col items-center">
-          <BannerImg2 className="scale-95" />
+        <article className="w-4/5 mx-auto flex flex-col items-center">
+          <BannerImg2 className="tablet:scale-95 scale-75" />
           <div className="flex-col items-center flex">
             <Link href="https://developers.google.com/community/gdsc-solution-challenge?hl=ko">
               <motion.button

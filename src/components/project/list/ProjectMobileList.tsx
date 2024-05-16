@@ -1,9 +1,7 @@
 'use client';
 
-import { useState } from 'react';
 import ProjectCard from '../card/ProjectCard';
 import { ProjectData } from '@/interfaces/project/projectData';
-import { PROJECTS } from '@/constants/project/projects';
 
 /**
  * @description
@@ -17,13 +15,11 @@ import { PROJECTS } from '@/constants/project/projects';
  * @returns The rendered list component.
  */
 
-const ProjectMobileList = () => {
-  const [projects, setProjects] = useState<ProjectData[]>(PROJECTS);
-
+const ProjectMobileList = ({ projectData }: { projectData: ProjectData[] }) => {
   return (
     <section className="w-full max-w-[1200px] tablet:px-10 px-4">
       <div className="w-full grid desktop:grid-cols-3 tablet:grid-cols-2 grid-cols-1 gap-8 mx-auto">
-        {projects.map((project) => (
+        {projectData.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}
       </div>

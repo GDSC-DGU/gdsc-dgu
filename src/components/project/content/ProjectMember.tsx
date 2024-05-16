@@ -1,4 +1,3 @@
-import ProfileImg from '@/images/project_img.png';
 import { ProjectMemberData } from '@/interfaces/project/projectMemberData';
 
 /**
@@ -19,8 +18,10 @@ const ProjectMember = ({ member }: { member: ProjectMemberData }) => {
   return (
     <section className="toggle-menu opacity-0 w-full p-4 bg-mono_900 flex flex-row items-center gap-4 rounded">
       <Image
-        src={ProfileImg}
+        src={member.image}
         alt="profile"
+        width={64}
+        height={64}
         className="w-[4rem] h-[4rem] rounded-lg"
       />
       <div className="flex flex-col leading-7">
