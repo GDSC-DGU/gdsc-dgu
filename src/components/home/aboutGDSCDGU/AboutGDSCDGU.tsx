@@ -1,3 +1,7 @@
+'use client';
+import { motion } from 'framer-motion';
+import { aniSlideRight, aniSlideUp } from '../animation/animaiton';
+
 const MemberGuideLine: React.FC<{ label: string; description: string }> = ({
   label,
   description,
@@ -16,13 +20,22 @@ const PartCard: React.FC<{
   description: string;
 }> = ({ icon, part, description }) => {
   return (
-    <div className="desktop:w-[352px] flex-shrink-0 p-8 bg-mono_black flex desktop:flex-col desktop:gap-10 gap-6">
-      <img className="desktop:w-6  desktop:h-6 w-7 h-7 bg-red-900 flex-shrink-0" />
+    <motion.div
+      className="desktop:w-[352px] flex-shrink-0 p-8 bg-mono_black flex desktop:flex-col desktop:gap-10 gap-6"
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ once: true, amount: 0.1 }}
+      variants={aniSlideUp}
+    >
+      <img
+        className="desktop:w-6  desktop:h-6 w-7 h-7 flex-shrink-0"
+        src={icon}
+      />
       <div className="text-[#ffffff] flex flex-col gap-3">
         <span className="H6">{part}</span>
         <p className="B1">{description}</p>
       </div>
-    </div>
+    </motion.div>
   );
 };
 
@@ -33,7 +46,14 @@ const AboutGDSCDGU = () => {
         <div className="flex desktop:flex-row flex-col flex-wrap">
           {/* title */}
           <div className="mr-10 mb-6 tablet:min-w-[440px]">
-            <div className="H3 inline-block">
+            {/*GDSC IN DOUGGUK UNIV*/}
+            <motion.div
+              className="H3 inline-block"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              variants={aniSlideUp}
+            >
               <span className="flex items-center gap-4">
                 <span>GDSC in</span>
                 <hr className="flex-grow border-black" />
@@ -42,18 +62,30 @@ const AboutGDSCDGU = () => {
               <span className="inline-block whitespace-no-wrap">
                 Dongguk University
               </span>
-            </div>
+            </motion.div>
 
-            <div className="B1 pt-6">
+            <motion.div
+              className="B1 pt-6"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.8 }}
+              variants={aniSlideUp}
+            >
               GDSC DGU는 자발적이고 주도적으로 학습하는 커뮤니티 그룹입니다.
               <br />
               저희는 이론과 산업 간의 격차를 줄이는 연구를 하기 위해 모였습니다.
-            </div>
+            </motion.div>
           </div>
           {/* title */}
 
           {/* member */}
-          <div className="flex flex-col mb-6">
+          <motion.div
+            className="flex flex-col mb-6"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.8 }}
+            variants={aniSlideUp}
+          >
             <p className="H6 h-[56px] flex items-center">Members</p>
             <MemberGuideLine
               label="Lead"
@@ -71,40 +103,61 @@ const AboutGDSCDGU = () => {
               label="DevRel"
               description="질 높은 컨텐츠를 제공하기 위해 돕습니다."
             />
-          </div>
+          </motion.div>
           {/* member */}
         </div>
 
         <div>
           <div className="flex flex-col">
             {/* title */}
-            <img className="w-6 h-6 bg-red-900 mb-8" />
-            <p className="H4">모든 길은 로마로 흐른다</p>
-            <p className="B1 pt-3">
+            <motion.img
+              className="w-6 h-6  mb-8"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              variants={aniSlideRight}
+              src="/svg/icons/common/chart.svg"
+            />
+            <motion.p
+              className="H4"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.1 }}
+              variants={aniSlideUp}
+            >
+              모든 길은 로마로 흐른다
+            </motion.p>
+            <motion.p
+              className="B1 pt-3"
+              initial="hidden"
+              whileInView="visible"
+              viewport={{ once: true, amount: 0.8 }}
+              variants={aniSlideUp}
+            >
               어떤 목표에 도달하는데는 많은 경로가 있습니다.
               <br />
               이와 같이, 하나의 파트에 국한 되지 않고 세가지 분야로 이루어져
               <br />
               서로의 지식과 경험을 공유하며 함께 성장해나가고자 합니다.
-            </p>
+            </motion.p>
           </div>
           {/* title */}
 
           {/* part */}
-          <div className="mt-10 flex justify-between desktop:flex-row flex-col desktop:justify-between desktop:gap-8 gap-3 overflow-scroll">
+          <div className="mt-10 flex justify-between desktop:flex-row flex-col desktop:justify-between desktop:gap-8 gap-3 overflow-x-scroll">
             <PartCard
-              icon="web_app"
+              icon="/svg/icons/common/part_web.app.svg"
               part="Web / App"
               description="EXPRESS, NEXT.JS, DJANGO 등을 사용하여 서비스를 배포하고 운영하며, AWS같은 클라우드 환경을 익숙하게 다루는 사람들의 모임"
             />
             <PartCard
-              icon="web_app"
-              part="Web / App"
+              icon="/svg/icons/common/part_server.cloud.svg"
+              part="Server / Cloud"
               description="EXPRESS, NEXT.JS, DJANGO 등을 사용하여 서비스를 배포하고 운영하며, AWS같은 클라우드 환경을 익숙하게 다루는 사람들의 모임"
             />
             <PartCard
-              icon="web_app"
-              part="Web / App"
+              icon="/svg/icons/common/part_ai.ml.svg"
+              part="AI / ML"
               description="EXPRESS, NEXT.JS, DJANGO 등을 사용하여 서비스를 배포하고 운영하며, AWS같은 클라우드 환경을 익숙하게 다루는 사람들의 모임"
             />
           </div>

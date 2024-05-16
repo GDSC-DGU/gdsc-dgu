@@ -1,3 +1,5 @@
+'use client';
+
 import { ProjectData } from '@/interfaces/project/projectData';
 import ProjectToggle from './ProjectToggle';
 import { slideUpVariants } from '@/constants/project/slideUpVariants';
@@ -28,10 +30,10 @@ const ProjectContent = ({ projectData }: { projectData: ProjectData }) => {
         className="w-full pb-[7.5rem] mx-auto"
       >
         <ProjectToggle teamData={projectData?.team || []} />
-        <section className="w-full mt-[5rem]">
+        {/* <section className="w-full mt-[5rem]">
           <div className="H6">노션 내용 크롤링</div>
           <div className="B1">{projectData?.content}</div>
-        </section>
+        </section> */}
       </motion.section>
     </section>
   );

@@ -12,12 +12,12 @@ import React from 'react';
  * Renders the header component for the recruitment section.
  * @returns The rendered header component.
  */
-const SeminarDetailReviewDetail = ({ data }: { data: SeminarReview }) => {
+const SeminarDetailReviewDetail = ({ review }: { review: SeminarReview }) => {
 
   return (
     <div className="mt-5 flex flex-col p-5 bg-mono_900 rounded-xl"> 
-    <p className='B1 font-bold font-medium'>사람 이름</p>
-    <p className='mt-3 B1 font-normal'>리뷰 내용</p>
+    <p className='B1 pointer-events-none'>{review.author}</p>
+    <p className='mt-3 B1 pointer-events-none'>{review.content}</p>
   </div>
   );
 };

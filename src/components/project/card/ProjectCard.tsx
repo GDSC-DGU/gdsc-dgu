@@ -1,8 +1,8 @@
-import ProjectImg from '@/images/project_img.png';
 import { ProjectData } from '@/interfaces/project/projectData';
 import Link from 'next/link';
 import { motion } from 'framer-motion';
 import { slideUpVariants } from '@/constants/project/slideUpVariants';
+import Image from 'next/image';
 
 /**
  * @description
@@ -28,21 +28,21 @@ const ProjectCard = ({ project }: { project: ProjectData }) => {
       variants={slideUpVariants}
       style={{ transformOrigin: '10% 60%' }}
     >
-      <Link href={`/project/${project.id}`}>
-        <div
+      <Link href={`/project/${project?.id}`}>
+        <Image
+          src={project?.image}
+          alt="프로젝트 사진"
+          width={800}
+          height={800}
           className="w-full h-[12.375rem] rounded-md flex-col justify-center items-center cursor-pointer"
-          style={{
-            backgroundImage: `url(${ProjectImg.src})`,
-            backgroundSize: 'cover', // Sets the background image to cover the div
-            backgroundPosition: 'center', // Aligns the background image to the center
-          }}
-        ></div>
+          priority
+        />
         <div className="w-full p-4 pt-3 rounded-b-md bg-mono_900">
-          <div className="pb-1 H6">{project.title}</div>
+          <div className="pb-1 H6">{project?.title}</div>
           <div className="B2 h-[3.2rem] text-overflow-custom">
-            {project.introduce}
+            {project?.introduce}
           </div>
-          <div className="pt-5 Cap text-mono_400">{project.feature}</div>
+          <div className="pt-5 Cap text-mono_400">{project?.feature}</div>
         </div>
       </Link>
     </motion.section>

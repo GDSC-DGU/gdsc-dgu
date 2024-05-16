@@ -10,4 +10,6 @@ export interface ProjectData {
   team: ProjectMemberData[];
   content: string;
   date: string; // 일단은 연도값만 넣기
+  youtube?: string;
+  github?: string;
 }

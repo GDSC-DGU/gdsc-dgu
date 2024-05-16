@@ -24,7 +24,7 @@ const SolutionChallengeTab = ({
   selectedYear: string;
   changeSelectedYear: (year: string) => void;
 }) => {
-  const yearData: string[] = ['2024', '2023', '2022', '2021', '2020'];
+  const yearData: string[] = ['2024'];
   const motionRef = useRef(null);
   const isInView = useInView(motionRef, { once: true });
 

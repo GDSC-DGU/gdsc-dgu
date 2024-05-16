@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from 'react';
 import { ProjectData } from '@/interfaces/project/projectData';
-import { PROJECTS } from '@/constants/project/projects';
 import ProjectCard from '@/components/project/card/ProjectCard';
 import SolutionChallengeTab from '@/components/sollutionChallenge/tab/SolutionChallengeTab';
 
@@ -18,12 +17,20 @@ import SolutionChallengeTab from '@/components/sollutionChallenge/tab/SolutionCh
  * @returns The rendered list component.
  */
 
-const SolutionChallengeList = () => {
+const SolutionChallengeList = ({
+  solutionChallengeData,
+}: {
+  solutionChallengeData: ProjectData[];
+}) => {
   const [selectedYear, setSelectedYear] = useState<string>('2024');
   const [projects, setProjects] = useState<ProjectData[]>([]);
 
   const changeSelectedYear = (year: string) => {
-    setProjects(PROJECTS.filter((project) => project.date === year));
+    // 년도 필터링 추후에 추가하기
+    // setProjects(
+    //   solutionChallengeData.filter((project) => project.date === year),
+    // );
+    setProjects(solutionChallengeData);
     setSelectedYear(year);
   };
 
@@ -40,7 +47,7 @@ const SolutionChallengeList = () => {
         selectedYear={selectedYear}
         changeSelectedYear={changeSelectedYear}
       />
-      <div className="w-full grid desktop:grid-cols-3 tablet:grid-cols-2 grid-cols-1 gap-8 mx-auto">
+      <div className="w-full grid bigTablet:grid-cols-3 tablet:grid-cols-2 grid-cols-1 gap-8 mx-auto">
         {projects.map((project) => (
           <ProjectCard key={project.id} project={project} />
         ))}

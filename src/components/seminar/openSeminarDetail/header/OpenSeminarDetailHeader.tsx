@@ -1,6 +1,6 @@
 'use client';
 
-import { OpenDetailSeminar, OpenSeminar } from '@/interfaces/seminar/openSeminar';
+import { OpenSeminar } from '@/interfaces/seminar/openSeminar';
 import React, { useState } from 'react';
 
 /**
@@ -14,8 +14,8 @@ import React, { useState } from 'react';
  * Renders the header component for the recruitment section.
  * @returns The rendered header component.
  */
-const OpenSeminarDetailHeader = ({ data }: { data: OpenSeminar }) => {
-  const [categoryData, setCategoryData] = useState([data.type, `${data.flag}st`]);
+const OpenSeminarDetailHeader = ({ openSeminar }: { openSeminar: OpenSeminar }) => {
+  const [categoryData, setCategoryData] = useState([openSeminar.type, openSeminar.flag]);
 
   return (
     <> 
@@ -29,11 +29,11 @@ const OpenSeminarDetailHeader = ({ data }: { data: OpenSeminar }) => {
         </button>
       ))}
       </div>
-    <p className="w-full px-3 pt-8 H3 font-normal">
-      {data.seminar_month_date}{" "}{data.type}
+    <p className="w-full px-3 pt-8 H3">
+      {openSeminar.title}
     </p>
-    <p className="w-full px-3 pt-3 H6 font-medium">
-    {data.description}
+    <p className="w-full px-3 pt-3 H6">
+    {openSeminar.description}
     </p>
   </>
   );

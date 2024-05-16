@@ -24,9 +24,11 @@ const TimelineMonthlyPart: React.FC<TimelineMonthlyPartProps> = ({ timelineData 
     <>
       {Object.entries(groupedData).map(([date, cards]) => (
         <div key={date} className="mx-auto my-10 animate-fadeIn">
+                  <div className="grid grid-cols-1 desktop:grid-cols-2 gap-4">
           <DateHeader date={date} />
           <hr className="border-t-[1px] border-mono_700 my-1" />
           <TimelineMonthlyCardSection timelineData={cards} />
+          </div>
         </div>
       ))}
     </>

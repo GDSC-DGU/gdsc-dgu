@@ -1,5 +1,7 @@
-export interface SeminarThumnail {
-    id: number;
+import { SeminarReview } from "./seminarReview";
+
+export interface SeminarThumbnail {
+    id: string;
     flag: number;
     type: string;
     topic: string;
@@ -7,8 +9,7 @@ export interface SeminarThumnail {
     location: string;
     title: string;
     description: string;
-    presenter: string;
-    role: string;
-    image_url: string;
+    seminar_image_url: string;
+    pdf_url: string;
 }
   

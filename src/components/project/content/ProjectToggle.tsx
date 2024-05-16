@@ -33,11 +33,12 @@ const ProjectToggle = ({ teamData }: { teamData: ProjectMemberData[] }) => {
           <ToggleIcon />
         </button>
       </div>
-      <div className="toggle-menu-box h-0 w-full grid min-[960px]:grid-cols-2 gap-8">
+      <div className="toggle-menu-box h-0 w-full grid bigTablet:grid-cols-2 gap-8">
         {teamData.length > 0 &&
           teamData.map((member) => (
             <ProjectMember key={member?.id} member={member} />
           ))}
+        <div className="toggle-menu"></div>
       </div>
     </section>
   );

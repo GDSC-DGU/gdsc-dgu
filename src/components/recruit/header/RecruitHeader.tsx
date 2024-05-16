@@ -42,7 +42,7 @@ const RecruitHeader = () => {
           </div>
         </article>
       </div>
-      <ChervonDownIcon className="self-center" />
+      {/* <ChervonDownIcon className="self-center" /> */}
     </header>
   );
 };
