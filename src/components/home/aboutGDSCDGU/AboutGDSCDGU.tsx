@@ -24,10 +24,13 @@ const PartCard: React.FC<{
       className="desktop:w-[352px] flex-shrink-0 p-8 bg-mono_black flex desktop:flex-col desktop:gap-10 gap-6"
       initial="hidden"
       whileInView="visible"
-      viewport={{ once: true, amount: 0.8 }}
+      viewport={{ once: true, amount: 0.1 }}
       variants={aniSlideUp}
     >
-      <img className="desktop:w-6  desktop:h-6 w-7 h-7 bg-red-900 flex-shrink-0" />
+      <img
+        className="desktop:w-6  desktop:h-6 w-7 h-7 flex-shrink-0"
+        src={icon}
+      />
       <div className="text-[#ffffff] flex flex-col gap-3">
         <span className="H6">{part}</span>
         <p className="B1">{description}</p>
@@ -108,11 +111,12 @@ const AboutGDSCDGU = () => {
           <div className="flex flex-col">
             {/* title */}
             <motion.img
-              className="w-6 h-6 bg-red-900 mb-8"
+              className="w-6 h-6  mb-8"
               initial="hidden"
               whileInView="visible"
               viewport={{ once: true, amount: 0.1 }}
               variants={aniSlideRight}
+              src="/svg/icons/common/chart.svg"
             />
             <motion.p
               className="H4"
@@ -140,20 +144,20 @@ const AboutGDSCDGU = () => {
           {/* title */}
 
           {/* part */}
-          <div className="mt-10 flex justify-between desktop:flex-row flex-col desktop:justify-between desktop:gap-8 gap-3 overflow-scroll-x">
+          <div className="mt-10 flex justify-between desktop:flex-row flex-col desktop:justify-between desktop:gap-8 gap-3 overflow-x-scroll">
             <PartCard
-              icon="web_app"
+              icon="/svg/icons/common/part_web.app.svg"
               part="Web / App"
               description="EXPRESS, NEXT.JS, DJANGO 등을 사용하여 서비스를 배포하고 운영하며, AWS같은 클라우드 환경을 익숙하게 다루는 사람들의 모임"
             />
             <PartCard
-              icon="web_app"
-              part="Web / App"
+              icon="/svg/icons/common/part_server.cloud.svg"
+              part="Server / Cloud"
               description="EXPRESS, NEXT.JS, DJANGO 등을 사용하여 서비스를 배포하고 운영하며, AWS같은 클라우드 환경을 익숙하게 다루는 사람들의 모임"
             />
             <PartCard
-              icon="web_app"
-              part="Web / App"
+              icon="/svg/icons/common/part_ai.ml.svg"
+              part="AI / ML"
               description="EXPRESS, NEXT.JS, DJANGO 등을 사용하여 서비스를 배포하고 운영하며, AWS같은 클라우드 환경을 익숙하게 다루는 사람들의 모임"
             />
           </div>

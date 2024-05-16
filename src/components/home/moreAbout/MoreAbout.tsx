@@ -3,19 +3,21 @@ import { aniSlideRight, aniSlideUp } from '../animation/animaiton';
 import HomeTitle from '../title/HomeTitle';
 import { motion } from 'framer-motion';
 
-const ChannelCard: React.FC<Channel> = ({ title, description }) => {
+const ChannelCard: React.FC<Channel> = ({ title, description, link }) => {
   return (
-    <motion.div
+    <motion.a
       className="flex-grow bg-mono_900 p-7 gap-3 text-white table:"
       initial="hidden"
       whileInView="visible"
       viewport={{ once: true, amount: 0.2 }}
       variants={aniSlideRight}
       transition={{ delay: 1 }} // 두 번째 컴포넌트의 delay를 1초로 설정
+      href={link}
+      target="_blanck"
     >
       <p className="H5">{title}</p>
       <p className="B2">{description}</p>
-    </motion.div>
+    </motion.a>
   );
 };
 
@@ -29,17 +31,17 @@ const ChannelList: Channel[] = [
   {
     title: 'FAQ',
     description: '자주 묻는 질문',
-    link: 'instagram',
+    link: 'https://www.instagram.com/p/Cw0LHr4hEEu/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==',
   },
   {
     title: 'Instagram',
     description: '인스타그램',
-    link: 'instagram',
+    link: 'https://www.instagram.com/gdsc.dgu/',
   },
   {
     title: 'Github',
     description: '깃허브',
-    link: 'instagram',
+    link: 'https://www.youtube.com/@DGUGDSC',
   },
   {
     title: 'Youtube',

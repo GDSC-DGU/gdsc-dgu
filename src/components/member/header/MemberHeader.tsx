@@ -17,7 +17,7 @@ import { motion } from 'framer-motion';
  */
 const MemberHeader = () => {
   return (
-    <div>
+    <div className="mb-20">
       <motion.div
         className="w-full flex justify-center mt-[5rem] mb-[5rem]"
         initial={{ opacity: 0 }}

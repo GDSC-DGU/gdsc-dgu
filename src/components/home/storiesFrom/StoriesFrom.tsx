@@ -23,17 +23,23 @@ const ImageBox: React.FC<Story> = ({ label, img }) => {
       transition={{ delay: 1 }} // 두 번째 컴포넌트의 delay를 1초로 설정
       className="flex flex-col gap-6 w-full"
     >
-      <img className="w-full bg-red-900 " src="/images/main/story_ex.png" />
+      <img className="w-full" src={img} />
       <div className="H6">{label}</div>
     </motion.div>
   );
 };
 
-const StoryList: Story[] = [
-  { label: '일번', img: '22' },
-  { label: '이번', img: '22' },
-  { label: '삼번', img: '22' },
-  { label: '사번', img: '22' },
+const StoryList1: Story[] = [
+  { label: 'TechTalk', img: '/images/main/storiesFromTheCommunity/3.png' },
+  { label: 'Project', img: '/images/main/storiesFromTheCommunity/4.png' },
+];
+
+const StoryList2: Story[] = [
+  { label: 'DevTalk', img: '/images/main/storiesFromTheCommunity/1.png' },
+  {
+    label: 'BraninStorming',
+    img: '/images/main/storiesFromTheCommunity/2.png',
+  },
 ];
 
 const StoriesFrom = () => {
@@ -69,14 +75,16 @@ const StoriesFrom = () => {
         {/* 데스크탑, 테블릿 */}
         <div className="tablet:flex w-full gap-10 max-w-[640px] hidden">
           <div className="flex-grow flex flex-col gap-14">
-            <ImageBox label="1" img="" />
-            <ImageBox label="1" img="" />
+            {StoryList1.map((item, index) => {
+              return <ImageBox label={item.label} img={item.img} />;
+            })}
             <div className="w-full h-12" />
           </div>
           <div className="flex-grow flex flex-col gap-14">
             <div className="w-full h-12" />
-            <ImageBox label="1" img="" />
-            <ImageBox label="1" img="" />
+            {StoryList2.map((item, index) => {
+              return <ImageBox label={item.label} img={item.img} />;
+            })}
           </div>
         </div>
         {/* 모바일 */}
@@ -93,7 +101,14 @@ const StoriesFrom = () => {
             className="w-full"
             loop
           >
-            {StoryList.map((item, index) => {
+            {StoryList1.map((item, index) => {
+              return (
+                <SwiperSlide key={index}>
+                  <ImageBox label={item.label} img={item.img} />
+                </SwiperSlide>
+              );
+            })}
+            {StoryList2.map((item, index) => {
               return (
                 <SwiperSlide key={index}>
                   <ImageBox label={item.label} img={item.img} />

@@ -24,7 +24,9 @@ const ProjectDetailPage = async ({ params }: { params: { id: string } }) => {
   }
 
   // 멤버 데이터 불러오기
-  const memberResponse = await fetch(`${process.env.SERVER_HOST}/api/member`);
+  const memberResponse = await fetch(
+    `${process.env.SERVER_HOST}/api/member/projectMember`,
+  );
 
   const memberList = await memberResponse.json();
 

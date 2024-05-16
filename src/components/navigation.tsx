@@ -21,7 +21,7 @@ interface NavItem {
   onClick?: () => void;
 }
 
-const selectStyle = 'text-red-400';
+const selectStyle = 'text-mono_200';
 export default function Navigation() {
   const pathname = usePathname(); // 현재 경로를 가져오기
 
@@ -48,7 +48,7 @@ export default function Navigation() {
   }, [pathname]); // 경로 변경을 감지하는 의존성 배열
 
   const NavgationList: NavItem[][] = [
-    [{ label: 'Timeline', link: '/timeline' }],
+    // [{ label: 'Timeline', link: '/timeline' }],
     [{ label: 'Seminar', link: '/seminar' }],
     [
       {
@@ -184,9 +184,9 @@ const NavToggle: React.FC<{ label: NavItem; navList: NavItem[] }> = ({
     >
       <p className={`${isActive}`}>{label.label}</p>
       {label.isModalShow ? (
-        <img className="w-6 h-6 bg-red-600" />
+        <img className="w-6 h-6" src="/svg/icons/common/up.svg" />
       ) : (
-        <img className="w-6 h-6 bg-red-200" />
+        <img className="w-6 h-6" src="/svg/icons/common/down.svg" />
       )}
 
       {label.isModalShow ? (
