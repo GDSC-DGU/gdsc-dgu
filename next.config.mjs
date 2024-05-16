@@ -1,6 +1,10 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  // notion image doamin
+  images: {
+    domains: ['prod-files-secure.s3.us-west-2.amazonaws.com'],
+  },
   webpack(config) {
     const fileLoaderRule = config.module.rules.find((rule) =>
       rule.test?.test?.('.svg'),
@@ -24,6 +28,7 @@ const nextConfig = {
     fileLoaderRule.exclude = /\.svg$/i;
     return config;
   },
+  staticPageGenerationTimeout: 120, // 타임아웃 시간을 120초로 설정
 };
 
 export default nextConfig;

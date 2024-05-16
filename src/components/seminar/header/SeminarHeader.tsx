@@ -1,4 +1,9 @@
+'use client';
+
 import BannerImg from '@/svg/seminar/seminar_banner.svg';
+import { motion } from 'framer-motion';
+import Link from 'next/link';
+import { OpenSeminar } from '@/interfaces/seminar/openSeminar';
 
 /**
  * @description
@@ -11,13 +16,27 @@ import BannerImg from '@/svg/seminar/seminar_banner.svg';
  * Renders the header component for the recruitment section.
  * @returns The rendered header component.
  */
-const SeminarHeader = () => {  
+const SeminarHeader = ({openSeminars}:{openSeminars:OpenSeminar[]}) => {  
+  // 현재 진행 세미나
+  const active_seminar_id = openSeminars.find(seminar => seminar.status)?.id;
+
   return (
     <>
-    <div className="w-full px-3 pt-10 H3 font-normal">Seminar</div> 
-    <div className="px-3 pt-3 H6 font-medium">여러분과 함께 나누고싶은 이야기</div>
+    <div className="w-full px-3 pt-10 H3">Seminar</div> 
+    <div className="px-3 pt-3 H6">여러분과 함께 나누고싶은 이야기</div>
     <p className="mt-6 border border-solid text-mono_700 h-0"/>
+    <motion.section
+           whileHover={{ scale: 1.05 }}
+           whileTap={{ scale: 0.8 }}
+           transition={{ duration: 0.5 }}
+         >
+        <Link
+               key={active_seminar_id} 
+               href={`/seminar/open/${active_seminar_id}`}
+             >
     <BannerImg className='mt-10 scale-100' />
+    </Link>
+    </motion.section>
 </>
   );
 };

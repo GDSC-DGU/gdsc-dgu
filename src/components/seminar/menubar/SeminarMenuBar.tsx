@@ -1,7 +1,9 @@
 'use client';
 
 import { SEMINAR_CATEGORYS } from '@/constants/seminar/seminarCategory';
-import React, { useState } from 'react';
+import React from 'react';
+import { motion } from 'framer-motion';
+import { seminarCardVariants } from '@/constants/seminar/seminarCardVariants';
 
 /**
  * @description
@@ -26,15 +28,18 @@ const SeminarMenuBar = ({
   return (
     <div className="mt-10 px-3 flex gap-3 items-center">
       {SEMINAR_CATEGORYS.map((category) => (
-        <button
-          key={category.value} 
-          className={`text-[0.75rem] border py-2 px-3 border-solid rounded-lg ${
-            selectedCategory === category.value ? 'mono_white' : 'border-mono_500 text-mono_500'
-          }`}
-          onClick={() => handleCategoryChange(category.value)}
-        >
+        <motion.button
+        key={category.value} 
+        className={`text-[0.75rem] border py-2 px-3 border-solid rounded-lg ${
+        selectedCategory === category.value ? 'mono_white' : 'border-mono_500 text-mono_500'
+        }`}
+        onClick={() => handleCategoryChange(category.value)}
+        whileHover={{ scale: 1.05 }}
+        whileTap={{ scale: 0.8 }}
+        transition={{ duration: 0.2}}
+      >
           {category.label}
-        </button>
+        </motion.button>
       ))}
     </div>
   );

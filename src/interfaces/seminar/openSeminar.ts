@@ -1,22 +1,34 @@
+import { SeminarThumbnail } from "./seminarThumbnail";
+
 export interface OpenSeminar {
-    id: number;
-    flag: number;
+    id: string;
+    flag: string;
     type: string;
-    seminar_opening_date: string;
-    seminar_month_date: string;
+    date: string;
     location: string;
+    title: string,
     description: string;
-    information: string;
     image_url: string;
     status: boolean;
-    seminars: OpenDetailSeminar[];
+    seminars: Relation[];
 }
 
-export interface OpenDetailSeminar {
+export interface OpenSeminarInfo {
     id: number;
-    presenter: string;
-    seminar_title: string;
-    presenter_role: string;
-    presenter_image_url: string;
+    open_seminar_id: string;
+    information: string;
 }
-  
+
+export interface Relation {
+    id: string;
+}
+
+export interface OpenSeminarDetailSeminar {
+    id: number;
+    seminar_id: string;
+    member_id: string;
+    member_name: string;
+    member_role: string;
+    member_profile_image: string;
+    seminar_title: string;
+}
