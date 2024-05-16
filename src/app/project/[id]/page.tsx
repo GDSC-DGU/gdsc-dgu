@@ -7,6 +7,8 @@ import {
 } from '@/hooks/project/notionProjectDataRefactor';
 import React from 'react';
 
+export const dynamic = "force-dynamic";
+
 const ProjectDetailPage = async ({ params }: { params: { id: string } }) => {
   // 프로젝트 데이터 불러오기
   const projectResponse = await fetch(

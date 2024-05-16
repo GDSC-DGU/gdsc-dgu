@@ -7,6 +7,8 @@ export const metadata = {
   title: 'SolutionChallenge',
 };
 
+export const dynamic = "force-dynamic";
+
 const SolutionChallengePage = async () => {
   let solutionChallengeData = [];
 
