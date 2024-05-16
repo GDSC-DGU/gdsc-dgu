@@ -1,5 +1,5 @@
 import { SeminarMember } from "@/interfaces/seminar/seminarMember";
-import PresenterProfileImg from '@/images/seminar/presenter/default_presenter.png';
+import PresenterProfileImg from '@/images/default_member.png';
 
 export const SEMINAR_MEMBER_DATA: SeminarMember = {
     id: 1,
