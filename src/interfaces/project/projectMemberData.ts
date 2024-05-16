@@ -3,5 +3,5 @@ export interface ProjectMemberData {
   name: string;
   role: string;
   seminar: string;
-//  image: string;
+ image: string;
 }
