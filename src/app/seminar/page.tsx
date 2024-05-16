@@ -17,7 +17,7 @@ const SeminarPage = async () => {
       // open seminar 데이터 가져오기
       const openSeminarResponse = await fetch(`${process.env.SERVER_HOST}/api/seminar/open`);
       const openSeminar = await openSeminarResponse.json();
-      const openSeminars = refactorOpenSeminarData(openSeminar.data || {});
+      const openSeminars = refactorOpenSeminarData(openSeminar.data);
 
           // 세미나 데이터
   if (!seminars) {
@@ -25,7 +25,7 @@ const SeminarPage = async () => {
   }
       
   return <section className="flex justify-center">
-  <div className="max-w-[1200px] desktop:px-10 bigTablet:px-10 lg:px-10 md:px-10 tablet:px-10 px-4 bg-mono_black">
+  <div className="w-full desktop:px-10 bigTablet:px-10 lg:px-10 md:px-10 tablet:px-10 px-4 bg-mono_black">
      <div className="w-full">
 
       {/* header */}
