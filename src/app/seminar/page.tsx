@@ -17,7 +17,7 @@ const SeminarPage = async () => {
       // open seminar 데이터 가져오기
       const openSeminarResponse = await fetch(`${process.env.SERVER_HOST}/api/seminar/open`);
       const openSeminar = await openSeminarResponse.json();
-      const openSeminars = refactorOpenSeminarData(openSeminar.data);
+      const openSeminars = refactorOpenSeminarData(openSeminar.data || []);
 
           // 세미나 데이터
   if (!seminars) {
