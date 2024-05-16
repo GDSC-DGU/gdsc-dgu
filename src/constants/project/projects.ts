@@ -15,24 +15,32 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -51,24 +59,32 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -87,24 +103,32 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -123,24 +147,32 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -159,24 +191,32 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -195,24 +235,32 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -231,24 +279,32 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -267,24 +323,32 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -303,24 +367,32 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -339,24 +411,32 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -375,24 +455,32 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -411,24 +499,32 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -447,24 +543,32 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -483,24 +587,32 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -519,24 +631,32 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image:
+          'https://media.licdn.com/dms/image/D4E03AQFWNgn2KNrxeA/profile-displayphoto-shrink_800_800/0/1692545918729?e=2147483647&v=beta&t=hf0m5ck2zz62Nu9PIqM5GwCzpXOHpnlCuk3d9OmViYs',
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
