@@ -49,15 +49,18 @@ const AboutGDSC = () => {
             <br />
           </motion.p>
 
-          <motion.div
+          <motion.a
             className="H6 flex gap-1 items-center"
             initial="hidden"
             whileInView="visible"
             viewport={{ once: true, amount: 0.8 }}
             variants={aniSlideUp}
+            href="https://developers.google.com/community/gdsc"
+            target="_blank"
           >
-            GDSC 소개 바로가기 <div className="w-6 h-6 bg-red-900"></div>
-          </motion.div>
+            GDSC 소개 바로가기{' '}
+            <img className="w-6 h-6" src="/svg/icons/common/right.svg" />
+          </motion.a>
 
           <motion.div
             className="flex gap-10 pt-6"
@@ -73,7 +76,7 @@ const AboutGDSC = () => {
 
         {/* 이미지 */}
         <motion.div
-          className="desktop:flex-grow desktop:h-[378px] bg-red-100 desktop:w-auto w-full"
+          className="desktop:flex-grow desktop:h-[378px] desktop:w-auto w-full"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.8 }}
