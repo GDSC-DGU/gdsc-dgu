@@ -8,6 +8,8 @@ export const metadata = {
   title: 'Project',
 };
 
+export const dynamic = "force-dynamic";
+
 const ProjectPage = async () => {
   let projectData = [];
 

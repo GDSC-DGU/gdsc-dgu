@@ -3,7 +3,7 @@ import { SeminarReview } from "@/interfaces/seminar/seminarReview";
 import { SeminarThumbnail } from "@/interfaces/seminar/seminarThumbnail";
 import SeminarThumbnailCardImg from '@/images/seminar/default_seminar.png';
 import OpenSeminarThumbnailCardImg from '@/images/seminar/default_open_seminar.png';
-import PresenterProfileImg from '@/images/seminar/presenter/default_presenter.png';
+import PresenterProfileImg from '@/images/default_member.png';
 import { OpenSeminar, OpenSeminarDetailSeminar, Relation } from "@/interfaces/seminar/openSeminar";
 
 // seminar data

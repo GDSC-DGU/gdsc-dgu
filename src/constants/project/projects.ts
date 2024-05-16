@@ -1,4 +1,5 @@
 import { ProjectData } from '@/interfaces/project/projectData';
+import ProjectMemberImage from '@/images/default_member.png'
 
 export const PROJECTS: ProjectData[] = [
   {
@@ -15,24 +16,28 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -51,24 +56,28 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -87,24 +96,28 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -123,24 +136,28 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -159,24 +176,28 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -195,24 +216,28 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -231,24 +256,28 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -267,24 +296,28 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -303,24 +336,28 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -339,24 +376,28 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -375,24 +416,28 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -411,24 +456,28 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -447,24 +496,28 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -483,24 +536,28 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
@@ -519,24 +576,28 @@ export const PROJECTS: ProjectData[] = [
         name: '팀명1',
         role: '역할1',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 2,
         name: '팀명2',
         role: '역할2',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 3,
         name: '팀명3',
         role: '역할3',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
       {
         id: 4,
         name: '팀명4',
         role: '역할4',
         seminar: '진행한 세미나명',
+        image: ProjectMemberImage.src
       },
     ],
     content: '노션에서 크롤링한 내용~~~~~~~~',
