@@ -5,6 +5,7 @@ const notion = new Client({
   auth: process.env.NOTION_SECRET_KEY,
 });
 
+
 async function queryAllMemberData(): Promise<any[]> {
   try {
     const response = await notion.databases.query({
@@ -13,9 +14,11 @@ async function queryAllMemberData(): Promise<any[]> {
     return response.results;
   } catch (error) {
     console.error(JSON.stringify(error));
+
     throw error;
   }
 }
+
 
 export async function GET(req: NextRequest) {
   try {
@@ -28,6 +31,7 @@ export async function GET(req: NextRequest) {
       },
     });
   } catch (error) {
+
     return new Response(
       JSON.stringify({ message: `Failed: ${error?.toString()}` }),
       {
@@ -39,3 +43,4 @@ export async function GET(req: NextRequest) {
     );
   }
 }
+

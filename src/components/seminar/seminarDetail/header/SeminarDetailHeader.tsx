@@ -1,8 +1,7 @@
 'use client';
 
-import { SeminarThumnail } from '@/interfaces/seminar/seminarThumbnail';
+import { SeminarThumbnail } from '@/interfaces/seminar/seminarThumbnail';
 import React, { useState } from 'react';
-import BannerImg from '@/svg/seminar/seminar_banner.svg';
 
 /**
  * @description
@@ -15,12 +14,12 @@ import BannerImg from '@/svg/seminar/seminar_banner.svg';
  * Renders the header component for the recruitment section.
  * @returns The rendered header component.
  */
-const SeminarDetailHeader = ({ data }: { data: SeminarThumnail }) => {
-  const [categoryData, setCategoryData] = useState([data.type, `${data.flag}st`, data.topic]);
+const SeminarDetailHeader = ({ seminar }: { seminar: SeminarThumbnail }) => {
+  const [categoryData, setCategoryData] = useState([seminar.type, `${seminar.flag}st`, seminar.topic]);
 
   return (
     <> 
-    <div className="mt-10 px-3 flex gap-3" >
+    <div className="mt-10 px-3 flex gap-3 pointer-events-none" >
       {categoryData.map((category, index) => (
         <button
           className={`text-[0.75rem] font-medium py-2 px-3 border border-solid rounded-lg ${index === 0 ? "mono_white" :  "border-mono_500 text-mono_500"}`}
@@ -30,11 +29,11 @@ const SeminarDetailHeader = ({ data }: { data: SeminarThumnail }) => {
         </button>
       ))}
       </div>
-    <p className="w-full px-3 pt-8 H3 font-normal">
-      {data.title}
+    <p className="w-full px-3 pt-8 H3">
+      {seminar.title}
     </p>
-    <p className="w-full px-3 pt-3 H6 font-medium">
-    {data.description}
+    <p className="w-full px-3 pt-3 H6">
+    {seminar.description}
     </p>
   </>
   );

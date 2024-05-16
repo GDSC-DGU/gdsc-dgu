@@ -1,4 +1,6 @@
-import { OpenDetailSeminar, OpenSeminar } from '@/interfaces/seminar/openSeminar';
+import { OpenSeminarDetailSeminar } from '@/interfaces/seminar/openSeminar';
+import { SeminarMember } from '@/interfaces/seminar/seminarMember';
+import { SeminarThumbnail } from '@/interfaces/seminar/seminarThumbnail';
 import Image from 'next/image';
 import React from 'react';
 
@@ -13,25 +15,24 @@ import React from 'react';
  * Renders the header component for the recruitment section.
  * @returns The rendered header component.
  */
-const OpenSeminarsDetailBox = ({ data }: { data: OpenDetailSeminar }) => {
+const OpenSeminarsDetailBox = ({ seminar }: { seminar:OpenSeminarDetailSeminar }) => {
 
   return (
     <div className="w-full flex flex-row p-4 bg-mono_900 rounded gap-4"> 
     <div className='rounded overflow-hidden'>
       <Image
-          src={data.presenter_image_url}
+          src={seminar.member_profile_image}
           alt="translate_img"
           width={64}
           height={64}
           quality={100}
-          priority
         />
         </div>
         <div className='flex flex-col justify-center'>
-        <div className="B1 font-medium flex gap-2">
-            {data.presenter} <p className="B1 font-normal text-mono_200">{data.presenter_role}</p>
+        <div className="B1 flex gap-2">
+            {seminar.member_name} <p className="B1 text-mono_200">{seminar.member_role}</p>
         </div>
-        <p className='className="B1 font-normal'>{data.seminar_title}</p>
+        <p className='className="B1'>{seminar.seminar_title}</p>
         </div>
   </div>
   );

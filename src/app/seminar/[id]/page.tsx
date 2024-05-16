@@ -1,46 +1,59 @@
-'use client';
-
-import React from 'react';
-import { usePathname } from 'next/navigation';
 import SeminarDetailHeader from '@/components/seminar/seminarDetail/header/SeminarDetailHeader';
 import SeminarDetailBanner from '@/components/seminar/seminarDetail/banner/SeminarDetailBanner';
-import { SEMINAR_DATA } from '@/constants/seminar/seminarData';
 import SeminarDetailPdf from '@/components/seminar/seminarDetail/pdf/SeminarDetailPdf';
 import NotFoundPage from '@/app/not-found';
 import SeminarDetailReview from '@/components/seminar/seminarDetail/review/SeminarDetailReview';
-import { changePathtoNumber } from '@/hooks/seminar/changePathtoNumber';
+import { refactorSeminarData, refactorSeminarMemberData, refactorSeminarReviewData } from '@/hooks/seminar/notionDataRefactor';
+import { headers } from "next/headers";
+import { changePathtoSeperate } from '@/hooks/seminar/changePathtoNumber';
+import { SEMINAR_MEMBER_DATA } from '@/constants/seminar/seminarMemberData';
 
-const SeminarDetailPage = () => {
-  const pathname = usePathname();
-  // 숫자 추출
-  var id = changePathtoNumber(pathname);
-  
-  // 객체 찾기
-  const seminar = SEMINAR_DATA.find(seminar => Number(seminar.id) === id);
+export const dynamic = "force-dynamic";
 
-  if (!id || !seminar) {
-    // 세미나를 찾지 못한 경우
-    return <NotFoundPage />;
-  }
-  
+const SeminarDetailPage = async () => {
+  // server comp에서 path 가져오기
+  const header = headers();
+  const pathname = header.get('next-url')
+
+  const seminarId = changePathtoSeperate(pathname ?? '', 'seminar');
+
+  // all seminar data 정의
+  const seminarResponse = await fetch(`${process.env.SERVER_HOST}/api/seminar/all`);
+  const seminarList = await seminarResponse.json();
+  const seminars = refactorSeminarData(seminarList.data ?? []);
+    // 세미나 디테일 데이터로 분리
+    let seminar =  seminars.find(seminar => `${seminar.id}` === `${seminarId}`);
+
+    if(!seminar) {
+      return <NotFoundPage />;
+    }
+
+  // reviews 데이터 정의
+  const seminarReviewResponse = await fetch(`${process.env.SERVER_HOST}/api/seminar/review?seminarId=${seminarId}`);
+  const seminarReviewList = await seminarReviewResponse.json();
+  const reviews = refactorSeminarReviewData(seminarReviewList.reviews ?? []);
+
+  // member 데이터 정의
+  const memberResponse = await fetch(`${process.env.SERVER_HOST}/api/member?seminarId=${seminarId}`);
+  const memberList = await memberResponse.json();
+  const member = refactorSeminarMemberData(memberList.data[0] ?? SEMINAR_MEMBER_DATA, seminar.id);
 
   return <section className="flex justify-center">
-  <div className="max-w-[1200px] desktop:px-10 tablet:px-10 px-4 bg-mono_black">
+  <div className="max-w-[1200px] desktop:px-10 bigTablet:px-10 lg:px-10 md:px-10 tablet:px-10 px-4 bg-mono_black">
      <div className="w-full">
-    {/* header */}
-    <SeminarDetailHeader key={`${seminar.id}_header`} data={seminar}/>
+        {/* header */}
+    <SeminarDetailHeader key={`${seminar.id}_header`} seminar={seminar}/>
 
-    {/* banner */}
-    <SeminarDetailBanner key={`${seminar.id}_banner`} data={seminar}/>
+{/* banner */}
+<SeminarDetailBanner key={`${seminar.id}_banner`} seminar={seminar} member={member}/>
 
-    {/* pdf file */}
-    <SeminarDetailPdf key={`${seminar.id}_pdf`}/>
+{/* pdf file */}
+<SeminarDetailPdf key={`${seminar.id}_pdf`} seminar={seminar}/>
 
-    {/* review */}
-    <SeminarDetailReview key={`${seminar.id}_review`} />
-
+{/* review */}
+<SeminarDetailReview key={`${seminar.id}_review`} reviews={reviews} />
   </div>
-  <div className="h-[120px]"></div>
+  <div className="h-[7.5rem]"></div>
   </div>
   </section>;
 };
