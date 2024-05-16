@@ -10,6 +10,7 @@ const config: Config = {
     extend: {
       screens: {
         desktop: '961px',
+        only_tablet: { max: '960px', min: '521px' },
         tablet: '521px',
         bigTablet: '960px',
         mainDesktop: '1200px',
