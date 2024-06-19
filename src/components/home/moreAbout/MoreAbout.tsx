@@ -41,12 +41,12 @@ const ChannelList: Channel[] = [
   {
     title: 'Github',
     description: '깃허브',
-    link: 'https://www.youtube.com/@DGUGDSC',
+    link: 'https://github.com/GDSC-DGU',
   },
   {
     title: 'Youtube',
     description: '유튜브',
-    link: 'instagram',
+    link: 'https://www.youtube.com/@DGUGDSC',
   },
 ];
 const MoreAbout = () => {
